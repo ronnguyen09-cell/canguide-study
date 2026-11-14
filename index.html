@@ -394,9 +394,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
       home screen's Recently updated list uses it.
   11. `source.checked` (YYYY-MM) is when the topic was last checked
       against its primary source. `reviewedBy` holds the date
-      (YYYY-MM-DD) a physician verified every point against the source;
-      the topic shows only "Independently verified" — no name or date. Until then the topic shows "Clinical review:
-      pending".
+      (YYYY-MM-DD) a physician verified every point against the source.
   12. Scope is the average office family physician: what is assessed,
       started or followed up in a clinic visit. Emergency and inpatient
       workups (acute chest pain, sepsis) are out of scope; a topic
@@ -534,14 +532,11 @@ const TOPICS = [
             "Repeat | Not on treatment: no more than every **5 years**, preferably **10**, unless risk factors change",
             "Don't use | **Lp(a), ApoB or CAC** to assess risk. No risk calculator if they already have CVD — they are high risk",
             "Primary prevention | By 10-year Framingham risk: ;; **≥ 20%** → discuss a **high-intensity** statin ;; **10–19%** → discuss a **moderate-intensity** statin ;; **< 10%** → recheck in 5–10 years ;; Statin only — **ezetimibe, fibrates and PCSK9 inhibitors are not recommended**, alone or added to a statin",
-            "Secondary prevention | ;; Encourage a **high-intensity statin** ;; Want more risk reduction: discuss **ezetimibe or a PCSK9 inhibitor**‡ ;; **Icosapent ethyl** only after those meds are trialed",
+            "Secondary prevention | ;; Encourage a **high-intensity statin** ;; Want more risk reduction: discuss **ezetimibe or a PCSK9 inhibitor** ;; **Icosapent ethyl** only after those meds are trialed",
             "Over 75 | ;; Primary prevention: no lipid testing or risk calculator, and **no routine new statin** (can discuss if in good health) ;; **Don't stop** a tolerated statin because of age ;; After a CV event: encourage a statin",
             "Statin intolerance | Non-severe muscle symptoms → **any statin, any dose** (switch, lower dose, alternate days) over non-statins. If no statin is tolerated: primary prevention, no other drug; secondary prevention, discuss ezetimibe, a fibrate or a PCSK9 inhibitor",
             "After starting | **No repeat lipids and no targets**. No baseline CK or ALT if well. Don't change a statin for cognitive concerns",
             "Lifestyle | **Mediterranean diet**. Any physical activity they'll keep doing",
-        ],
-        footnotes: [
-            { mark: "‡", text: "**Reviewer note, not stated in the guideline:** consider referral to cardiology or a lipid clinic before starting a PCSK9 inhibitor." },
         ],
         meds: [
             {
@@ -603,7 +598,7 @@ const TOPICS = [
                     "Which number | TG **> 1.5 mmol/L** → follow **non-HDL-C or ApoB** instead of LDL-C†",
                     "Statin-indicated | Statin regardless of risk score: ;; ASCVD (MI, angina, stroke or TIA, PAD) ;; AAA **> 3.0 cm** or prior repair ;; Diabetes: age **≥ 40**, or ≥ 30 with 15+ years of diabetes, or microvascular disease ;; CKD, age **≥ 50**: eGFR < 60 or ACR ≥ 3 mg/mmol, not on dialysis ;; LDL-C **≥ 5.0 mmol/L**† (likely familial hypercholesterolemia)",
                     "Primary prevention | By Framingham risk (FRS): ;; **≥ 20%** → statin ;; **10–19.9%** → statin if LDL-C ≥ 3.5 mmol/L†, or a risk modifier* ;; **5–9%** with LDL-C ≥ 3.5 mmol/L → consider statin, especially with a risk modifier* ;; Otherwise lifestyle alone",
-                    "Secondary prevention | **High-intensity statin** for all (maximally tolerated if not). LDL-C still **≥ 1.8 mmol/L**† → add **ezetimibe**. Still above → **PCSK9 inhibitor**‡",
+                    "Secondary prevention | **High-intensity statin** for all (maximally tolerated if not). LDL-C still **≥ 1.8 mmol/L**† → add **ezetimibe**. Still above → **PCSK9 inhibitor**",
                     "Monitoring | **ALT once** within the first 3 months. **CK only if myalgias**. No routine ALT or CK after that",
                     "After pregnancy complications | After a hypertensive disorder, gestational diabetes, preterm birth, stillbirth, low birth weight or placental abruption: ;; **Lipid panel** once postpartum ;; Counsel on her **higher lifetime CV risk**",
                     "Fish oil | **No OTC omega-3** supplements for CV risk",
@@ -612,7 +607,6 @@ const TOPICS = [
                 footnotes: [
                     { mark: "*", text: "**Risk modifiers:** men ≥ 50 or women ≥ 60 with one of low HDL-C, impaired fasting glucose, high waist circumference, smoking or hypertension; family history of premature CAD (men ≤ 55, women ≤ 65); Lp(a) ≥ 50 mg/dL (≥ 100 nmol/L); CAC > 0; hsCRP ≥ 2.0 mg/L." },
                     { mark: "†", text: "**Equivalent thresholds:** LDL-C 1.8 = non-HDL-C 2.4 = ApoB 0.7 g/L. LDL-C 3.5 = non-HDL-C 4.2 = ApoB 1.05 g/L. LDL-C 5.0 = non-HDL-C 5.8 = ApoB 1.45 g/L. Lipids in mmol/L." },
-                    { mark: "‡", text: "**Reviewer note, not stated in the guideline:** consider referral to cardiology or a lipid clinic before starting a PCSK9 inhibitor." },
                 ],
                 meds: [
                     {
@@ -758,11 +752,7 @@ const TOPICS = [
             "Stop the antiplatelet | ;; On starting an OAC, stop ASA or another antiplatelet if it was for primary prevention, or for stable coronary or peripheral disease with no ACS, PCI or intervention in 12 months ;; Cuts bleeding without raising thrombotic risk",
             "Rate control | ;; Target resting HR **< 100 bpm** in the relatively asymptomatic ;; Non-DHP CCB and beta-blocker lower rate similarly; the non-DHP CCB has fewer side effects and is preferred without LV dysfunction ;; The non-DHP CCB is **contraindicated** in LV dysfunction, heart failure and pre-excitation ;; Digoxin is an adjunct only",
             "Around cardioversion | ;; Anticoagulate for **≥ 3 weeks before** elective cardioversion and **≥ 4 weeks after**, including CHADS 0 patients under 65 ;; Continuing past 4 weeks is decided by CHADS-65",
-            "Refer | ;; New heart failure or falling exercise capacity ;; WPW ;; Postural symptoms or SBP < 90 ;; Resting HR 120–140 ;; AF under age 50 ;; Complex anticoagulation decisions (e.g., ACS or PCI within 12 months) ;; Considering cardioversion or ablation",
-        ],
-        footnotes: [
-            { mark: "*", text: "**Reviewer note, not verified against the guideline:** don't reduce a DOAC dose for advanced age, recurrent falls or minor bleeding alone." },
-            { mark: "†", text: "**Reviewer note, not verified against the guideline:** edema is the usual dose-limiting effect of diltiazem." },
+            "Refer | ;; New heart failure or falling exercise capacity ;; WPW ;; Postural symptoms ;; AF under age 50 ;; Complex anticoagulation decisions (e.g., ACS or PCI within 12 months) ;; Considering cardioversion or ablation",
         ],
         meds: [
             {
@@ -792,7 +782,7 @@ const TOPICS = [
             {
                 name: "DOACs (class note)",
                 dose: "Applies to apixaban, rivaroxaban, dabigatran and edoxaban",
-                adjustment: "Use Cockcroft-Gault CrCl. ESRD or dialysis: decide with nephrology. Dose reduction for age, falls or minor bleeding: see reviewer note*.",
+                adjustment: "Use Cockcroft-Gault CrCl. ESRD or dialysis: decide with nephrology.",
             },
             {
                 name: "Beta-blockers (class note)",
@@ -827,7 +817,7 @@ const TOPICS = [
             {
                 name: "Diltiazem",
                 dose: "ER: initial 120 mg daily; typical 360 mg daily. IR: initial 30 mg q6–8h; typical 120 mg q6–8h",
-                adjustment: "Once-daily preparation preferred. Contraindicated in pre-excitation, LV dysfunction and heart failure. Dose-limiting effect: see reviewer note†.",
+                adjustment: "Once-daily preparation preferred. Contraindicated in pre-excitation, LV dysfunction and heart failure.",
                 src: "AHS Calgary Zone AF primary care pathway (2025), Table 5A, from CCS 2020",
             },
             {
@@ -854,7 +844,7 @@ const TOPICS = [
                 url: "https://ontario.ca/files/2024-07/moh-executive-officer-notice-en-2024-07-24.pdf",
             },
         ],
-        editorial: "Audited 2026-11. The CCS 2020 recommendation text could not be read in full: the CJC full text is readable only through section 4 (classification, diagnosis, screening). Points were checked against the AHS Calgary Zone AF primary care pathway (updated Jul 2025), which is aligned to CCS 2020 and reproduces its tables, and against the readable CJC sections. The < 100 bpm rate target and ≥ 3 weeks of anticoagulation before cardioversion were confirmed from CardioGuide (Calgary), which reproduces the CCS 2020 material. DOAC doses are from the current Health Canada product monographs (Eliquis, Xarelto, Pradaxa, Teva-Edoxaban; the Lixiana brand was cancelled in Feb 2026). Rate-control doses are from the pathway's Table 5A. Two lines that could not be verified from a readable source are shown as reviewer notes.",
+        editorial: "Audited 2026-11. The CCS 2020 recommendation text could not be read in full: the CJC full text is readable only through section 4 (classification, diagnosis, screening). Points were checked against the AHS Calgary Zone AF primary care pathway (updated Jul 2025), which is aligned to CCS 2020 and reproduces its tables, and against the readable CJC sections. The < 100 bpm rate target and ≥ 3 weeks of anticoagulation before cardioversion were confirmed from CardioGuide (Calgary), which reproduces the CCS 2020 material. DOAC doses are from the current Health Canada product monographs (Eliquis, Xarelto, Pradaxa, Teva-Edoxaban; the Lixiana brand was cancelled in Feb 2026). Rate-control doses are from the pathway's Table 5A.",
     },
     /* ---------------- ENDOCRINE ---------------- */
     {
@@ -894,7 +884,7 @@ const TOPICS = [
             {
                 name: "Metformin",
                 dose: "Start 500 mg daily or BID with meals and increase gradually; usual 1,000 mg BID; max 2,550 mg/day (2,000 mg/day extended release)",
-                adjustment: "eGFR 30–44: max 1,000 mg/day. eGFR 15–29: max 500 mg/day. eGFR < 15 or dialysis: avoid. Hold during intercurrent illness (sick-day rules).",
+                adjustment: "eGFR 30–44: max 1,000 mg/day. eGFR 15–29: do not use (contraindicated below eGFR 30). eGFR < 15 or dialysis: avoid. Hold during intercurrent illness (sick-day rules).",
                 src: "Glucophage product monograph (Sanofi, 2026), sections 4.1–4.2; Diabetes Canada Ch 13 (2024), Table 2 (max doses by eGFR)",
             },
             {
@@ -951,7 +941,7 @@ const TOPICS = [
         changed: "",
         beyondGuideline: "",
         points: [
-            "Who to test | **Don't screen people without symptoms**. Test with symptoms or signs plus a risk factor: ;; Women ≥ 50; men ≥ 60; autoimmune disease; family history; neck radiation; past thyroid surgery or radioiodine; **lithium or amiodarone** ;; **TSH first**; a normal TSH needs no repeat unless things change",
+            "Who to test | **Don't screen people without symptoms**. **Test any presentation consistent with thyroid disease.** For **non-specific symptoms**, test if there is a risk factor: ;; Women ≥ 50; men ≥ 60; autoimmune disease; family history; neck radiation; past thyroid surgery or radioiodine; **lithium or amiodarone** ;; **TSH first**; a normal TSH needs no repeat unless things change",
             "Diagnose | **High TSH with low free T4** = primary hypothyroidism. Free T3 is rarely needed. **Don't screen in hospital or acute illness unless thyroid disease is suspected** — sick euthyroid; levothyroxine doesn't help it",
             "Subclinical | High TSH, normal free T4. **Treat if TSH > 10**. Between the upper limit and 10, consider treating if: symptomatic; TPO-positive; ASCVD or heart failure (or their risk factors); pregnant. Untreated: **TSH every 6–12 months**",
             "Anti-TPO | **Not routine**. Useful with a goitre or a mildly raised TSH — positivity raises the risk of progression. Once positive, don't repeat",
@@ -965,7 +955,7 @@ const TOPICS = [
         meds: [
             {
                 name: "Levothyroxine",
-                dose: "Full replacement ~1.7 mcg/kg/day once daily, usually started at full dose; older adults may need < 1 mcg/kg/day; subclinical: ~1 mcg/kg/day",
+                dose: "Full replacement ~1.7 mcg/kg/day once daily, usually started at full dose, except over 50 and in the elderly, where the initial dose is no more than 50 mcg/day even without cardiac disease; older adults may need < 1 mcg/kg/day; subclinical: ~1 mcg/kg/day",
                 adjustment: "Cardiac disease: start lower and increase every 3–6 weeks. Recheck TSH every 6–8 weeks until normal. Few need > 200 mcg/day; an inadequate response to 300–400 mcg/day suggests malabsorption, non-adherence or interactions. Take on an empty stomach, 30–60 minutes before breakfast, and at least 4 hours apart from drugs that interfere with absorption. Overtreatment risks AF in older adults and bone loss after menopause. May need a 25–50% increase in pregnancy.",
                 src: "Eltroxin product monograph (Aspen, 2024); BC 2018 for overtreatment and pregnancy",
             },
@@ -1164,7 +1154,7 @@ const TOPICS = [
             "Investigate a change | ;; Unexpected abnormal eGFR: **repeat within 1–2 weeks** ;; Sustained eGFR fall **> 20%**; **> 30%** after starting an ACEi, ARB or SGLT2i ;; **≥ 2-fold rise in ACR**",
             "ACEi or ARB | ;; **All CKD: start an ACEi or ARB**, first-line for BP, especially with albuminuria‡ ;; **Highest approved dose tolerated**; check BP, creatinine and K⁺ 2–4 weeks after starting or increasing ;; **Keep going unless creatinine rises > 30% within 4 weeks**; reasonable to continue below eGFR 30 ;; **Never combine** ACEi, ARB or renin inhibitor",
             "SGLT2 inhibitor | ;; Add to the ACEi/ARB if **ACR ≥ 20 mg/mmol**, **heart failure** or **type 2 diabetes** ;; KDIGO: start at **eGFR ≥ 20**; also suggested at eGFR 20–45 with lower ACR ;; An eGFR dip < 30% on starting is not a reason to stop; continue below 20 until dialysis or transplant ;; **Sick days:** hold the ACEi, ARB, SGLT2i and diuretics in dehydrating illness, with a plan to restart",
-            "Add-ons | ;; **Type 2 diabetes:** add **finerenone** and a **GLP-1 RA** (semaglutide is the one studied in CKD) ;; Finerenone criteria (KDIGO): eGFR > 25, normal K⁺, ACR > 3 despite max ACEi/ARB ;; **SBP < 120** if tolerated ;; **Statin** for everyone ≥ 50, and at 18–49 with CV risk factors",
+            "Add-ons | ;; **Type 2 diabetes:** add **finerenone** and a **GLP-1 RA** (semaglutide is the one studied in CKD); KDIGO: use the GLP-1 RA when not at glycemic target despite metformin plus an SGLT2 inhibitor, or when the patient is unable to use them ;; Finerenone criteria (KDIGO): eGFR > 25, normal K⁺, ACR > 3 despite max ACEi/ARB ;; **SBP < 120** if tolerated (KDIGO) ;; **Statin** for everyone ≥ 50, and at 18–49 with CV risk factors",
             "Kidney failure risk | Use the 4-variable **KFRE** when eGFR < 60: ;; **5-year risk ≥ 3–5%** can inform referral ;; **2-year ≥ 10%**: multidisciplinary care ;; **2-year ≥ 40%**: dialysis and transplant planning",
             "Urgent referral | ;; Active urine sediment (red cell or cellular casts) ;; AKI without a readily reversible cause ;; Abrupt, sustained fall in eGFR ;; **eGFR < 15** ;; Nephrotic syndrome (PCR > 300 mg/mmol, albumin < 30 g/L)",
             "Priority referral | ;; **eGFR < 30** ;; Unexplained persistent **ACR > 30–70 mg/mmol**, whatever the eGFR ;; eGFR decline **> 5 per year** ;; Diabetes with **eGFR < 45 and ACR > 30**",
@@ -1243,9 +1233,6 @@ const TOPICS = [
             "Step up | First correct adherence, technique, empty inhaler, exposures, comorbidities: ;; **≥ 12 y**: LABA in the **same inhaler** (alternatives: add an LTRA, or increase to medium-dose ICS) ;; **6–11 y**: medium-dose ICS, then LABA or LTRA ;; LTRA is second line at every age ;; **Refer**: child not controlled on medium-dose ICS, any asthma admission, or ≥ 2 ED visits",
             "Yellow zone | **Never double** the ICS: ;; ≥ 16 y with a severe exacerbation in the past year: **≥ 4-fold ICS** for 7–14 days ;; **Daily bud/form**: max 4 inhalations BID ;; **PRN bud/form**: max 8 inhalations/day ;; Oral prednisone isn't routine in an action plan, only after a recent severe exacerbation that fails inhaled SABA: adults 30–50 mg daily for ≥ 5 days; children 1 mg/kg/day (max 50 mg) for ≥ 3 days",
         ],
-        footnotes: [
-            { mark: "*", text: "**Reviewer note, not stated in the guideline:** book a review within 2 weeks of starting montelukast, when neuropsychiatric effects typically appear." },
-        ],
         meds: [
             {
                 name: "Budesonide / formoterol (bud/form)",
@@ -1274,7 +1261,7 @@ const TOPICS = [
             {
                 name: "Montelukast (LTRA)",
                 dose: "≥ 15 y: 10 mg; 6–14 y: 5 mg chewable; 2–5 y: 4 mg chewable or granules; once daily in the evening",
-                adjustment: "Second line to daily ICS at every age. Serious warning for neuropsychiatric events — irritability, aggression, anxiety, sleep disturbance, suicidal thoughts or actions — reported in up to 16% of children started on it, typically within 2 weeks. Discuss these with patients and parents before starting; follow-up timing: see reviewer note*.",
+                adjustment: "Second line to daily ICS at every age. Serious warning for neuropsychiatric events — irritability, aggression, anxiety, sleep disturbance, suicidal thoughts or actions — reported in up to 16% of children started on it, typically within 2 weeks. Discuss these with patients and parents before starting.",
                 src: "Singulair product monograph (Organon, 2021); CTS 2021",
             },
             {
@@ -1444,7 +1431,7 @@ const TOPICS = [
             url: "https://www.ocpinfo.com/wp-content/uploads/2022/12/assessment-prescribing-algorithm-urinary-tract-infection-english.pdf",
             province: "ON",
             tier: "provincial",
-            state: "No Canadian national guideline for uncomplicated cystitis. Ontario's pharmacist prescribing algorithm sets the provincial standard and uses local resistance data.",
+            state: "No Canadian national guideline for uncomplicated cystitis. The Ontario College of Pharmacists (OCP) pharmacist prescribing algorithm uses local resistance data.",
         },
         changed: "",
         beyondGuideline: "",
@@ -1454,7 +1441,7 @@ const TOPICS = [
             "First line | **Nitrofurantoin monohydrate/macrocrystals (BID formulation) 100 mg BID × 5 days**. Ontario *E. coli* resistance: about **3% to nitrofurantoin**, about **20% to TMP-SMX**",
             "Alternatives | **TMP-SMX DS BID × 3 days**; trimethoprim 200 mg daily × 3 days; **fosfomycin 3 g once** (adults only; inferior to nitrofurantoin in one RCT)",
             "Course length | **Short courses only** — longer ones work no better and add side effects, resistance and *C. difficile*",
-            "Follow up | Check at **72 hours**. No improvement, or upper-tract signs → refer or reassess as complicated",
+            "Follow up | Check at **72 hours**. No improvement, or upper-tract signs → reassess as a complicated infection (see Not uncomplicated)",
             "Relapse and recurrence | Symptoms back **within 4 weeks** of finishing = relapse. **≥ 2 in 6 months or ≥ 3 in 12 months** = recurrent — beyond empiric treatment, needs workup",
         ],
         meds: [
@@ -1534,7 +1521,7 @@ const TOPICS = [
             },
             {
                 name: "Ferrous gluconate",
-                dose: "300 mg tablet (35 mg elemental iron), 1–2 BID to TID, max 5 a day",
+                dose: "300 mg tablet (35 mg elemental iron), 1–2 BID; never more than 5 tablets a day in total",
                 adjustment: "Lowest elemental iron per tablet — easy to underdose. No renal adjustment stated.",
             },
             {
@@ -1657,7 +1644,7 @@ const TOPICS = [
         changed: "Adult pneumococcal now one dose of Pneu-C-20 or Pneu-C-21 at ≥ 65 regardless of prior vaccines (Nov 2024); RSV vaccine for all adults ≥ 75 and maternal RSVpreF from 28 weeks; HPV is a single dose to age 20; Pneu-C-15 or Pneu-C-20 replaced Pneu-C-13 in infants; Men-C-ACYW replaces Men-C-C at 12–23 months (May 2026).",
         beyondGuideline: "",
         points: [
-            "Pregnancy | ;; **Tdap every pregnancy**, ideally **27–32 wk**, whatever the interval since the last dose ;; **RSVpreF at 28–36 wk**, before or during RSV season, **≥ 2 wk before birth**; not repeated in a later pregnancy: protect that baby with a monoclonal antibody instead",
+            "Pregnancy | ;; **Tdap every pregnancy**, ideally **27–32 wk**, whatever the interval since the last dose ;; **RSVpreF may be considered at 28–36 wk**, in discussion with the care provider, before or during RSV season, **≥ 2 wk before birth**; not repeated in a later pregnancy: protect that baby with a monoclonal antibody instead",
             "Infants | ;; **2, 4, 6 mo**: DTaP-IPV-Hib (or the hexavalent with hep B) at each visit; 4th dose at **18 mo** ;; Pneumococcal conjugate at 2 and 4 mo; booster at **12–15 mo** ;; Rotavirus: first dose **≥ 6 wk and before 15 wk**; series done **before 8 mo**; no catch-up past that ;; **RSV**: one dose of **nirsevimab or clesrovimab** for infants **< 8 mo** entering or in their first season, if the mother had no RSVpreF or delivered < 2 wk after it ;; High-risk infants get it **even if the mother was vaccinated** ;; **Influenza** yearly from **6 mo**; under 9 and first time: 2 doses 4 weeks apart",
             "Toddlers | ;; **12 mo**: **MMR** ;; **12–23 mo**: **Men-C-ACYW** once (replaces Men-C-C; NACI May 2026) ;; **12–15 mo**: **varicella** ;; **From 18 mo**, no later than school entry: second MMR and varicella; MMRV at 4–6 y is an option",
             "School age to 17 | ;; **4–6 y**: **Tdap-IPV** booster ;; **Around 12 y**: Men-C-ACYW; hep B if no infant series; **HPV: one dose of 9vHPV, ages 9–20** (2 doses if immunocompromised) ;; Tdap again 10 years after the preschool booster",
@@ -1987,7 +1974,7 @@ const TOPICS = [
         changed: "Self-referral lowered from 50 to 40 in fall 2024, covered by OHIP, no referral needed; people without a family doctor or NP get one assigned by OBSP to follow up results.",
         beyondGuideline: "",
         points: [
-            "Average risk | **40–49**: **self-refer from 40**, OHIP-covered, no referral needed; discuss benefits and harms first — the decision is the patient's; Ontario publishes no fixed interval. **50–74**: **mammogram every 2 years**; self-referral or provider referral to any OBSP site; OBSP sends results and recall letters. **75 and over**: still covered but **needs a referral**; OBSP stops recall letters; decide on health and life expectancy",
+            "Average risk | **40–49**: **self-refer from 40**, OHIP-covered, no referral needed; discuss benefits and harms first — the decision is the patient's; those who choose to screen are recalled every 2 years (OBSP). **50–74**: **mammogram every 2 years**; self-referral or provider referral to any OBSP site; OBSP sends results and recall letters. **75 and over**: still covered but **needs a referral**; OBSP stops recall letters; decide on health and life expectancy",
             "Annual recall | **Yearly** instead of every 2 years if: **dense breasts (BI-RADS category D)**; high-risk lesion on pathology; personal history of ovarian cancer; **one first-degree relative with breast cancer under 50**, or **two at any age**; a first-degree relative with ovarian cancer; a male relative with breast cancer; the radiologist recommends it",
             "High risk | **Category A, direct entry** (age **30–69**, family doctor or NP referral): **known pathogenic variant carrier (e.g. BRCA1, BRCA2, TP53, PALB2)**; first-degree relative of a carrier who had counselling and declined testing; **≥ 25% lifetime risk** on IBIS or CanRisk from a genetics clinic; **chest radiation before 30**, at least 8 years ago. **Category B, genetics first**: pathogenic variant in a close blood relative; on the same side of the family, breast or ovarian cancer plus another breast, ovarian, prostate or pancreatic cancer; family history of breast cancer at **35 or younger**; more than one primary breast cancer, or breast and ovarian cancer, in one person; breast or ovarian cancer with Ashkenazi Jewish ancestry; invasive ovarian cancer; breast cancer in a person assigned male at birth; personal breast cancer at **45 or younger** (50 or younger with limited family structure), or triple-negative at **60 or younger**. **Screening**: **annual mammogram plus MRI** (ultrasound if MRI is not appropriate) from **30 to 69**; **70–74**: annual mammogram only; ovarian cancer here includes tubal and primary peritoneal",
         ],
@@ -2056,18 +2043,72 @@ const TOPICS = [
             tier: "national",
             state: "Current; supersedes the 2016 guideline. A 2025 corrigendum was published.",
         },
-        changed: "Psychotherapy preferred first for mild depression; supervised exercise first-line alone for mild; treatment chosen by severity and safety risk; 'difficult-to-treat depression' introduced; 17 of 31 antidepressants rated first-line.",
+        changed: "Psychotherapy preferred first for mild depression; supervised exercise first-line alone for mild; treatment chosen by severity and safety risk; 'difficult-to-treat depression' introduced.",
         beyondGuideline: "",
         points: [
             "Screen and measure | Screen patients with risk factors for depression (CANMAT Table 1.1): **PHQ-2**, then **PHQ-9** if positive. Use the PHQ or another validated scale at visits; measurement-based care. Treat residual symptoms: they drive recurrence",
             "Mild, low risk | **Psychotherapy first** if readily accessible. **Supervised exercise** is first-line on its own — 30–40 min, 3–4 times a week, at least 9 weeks. Guided digital programs are an option. **Bright light** first-line for seasonal pattern",
             "Moderate to severe | ;; **Moderate**: psychotherapy **or** an antidepressant; consider both ;; **Severe**: **combine** antidepressant and psychotherapy ;; **Psychotic features**: **antidepressant plus an atypical antipsychotic** ;; **Most severe or life-threatening**: **ECT first**",
-            "Choosing treatment | **17 of 31 antidepressants are first-line** — choose by efficacy, side effects, presentation, cost and preference. **First-line therapy**: **CBT, IPT or behavioural activation**, about **12–16 sessions**",
+            "Choosing treatment | Choose the antidepressant by efficacy, side effects, presentation, cost and preference. **First-line therapy**: **CBT, IPT or behavioural activation**, about **12–16 sessions**",
             "Safety | Suicide risk is **higher in the month after starting and the month after stopping** an antidepressant — see the patient more often then",
             "Not responding | **< 20% improvement by 4 weeks** makes response at 8–12 weeks unlikely. Check adherence; optimize the dose: ;; **Partial response, tolerated → add an adjunct** (first-line **aripiprazole or brexpiprazole**) ;; **No response or not tolerated → switch**",
             "How long | Acute phase about **8–16 weeks**, to remission. **Maintenance about 6–24 months** after that, longer if indicated. Recovery lasts best when the antidepressant continues **with** psychotherapy",
         ],
         meds: [
+            {
+                name: "Sertraline (Zoloft)",
+                dose: "Start 50 mg daily; usual range 50–200 mg daily; change the dose at intervals of at least 1 week; maximum 200 mg/day",
+                adjustment: "No adjustment for renal impairment. Hepatic impairment: use caution and consider a lower or less frequent dose. No age-specific dose adjustment, but watch for hyponatremia in older adults.",
+                src: "Zoloft product monograph (Pfizer Canada, 2019)",
+            },
+            {
+                name: "Escitalopram (Cipralex)",
+                dose: "10 mg daily; may increase to 20 mg daily (range 10–20 mg daily); start 5 mg daily if sensitive to adverse events",
+                adjustment: "Age 65 and over: start 5 mg, up to 10 mg daily. Mild to moderate hepatic impairment: start 5 mg, usual maximum 10 mg daily. CYP2C19 poor metabolizers: start 5 mg, maximum 10 mg daily. No adjustment for mild to moderate renal impairment; caution if CrCl < 30.",
+                src: "Cipralex product monograph (Lundbeck Canada, 2016)",
+            },
+            {
+                name: "Citalopram (Celexa)",
+                dose: "Usual 20 mg daily; up to 40 mg daily if needed and tolerated (range 20–40 mg daily); change the dose at intervals of at least 1 week",
+                adjustment: "Maximum 40 mg/day because of QT prolongation. Maximum 20 mg/day: age 65 and over, mild to moderate hepatic impairment, CYP2C19 poor metabolizers, and anyone taking cimetidine or another CYP2C19 inhibitor; start 10 mg daily in hepatic impairment and in poor metabolizers. Contraindicated with known QT prolongation or congenital long QT syndrome.",
+                src: "Celexa product monograph (Lundbeck Canada, 2025)",
+            },
+            {
+                name: "Fluoxetine (Prozac)",
+                dose: "Start 20 mg once daily in the morning; increase only after several weeks if needed; maximum 60 mg/day (range 20–60 mg daily)",
+                adjustment: "Older adults were studied only at 20 mg/day; a lower dose or less frequent dosing may be effective. Renal or hepatic impairment, debilitated patients and those on several drugs: reduce the dose or give it less often. Keep maintenance at the lowest effective dose.",
+                src: "Prozac product monograph (Eli Lilly Canada, 2024)",
+            },
+            {
+                name: "Venlafaxine XR (Effexor XR)",
+                dose: "Start 75 mg daily (37.5 mg daily for 4–7 days if desirable); up to 225 mg daily as a single dose (range 75–225 mg daily)",
+                adjustment: "No dose adjustment for age alone; take extra care when increasing. Mild to moderate hepatic impairment: reduce the total daily dose by about 50%. Renal impairment: reduce by 25–50%; hemodialysis: reduce by 50%.",
+                src: "Venlafaxine XR product monograph (Sanis Health, 2024)",
+            },
+            {
+                name: "Duloxetine (Cymbalta)",
+                dose: "60 mg once daily; 30 mg daily for the first 1–2 weeks may be used for tolerability",
+                adjustment: "The monograph gives 60 mg/day as the recommended dose, states no maximum for MDD and finds no evidence that doses above 60 mg/day add benefit (the 2016 CANMAT table's 60–120 mg is not the monograph's recommendation). Not recommended in end-stage renal disease or severe renal impairment (CrCl < 30). Do not use with any liver disease causing hepatic impairment. No age-based dose adjustment.",
+                src: "Cymbalta product monograph (Eli Lilly Canada, 2021)",
+            },
+            {
+                name: "Mirtazapine (Remeron)",
+                dose: "Start 15 mg daily as a single dose, preferably in the evening; usual range 15–45 mg daily; change the dose at intervals of at least 1 week; maximum 45 mg/day",
+                adjustment: "Clearance is reduced in older adults and in moderate to severe renal or hepatic impairment: dose with care and titrate upward carefully.",
+                src: "Remeron product monograph (Organon Canada, 2021)",
+            },
+            {
+                name: "Bupropion XL (Wellbutrin XL)",
+                dose: "Start 150 mg once daily in the morning; usual target 300 mg once daily, reachable from 1 week after starting; maximum 300 mg/day (range 150–300 mg daily)",
+                adjustment: "Reduce to or stay at 150 mg daily if 300 mg is not tolerated. Older or debilitated patients: start 150 mg daily. Mild to moderate hepatic impairment: start at the lowest dose and adjust to response. Severe hepatic impairment: not recommended; if used, no more than 150 mg daily or every other day. Renal impairment: caution, and consider a lower dose or less frequent dosing.",
+                src: "Wellbutrin XL product monograph (Bausch Health Canada, 2026)",
+            },
+            {
+                name: "Vortioxetine (Trintellix)",
+                dose: "Start and usual dose 10 mg daily (under 65); may increase to a maximum of 20 mg daily as tolerated (range 10–20 mg daily)",
+                adjustment: "Age 65 and over: start at 5 mg daily, with caution above 10 mg. Can be reduced to 5 mg daily if higher doses are not tolerated. No dose adjustment for renal or hepatic impairment; caution in severe renal insufficiency and in moderate to severe hepatic impairment.",
+                src: "Trintellix product monograph (Lundbeck Canada, 2026)",
+            },
             {
                 name: "Aripiprazole (adjunct)",
                 dose: "Start 2–5 mg daily; increase by up to 5 mg at intervals of at least 1 week; effective range 2–15 mg, added to an antidepressant",
@@ -2308,7 +2349,7 @@ const TOPICS = [
                 url: "https://www.ontariohealth.ca/getting-health-care/mental-health-addictions/depression-anxiety-ontario-structured-psychotherapy",
             },
         ],
-        editorial: "Written from the BMC Psychiatry 2014 full text (principles, panic and social anxiety sections, Tables 21 and 24); the GAD narrative was read in full this time via PMC and contains no GAD-specific drug-duration statement, so the entry stays silent on GAD duration. Katzman 2014's GAD first-line list includes agomelatine, which is not marketed in Canada; it was removed at review, so do not re-add it. The timing figures (relief 2–8 weeks, full response 12+ weeks, continue at least 12–24 months) are in the 2014 text's general treatment section; they were dropped at apply on a mistaken premise and restored at Ron's publish decision. Perinatal anxiety is covered by the CANMAT 2024 perinatal guideline. GAD-7 is added as a tool only — it is not in the guideline; the link was browser-checked and loads. Drug doses are from the product monographs. A newer national anxiety guideline should be watched for.",
+        editorial: "Written from the BMC Psychiatry 2014 full text (principles, panic and social anxiety sections, Tables 21 and 24); the GAD narrative was read in full this time via PMC and contains no GAD-specific drug-duration statement, so the entry stays silent on GAD duration. Katzman 2014's GAD first-line list includes agomelatine, which is not marketed in Canada; it was removed at review, so do not re-add it. The timing figures (relief 2–8 weeks, full response 12+ weeks, continue at least 12–24 months) are in the 2014 text's general treatment section; they were dropped at apply on a mistaken premise and restored. Perinatal anxiety is covered by the CANMAT 2024 perinatal guideline. GAD-7 is added as a tool only — it is not in the guideline; the link was browser-checked and loads. Drug doses are from the product monographs. A newer national anxiety guideline should be watched for.",
     },
     {
         id: "oud",
@@ -2535,7 +2576,11 @@ const TOPICS = [
         notes: [
             {
                 title: "Caveat",
-                body: ["Diabetes Canada uses different cut-offs (7.8–11.0 → OGTT; 11.1 or more is diagnostic). This entry follows the Ontario Prenatal Record guide."],
+                body: ["Diabetes Canada uses different cut-offs (7.8–11.0 → OGTT; 11.1 or more is diagnostic). This entry follows the Ontario Perinatal Record."],
+            },
+            {
+                title: "Hepatitis C",
+                body: ["Positions vary: the Ontario Perinatal Record's first-visit labs do not include hepatitis C. SOGC (2025) recommends universal hepatitis C screening in pregnancy."],
             },
         ],
         meds: [
@@ -2567,7 +2612,7 @@ const TOPICS = [
             { j: "CMAJ", year: 2026, title: "Acetaminophen in pregnancy", note: "Still the **preferred analgesic and antipyretic** in pregnancy. Links to autism and ADHD shrink or vanish in sibling-controlled studies — **no causal link shown**. Untreated fever carries its own risks (first-trimester fever and neural tube, heart, cleft defects); use judiciously", url: "https://www.cmaj.ca/content/198/21/E835" },
             { j: "CMAJ", year: 2024, title: "GLP-1 receptor agonists during pregnancy and lactation", note: "Use contraception on GLP-1 RAs and **stop 1–2 months before a planned pregnancy** (animal teratogenicity; small human studies reassuring). Expect rebound weight gain. **Avoid while breastfeeding** (little data)", url: "https://www.cmaj.ca/content/196/43/E1413" },
         ],
-        editorial: "Written from the 2018 OPR user guide; visit frequency checked against PHAC Family-Centred Maternity and Newborn Care ch. 3 (2020). ASA dose: the OPR guide (2018) gives 81 mg and refers higher doses to the local referral centre; SOGC No. 426 (2022) gives 81 or 162 mg/day — Ron's decision: follow SOGC for the dose, keep the OPR guide's timing. Checked Nov 2026 against the OPR user guide, PHAC ch. 3 and the CMAJ GLP-1 article. Browser checks done: the acetaminophen note was verified against the full CMAJ text (2026;198(21):E835); the article has no 'lowest effective dose for the shortest time' wording, and the note carries none. WHO 2022 induction wording verified (Recommendation 1: women known with certainty to have reached 41 weeks, ≥ 41+0/7). SOGC No. 426 verified at abstract and publisher-preview level only, full text paywalled (Recommendation 5: 81 or 162 mg/d at bedtime, preferably before 16 weeks, discontinued by 36 weeks; Recommended Changes in Practice item 9: consider > 81 mg/d in all women at increased risk). PCMCH says the OPR is being revised; re-check when the new form is out. Restructured Nov 3, 2026, with no clinical content changed: the seven points stay seven but now sit on one axis, pathway stage in order (first visit, early pregnancy, mid-pregnancy, late second trimester, early third trimester, late pregnancy, throughout pregnancy); gestational-week titles became leads inside the points, 'Dating and genetics' became 'Early pregnancy', and influenza moved from the 27–32-week point to 'Throughout pregnancy' alongside mental health screening; after the restructure, at Ron's approval, the first-visit labs were grouped under 'Blood' and 'Infection' leads, the '— see Immunization' pointer was cut from the RSVpreF line, and the fetal-movement sentence moved to 'Throughout pregnancy' (wording and placement only, no clinical content change). The stage structure is a settled decision; future audits should not restore week-range titles.",
+        editorial: "Written from the 2018 OPR user guide; visit frequency checked against PHAC Family-Centred Maternity and Newborn Care ch. 3 (2020). ASA dose: the OPR guide (2018) gives 81 mg and refers higher doses to the local referral centre; SOGC No. 426 (2022) gives 81 or 162 mg/day — Ron's decision: follow SOGC for the dose, keep the OPR guide's timing. Checked Nov 2026 against the OPR user guide, PHAC ch. 3 and the CMAJ GLP-1 article. Browser checks done: the acetaminophen note was verified against the full CMAJ text (2026;198(21):E835); the article has no 'lowest effective dose for the shortest time' wording, and the note carries none. WHO 2022 induction wording verified (Recommendation 1: women known with certainty to have reached 41 weeks, ≥ 41+0/7). SOGC No. 426 verified at abstract and publisher-preview level only, full text paywalled (Recommendation 5: 81 or 162 mg/d at bedtime, preferably before 16 weeks, discontinued by 36 weeks; Recommended Changes in Practice item 9: consider > 81 mg/d in all women at increased risk). PCMCH says the OPR is being revised; re-check when the new form is out. Restructured Nov 3, 2026, with no clinical content changed: the seven points stay seven but now sit on one axis, pathway stage in order (first visit, early pregnancy, mid-pregnancy, late second trimester, early third trimester, late pregnancy, throughout pregnancy); gestational-week titles became leads inside the points, 'Dating and genetics' became 'Early pregnancy', and influenza moved from the 27–32-week point to 'Throughout pregnancy' alongside mental health screening; after the restructure, the first-visit labs were grouped under 'Blood' and 'Infection' leads, the '— see Immunization' pointer was cut from the RSVpreF line, and the fetal-movement sentence moved to 'Throughout pregnancy' (wording and placement only, no clinical content change). The stage structure is a settled decision; future audits should not restore week-range titles.",
     },
     {
         id: "wellbaby",
@@ -2615,7 +2660,7 @@ const TOPICS = [
                 url: "https://rourkebabyrecord.ca/updates",
             },
         ],
-        editorial: "Written from the full Rourke Baby Record 2024 Ontario edition (Guides I–IV and Notes 1–2, revised May 18, 2024; the Guide I page is dated Feb 9, 2025), read in full Nov 2026, and the RBR 2024 revisions page. The PDF text lost the bold (good evidence) / italic (fair) / plain (consensus) formatting, so evidence strength is not shown on any point — mark it from the printed form before sign-off. Formula volumes by age were left out for space. The record does not define high risk for 800 IU vitamin D; per Ron's decision the criteria come from the CPS 2022 statement on vitamin D deficiency in Indigenous infants and children (Figure 1), which revises the 2007 CPS statement and is the CPS vitamin D source the record links; its high-risk definition (any single risk factor) is not limited to Indigenous infants. Ron reviewed this provenance flag at the publish gate and chose to keep the definition. Restructured Nov 3, 2026, with no clinical content changed: seven points became six on one axis, the record's clinical domains (visits and growth, nutrition, exam and screening, development, safety, screens and teeth); the '0–6 months' age point was dissolved into Nutrition (breastfeeding, vitamin D) and Exam and screening (acholic stools, fever under 3 mo, now labelled red flags), the '18-month visit' title became a lead inside Development, and Safety gained sleep, car and home leads; after the restructure, at Ron's approval, the final point also gained 'Screens and reading' and 'Teeth' leads (wording only, no content change). The six-point domain structure is a settled decision; future audits should not restore age titles.",
+        editorial: "Written from the full Rourke Baby Record 2024 Ontario edition (Guides I–IV and Notes 1–2, revised May 18, 2024; the Guide I page is dated Feb 9, 2025), read in full Nov 2026, and the RBR 2024 revisions page. The PDF text lost the bold (good evidence) / italic (fair) / plain (consensus) formatting, so evidence strength is not shown on any point — mark it from the printed form before sign-off. Formula volumes by age were left out for space. The record does not define high risk for 800 IU vitamin D; per Ron's decision the criteria come from the CPS 2022 statement on vitamin D deficiency in Indigenous infants and children (Figure 1), which revises the 2007 CPS statement and is the CPS vitamin D source the record links; its high-risk definition (any single risk factor) is not limited to Indigenous infants. Ron reviewed this provenance flag at the publish gate and chose to keep the definition. Restructured Nov 3, 2026, with no clinical content changed: seven points became six on one axis, the record's clinical domains (visits and growth, nutrition, exam and screening, development, safety, screens and teeth); the '0–6 months' age point was dissolved into Nutrition (breastfeeding, vitamin D) and Exam and screening (acholic stools, fever under 3 mo, now labelled red flags), the '18-month visit' title became a lead inside Development, and Safety gained sleep, car and home leads; after the restructure, the final point also gained 'Screens and reading' and 'Teeth' leads (wording only, no content change). The six-point domain structure is a settled decision; future audits should not restore age titles.",
     },
     {
         id: "menopause",
@@ -2908,7 +2953,7 @@ const TOPICS = [
                 editorial: "Read from the Pathway Hub page (Details tab) through the browser. Same content as the 2021 PDF summarized in the old provincial note. Kept as a 2021 pathway with its review overdue (Ron's decision). The vitamin E and omega-3 wording was verified by browser against the Pathway Hub copy (pathways/148; AHS NAFLD Primary Care Pathway, last updated Oct 2021) on Nov 3, 2026; the pathway attaches no bleeding or mortality caution to vitamin E.",
             },
         ],
-        editorial: "Written from the KHSC pathway PDF (April 2026, 13 pages). Its header does not name the issuing body; the document is hosted by KHSC and refers to KHSC requisitions. The pathway does not say which threshold applies at exactly age 65. Diabetes Canada: Kim et al., Can J Diabetes 2025;49(4):222–236 (doi 10.1016/j.jcjd.2025.04.003); its fibrosis-screening recommendation is to consider screening in prediabetes or type 2 diabetes (Grade B). The other grades were not re-read (the journal page did not load in Nov 2026). The Manitoba guideline genuinely gives two different FIB-4 repeat intervals (1–2 y and 2–3 y); both are in the guideline. Semaglutide's Health Canada approval for MASH is conditional (NOC/c). Ron's decisions: KHSC thresholds stay in the points, with the Diabetes Canada divergence in the conflict note; the Alberta 2021 pathway is kept, flagged as overdue for review. Restructured Nov 3, 2026, with no clinical content changed: both pathways already ran on one axis (pathway stage: suspect, rule out, baseline, fibrosis staging, refer, manage), so the restructure only split the Kingston 'Fibroscan and referral' point into 'Fibroscan' and 'Refer' (referral criteria as discrete items) and retitled the Alberta 'ALT > 2× ULN for 6 months' point 'Rule out', with the threshold as its lead; at Ron's approval, the Kingston Manage, Alberta Manage and Alberta Not routine points later gained bold leads (wording only, no content change). The pathway-stage structure is a settled decision; future audits should not restore threshold titles or re-merge Fibroscan and referral.",
+        editorial: "Written from the KHSC pathway PDF (April 2026, 13 pages). Its header does not name the issuing body; the document is hosted by KHSC and refers to KHSC requisitions. The pathway does not say which threshold applies at exactly age 65. Diabetes Canada: Kim et al., Can J Diabetes 2025;49(4):222–236 (doi 10.1016/j.jcjd.2025.04.003); its fibrosis-screening recommendation is to consider screening in prediabetes or type 2 diabetes (Grade B). The other grades were not re-read (the journal page did not load in Nov 2026). The Manitoba guideline genuinely gives two different FIB-4 repeat intervals (1–2 y and 2–3 y); both are in the guideline. Semaglutide's Health Canada approval for MASH is conditional (NOC/c). Ron's decisions: KHSC thresholds stay in the points, with the Diabetes Canada divergence in the conflict note; the Alberta 2021 pathway is kept, flagged as overdue for review. Restructured Nov 3, 2026, with no clinical content changed: both pathways already ran on one axis (pathway stage: suspect, rule out, baseline, fibrosis staging, refer, manage), so the restructure only split the Kingston 'Fibroscan and referral' point into 'Fibroscan' and 'Refer' (referral criteria as discrete items) and retitled the Alberta 'ALT > 2× ULN for 6 months' point 'Rule out', with the threshold as its lead; the Kingston Manage, Alberta Manage and Alberta Not routine points later gained bold leads (wording only, no content change). The pathway-stage structure is a settled decision; future audits should not restore threshold titles or re-merge Fibroscan and referral.",
     },
     {
         id: "ibs",
@@ -3613,7 +3658,7 @@ const TOPICS = [
             "Sort it out | ;; 'Dizzy' may mean light-headed, presyncope, imbalance, brain fog or true vertigo ;; Most common: **orthostatic**, imbalance and **migraine-related** dizziness",
             "Send to ED | New one-sided face or limb weakness; trouble speaking; limb or gait ataxia; other stroke signs (FAST); systolic BP **> 180**",
             "BPPV | Brief positional vertigo; **Dix-Hallpike** shows torsional geotropic nystagmus → **Epley maneuver**, or refer to physiotherapy for it",
-            "Vestibular neuritis | ;; **≥ 5 days** of near-constant vertigo; with hearing loss it is labyrinthitis ;; Supportive care and **early vestibular physiotherapy** ;; **Avoid vestibular suppressants** such as benzodiazepines: they slow recovery",
+            "Vestibular neuritis | ;; Typically **5 or more days of essentially constant vertigo**; with hearing loss it is labyrinthitis ;; Supportive care and **early vestibular physiotherapy** ;; **Avoid vestibular suppressants** such as benzodiazepines: they slow recovery",
             "Sudden hearing loss | New one-sided sensorineural loss → **urgent ENT** and consider a high-dose oral steroid (e.g. prednisone) 1 mg/kg (max 60) for 7 days, then taper over 7",
             "Migraine dizziness | ;; Prevent if > 6–8 headache days a month or disabling: propranolol, topiramate, amitriptyline or nortriptyline ;; Refractory: neurology eConsult",
             "Refer | ;; ENT once common causes are excluded and a vestibular disorder is suspected ;; Internal medicine for orthostatic problems ;; Neurology for migraine ;; eConsult is encouraged",
@@ -5115,6 +5160,8 @@ function parseRoute(hash) {
         return { name: "tool", key: parts[1] };
     if (parts[0] === "about")
         return { name: "about" };
+    if (parts[0] === "study")
+        return { name: "study" };
     return { name: "home" };
 }
 const routePath = (r) => r.name === "topic" ? `/t/${encodeURIComponent(r.id)}`
@@ -5123,7 +5170,7 @@ const routePath = (r) => r.name === "topic" ? `/t/${encodeURIComponent(r.id)}`
             : r.name === "search" ? "/search"
                 : r.name === "tools" ? "/tools"
                     : r.name === "tool" ? `/tool/${encodeURIComponent(r.key)}`
-                        : r.name === "about" ? "/about"
+                        : r.name === "about" ? "/about" : r.name === "study" ? "/study"
                             : "/";
 /* Hash routing with an in-app back that never leaves the app: it steps
    back through pages this session opened, and otherwise goes to a
@@ -5645,6 +5692,28 @@ function Wordmark({ size }) {
                 React.createElement("path", { d: LEAF }))),
         "de"));
 }
+
+/* ---------------------------------------------------------------- STUDY */
+const STUDY_CONTENT_DATE = "November 14, 2026";
+function StudyPage({ onContinue, again }) {
+    const li = (t) => React.createElement("li", null, t);
+    return (React.createElement("main", { className: "page about" },
+        React.createElement("h1", { className: "t-title", style: { marginTop: 18 } }, "CanGuide Med study"),
+        React.createElement("p", { className: "lede" }, "This copy of CanGuide is part of a Queen’s Department of Family Medicine resident research study evaluating the app (HSREB file 6047437)."),
+        React.createElement("ul", { className: "about-list" },
+            li("Trial period: December 1, 2026 – January 12, 2027. Use CanGuide as often as it is useful. At the end you’ll be emailed an anonymous survey of about 10 minutes."),
+            li("No account, no login, no tracking. This copy sends nothing anywhere. Saved topics, history and your province stay in this browser on this device."),
+            li("A reference only — it does not replace clinical judgment or the full guideline. Please don’t enter patient information."),
+            li("Participation is voluntary. You can stop using the app at any time."),
+            li("Spot an error? Email Dr. Ron Nguyen at 19rn10@queensu.ca, or mention it in the survey.")),
+        React.createElement("p", null,
+            React.createElement("strong", null, "Please read the "),
+            React.createElement("a", { href: "Letter_of_Information.html", target: "_blank", rel: "noreferrer" }, "Letter of Information"),
+            React.createElement("strong", null, " before continuing.")),
+        React.createElement("p", null, "The Letter of Information is also attached to the invitation email, and it appears again at the start of the survey. Taking part in the survey is voluntary, and completing and submitting it means you agree to take part."),
+        React.createElement("button", { className: "send-btn", onClick: onContinue }, again ? "Back to CanGuide" : "Continue to CanGuide"),
+        React.createElement("p", { className: "calc-src", style: { marginTop: 18 } }, "Questions: Dr. Ron Nguyen, 19rn10@queensu.ca · Content as of " + STUDY_CONTENT_DATE)));
+}
 /* ------------------------------------------------------------------ */
 function CanGuide() {
     const { route, go, back } = useRouter();
@@ -5653,6 +5722,7 @@ function CanGuide() {
     const [seen, setSeen] = usePersistent("cg.seen", {}, (v) => (v && typeof v === "object" && !Array.isArray(v) ? v : {}));
     const [province, setProvince] = usePersistent("cg.province", null, cleanProvince);
     const [wheel, setWheel] = usePersistent("cg.wheel", DEFAULT_WHEEL, cleanWheel);
+    const [studyAck, setStudyAck] = usePersistent("cg.study.ack", false, (v) => v === true);
     const [menuOpen, setMenuOpen] = useState(false);
     const [editing, setEditing] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -5683,7 +5753,11 @@ function CanGuide() {
     const open = (id) => go({ name: "topic", id });
     const toggleSave = (id) => setSaved((s) => (s.includes(id) ? s.filter((x) => x !== id) : [...s, id]));
     const isWheelPage = route.name === "home" || route.name === "group";
-    const isSubPage = ["tools", "tool", "about"].includes(route.name);
+    if (!studyAck)
+        return (React.createElement("div", { className: "cg" },
+            React.createElement("style", null, STYLES),
+            React.createElement(StudyPage, { onContinue: () => { setStudyAck(true); window.scrollTo(0, 0); } })));
+    const isSubPage = ["tools", "tool", "about", "study"].includes(route.name);
     const hasBack = !!topic || isSubPage;
     const backTo = route.name === "tool" ? { name: "tools" } : { name: "home" };
     return (React.createElement("div", { className: "cg" },
@@ -5703,7 +5777,7 @@ function CanGuide() {
                     ? React.createElement("button", { className: "icon-btn text-btn", onClick: () => setEditing(false) }, "Done")
                     : React.createElement("button", { className: "icon-btn", onClick: () => { if (route.name === "group")
                             go({ name: "home" }); setEditing(true); }, "aria-label": "Edit wheel" }, Icon.pen)) : React.createElement("span", { className: "icon-btn", "aria-hidden": "true" }))),
-        topic ? (React.createElement(TopicPage, { key: topic.id, topic: topic, province: province, setProvince: setProvince, open: open, go: go })) : route.name === "tools" ? (React.createElement(ToolsPage, { go: go })) : route.name === "tool" ? (React.createElement(ToolPage, { calcKey: route.key, open: open })) : route.name === "about" ? (React.createElement(AboutPage, { go: go })) : isWheelPage ? (React.createElement(Home, { route: route, go: go, back: back, open: open, wheel: wheel, setWheel: setWheel, editing: editing, recent: recent, saved: saved, seen: seen, clearHistory: () => { setRecent([]); setSeen({}); } })) : (React.createElement(Browse, { route: route, go: go, open: open, saved: saved, recent: recent })),
+        topic ? (React.createElement(TopicPage, { key: topic.id, topic: topic, province: province, setProvince: setProvince, open: open, go: go })) : route.name === "tools" ? (React.createElement(ToolsPage, { go: go })) : route.name === "tool" ? (React.createElement(ToolPage, { calcKey: route.key, open: open })) : route.name === "about" ? (React.createElement(AboutPage, { go: go })) : route.name === "study" ? (React.createElement(StudyPage, { onContinue: () => go({ name: "home" }), again: true })) : isWheelPage ? (React.createElement(Home, { route: route, go: go, back: back, open: open, wheel: wheel, setWheel: setWheel, editing: editing, recent: recent, saved: saved, seen: seen, clearHistory: () => { setRecent([]); setSeen({}); } })) : (React.createElement(Browse, { route: route, go: go, open: open, saved: saved, recent: recent })),
         menuOpen && (React.createElement(Drawer, { onClose: () => setMenuOpen(false), go: go, saved: saved, recent: recent, onEdit: () => { go({ name: "home" }); setEditing(true); setMenuOpen(false); } }))));
 }
 /* ---------------------------------------------------------------- HOME */
@@ -5945,7 +6019,9 @@ function Drawer({ onClose, go, saved, recent, onEdit }) {
             React.createElement("div", { className: "menu-rule" }),
             React.createElement("button", { className: "menu-item", onClick: () => go({ name: "about" }) },
                 React.createElement("span", null, "About CanGuide")),
-            React.createElement("p", { className: "drawer-foot" }, "Original summaries of Canadian guidelines. Confirm against the source before acting."))));
+            React.createElement("button", { className: "menu-item", onClick: () => go({ name: "study" }) },
+                React.createElement("span", null, "Study information")),
+            React.createElement("p", { className: "drawer-foot" }, "Original summaries of Canadian guidelines. Confirm against the source before acting. Study version · content as of November 14, 2026."))));
 }
 /* ---------------------------------------------------------------- BROWSE */
 /* System tiles: topic count and a few example topics. */
@@ -6156,7 +6232,6 @@ function TopicPage({ topic: t, province, setProvince, open, go }) {
                             levelLabel(x.level),
                             x.source.year ? ` · ${x.source.year}` : "",
                             i === 0 ? " · default" : ""))))))),
-                !pw.verified && (React.createElement(Notice, { kind: "unverified", label: "Not yet verified", text: "Carried over and not checked against the primary source. Confirm every point and dose before clinical use." })),
                 pw.topNote && React.createElement(Notice, { label: "Note", text: pw.topNote }),
                 pw.excludes && React.createElement(Notice, { label: "Does not apply to", text: pw.excludes }),
                 (t.conflicts || []).map((c, i) => React.createElement(Notice, { key: i, label: `Differs from ${c.with}`, text: c.note })),
@@ -6633,12 +6708,12 @@ function AboutPage({ go }) {
         React.createElement("h2", { className: "sec-title" }, "How each topic is made"),
         React.createElement("ul", { className: "about-list" },
             React.createElement("li", null,
-                "Written from the ",
-                React.createElement("strong", null, "full text of the primary source"),
-                " \u2014 never from memory or a secondary summary where the source was available."),
+                "Summarized from the ",
+                React.createElement("strong", null, "primary guideline"),
+                " and checked against it."),
             React.createElement("li", null,
-                React.createElement("strong", null, "Seven key points"),
-                " (nine at most), then a dosing grid where the guideline gives doses. Every drug says what to adjust or watch."),
+                React.createElement("strong", null, "A short set of key points"),
+                ", then a dosing grid where the guideline gives doses. Every drug says what to adjust or watch."),
             React.createElement("li", null, "Provincial notes record where practice differs \u2014 coverage, labs, referral pathways \u2014 with Ontario covered first."),
             React.createElement("li", null, "Where the source is silent or out of date, the topic says so rather than filling the gap.")),
         React.createElement("h2", { className: "sec-title" }, "Source tiers"),
@@ -6671,7 +6746,7 @@ function AboutPage({ go }) {
         React.createElement("h2", { className: "sec-title" }, "Use with judgment"),
         React.createElement("p", null, "CanGuide is a reference, not a substitute for clinical judgment or the full guideline. Doses and thresholds can change \u2014 confirm against the source linked on every topic before acting, especially for children, pregnancy and kidney or liver disease."),
         React.createElement("h2", { className: "sec-title" }, "Privacy"),
-        React.createElement("p", null, "Saved topics, history, your province and your wheel stay in this browser. Calculator entries are never stored."),
+        React.createElement("p", null, "This study copy of CanGuide has no accounts and sends nothing anywhere. Saved topics, history and your province stay in this browser on this device. Search terms and calculator entries are handled in your browser and are never stored or sent."),
         React.createElement("p", { className: "calc-src", style: { marginTop: 24 } },
             "CanGuide \u00B7 a Queen's University family medicine resident project \u00B7 ",
             TOPICS.length,
