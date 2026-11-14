@@ -493,6 +493,7 @@ const TOPICS = [
                 name: "Spironolactone",
                 dose: "12.5 mg daily, up to 25 mg",
                 adjustment: "Check K⁺ at 2–4 weeks and after every dose change. Check aldosterone-to-renin ratio BEFORE starting (rule out primary aldosteronism). Warn men re gynecomastia.",
+                src: "Hypertension Canada 2025 guideline (CMAJ 2025;197(20):E549–E564)",
             },
         ],
         calculators: [
@@ -587,7 +588,7 @@ const TOPICS = [
                     tier: "national",
                     level: "national",
                     short: "CCS · cardiology",
-                    state: "Still the current Canadian guideline, and five years old. ACC/AHA replaced their equivalent in March 2026 — see the conflict below. CCS hosts the full text chapter by chapter at the link; the CJC copy is bot-blocked.",
+                    state: "Still the current Canadian guideline, and five years old. ACC/AHA replaced their equivalent in March 2026 — see the conflict below. CCS hosts the full text chapter by chapter at the link.",
                 },
                 verified: true,
                 reviewedBy: "2026-10-26",
@@ -655,11 +656,20 @@ const TOPICS = [
         points: [
             "Four pillars | **ARNI** (or ACEi/ARB), **beta-blocker**, **MRA** and **SGLT2 inhibitor**: all four unless contraindicated",
             "Titrate fast | To the trial target dose, or maximally tolerated. Aim for all four at target within **3–6 months** of diagnosis. No fixed sequence is endorsed; titrating classes in parallel is acceptable",
-            "ARNI first | Preferred over ACEi/ARB. New HFrEF diagnosed in hospital: ARNI as first-line. Already on ACEi/ARB: switch once stabilized, **before discharge**. 36-hour washout after an ACEi; none needed after an ARB",
-            "Beta-blocker timing | Start as soon as possible after diagnosis, including during the index admission once hemodynamically stable; do not wait for discharge. Stabilize NYHA IV first",
-            "Add-ons | ;; **Ivabradine:** HR ≥ 70 (Health Canada label: ≥ 77) in sinus rhythm on GDMT ;; **Hydralazine/nitrate:** if ACEi/ARB/ARNI not tolerated, and in Black patients with advanced symptoms ;; **Digoxin:** AF with poor rate control, or persistent symptoms ;; **Vericiguat:** after a heart failure admission in the past 6 months",
+            "ARNI first | Preferred over ACEi/ARB. 36-hour washout after an ACEi; none needed after an ARB",
+            "Beta-blocker timing | Start as soon as possible after diagnosis. Stabilize NYHA IV first",
+            "Add-ons | ;; **Ivabradine:** HR ≥ 70 in sinus rhythm on GDMT ;; **Hydralazine/nitrate:** if ACEi/ARB/ARNI not tolerated, and in Black patients with advanced symptoms ;; **Digoxin:** AF with poor rate control, or persistent symptoms ;; **Vericiguat:** after a heart failure admission in the past 6 months",
             "Monitoring | ;; **MRA:** creatinine and K⁺ **within 1 week** of start or dose change ;; **ACEi/ARB/ARNI:** creatinine rise up to 30% is expected and not a reason to stop ;; **SGLT2i:** eGFR dip up to 15%, resolving over 1–3 months",
             "Before device referral | Optimize and titrate GDMT first, then repeat LVEF **3 months** after reaching target or maximally tolerated doses. Don't unduly delay referral if titration isn't feasible",
+        ],
+        notes: [
+            {
+                title: "In hospital",
+                body: [
+                    "New HFrEF diagnosed in hospital: ARNI as first-line. Already on ACEi/ARB: switch once stabilized, **before discharge**.",
+                    "Beta-blocker: start during the index admission once hemodynamically stable; do not wait for discharge.",
+                ],
+            },
         ],
         meds: [
             {
@@ -683,7 +693,7 @@ const TOPICS = [
             {
                 name: "Spironolactone (MRA)",
                 dose: "12.5 mg daily → target 25–50 mg daily",
-                adjustment: "Avoid if eGFR < 30. Recheck creatinine and K⁺ within 1 week of start or dose change. Reduce or hold if K⁺ > 5.5; resume once K⁺ ≤ 5.0. Minimal effect on BP. The Canadian label gives edema dosing only.",
+                adjustment: "Avoid if eGFR < 30. Recheck creatinine and K⁺ within 1 week of start or dose change. Reduce or hold if K⁺ > 5.5; resume once K⁺ ≤ 5.0. Minimal effect on BP.",
                 src: "CCS/CHFS 2021, Table 2",
             },
             {
@@ -783,6 +793,7 @@ const TOPICS = [
                 name: "DOACs (class note)",
                 dose: "Applies to apixaban, rivaroxaban, dabigatran and edoxaban",
                 adjustment: "Use Cockcroft-Gault CrCl. ESRD or dialysis: decide with nephrology.",
+                src: "CCS/CHRS 2020 AF guideline; the DOAC product monographs above",
             },
             {
                 name: "Beta-blockers (class note)",
@@ -911,7 +922,7 @@ const TOPICS = [
             { title: "Kidney Failure Risk Equation (KFRE)", url: "https://kidneyfailurerisk.com/" },
         ],
         handout: null,
-        related: ["ckd", "dpn", "htn", "lipids", "hf"],
+        related: ["ckd", "htn", "lipids", "hf"],
         conflicts: [],
         provincial: [],
         journal: [
@@ -941,8 +952,8 @@ const TOPICS = [
         changed: "",
         beyondGuideline: "",
         points: [
-            "Who to test | **Don't screen people without symptoms**. **Test any presentation consistent with thyroid disease.** For **non-specific symptoms**, test if there is a risk factor: ;; Women ≥ 50; men ≥ 60; autoimmune disease; family history; neck radiation; past thyroid surgery or radioiodine; **lithium or amiodarone** ;; **TSH first**; a normal TSH needs no repeat unless things change",
-            "Diagnose | **High TSH with low free T4** = primary hypothyroidism. Free T3 is rarely needed. **Don't screen in hospital or acute illness unless thyroid disease is suspected** — sick euthyroid; levothyroxine doesn't help it",
+            "Who to test | **Don't screen people without symptoms**. **Test any presentation consistent with thyroid disease.** **TSH first**; a normal TSH needs no repeat unless things change. For **non-specific symptoms**, test if there is a risk factor: ;; Women ≥ 50 ;; Men ≥ 60 ;; Autoimmune disease ;; Family history ;; Neck radiation ;; Past thyroid surgery or radioiodine ;; **Lithium or amiodarone**",
+            "Diagnose | **High TSH with low free T4** = primary hypothyroidism. Free T3 is rarely needed. **Don't screen in hospital or acute illness unless thyroid disease is suspected** — results may reflect sick euthyroid, which levothyroxine doesn't help",
             "Subclinical | High TSH, normal free T4. **Treat if TSH > 10**. Between the upper limit and 10, consider treating if: symptomatic; TPO-positive; ASCVD or heart failure (or their risk factors); pregnant. Untreated: **TSH every 6–12 months**",
             "Anti-TPO | **Not routine**. Useful with a goitre or a mildly raised TSH — positivity raises the risk of progression. Once positive, don't repeat",
             "Monitor treatment | TSH **at least 6 weeks** after any dose change, then **yearly** once normal — every 6 months on lithium or amiodarone. TSH varies **up to 50%** through the day; changes inside the reference range don't matter",
@@ -1157,7 +1168,7 @@ const TOPICS = [
             "Add-ons | ;; **Type 2 diabetes:** add **finerenone** and a **GLP-1 RA** (semaglutide is the one studied in CKD); KDIGO: use the GLP-1 RA when not at glycemic target despite metformin plus an SGLT2 inhibitor, or when the patient is unable to use them ;; Finerenone criteria (KDIGO): eGFR > 25, normal K⁺, ACR > 3 despite max ACEi/ARB ;; **SBP < 120** if tolerated (KDIGO) ;; **Statin** for everyone ≥ 50, and at 18–49 with CV risk factors",
             "Kidney failure risk | Use the 4-variable **KFRE** when eGFR < 60: ;; **5-year risk ≥ 3–5%** can inform referral ;; **2-year ≥ 10%**: multidisciplinary care ;; **2-year ≥ 40%**: dialysis and transplant planning",
             "Urgent referral | ;; Active urine sediment (red cell or cellular casts) ;; AKI without a readily reversible cause ;; Abrupt, sustained fall in eGFR ;; **eGFR < 15** ;; Nephrotic syndrome (PCR > 300 mg/mmol, albumin < 30 g/L)",
-            "Priority referral | ;; **eGFR < 30** ;; Unexplained persistent **ACR > 30–70 mg/mmol**, whatever the eGFR ;; eGFR decline **> 5 per year** ;; Diabetes with **eGFR < 45 and ACR > 30**",
+            "Priority referral | ;; **eGFR < 30** ;; Unexplained persistent **ACR > 30–70 mg/mmol**, whatever the eGFR (e.g., in absence of diabetes or HTN) ;; eGFR decline **> 5 per year** ;; Diabetes with **eGFR < 45 and ACR > 30**",
         ],
         footnotes: [
             { mark: "†", text: "KDIGO staging. By eGFR (G): G1 ≥ 90; G2 60–89; **G3a 45–59; G3b 30–44**; G4 15–29; G5 < 15. By ACR (A): A1 < 3; **A2 3–29**; **A3 ≥ 30 mg/mmol**." },
@@ -1184,7 +1195,7 @@ const TOPICS = [
             },
             {
                 name: "Statin or statin/ezetimibe",
-                dose: "BC Appendix C intensive regimens: atorvastatin 20 mg daily; rosuvastatin 10 mg daily; or simvastatin 20 mg + ezetimibe 10 mg daily.",
+                dose: "BC Appendix C regimens: atorvastatin 20 mg daily; rosuvastatin 10 mg daily; or simvastatin 20 mg + ezetimibe 10 mg daily",
                 adjustment: "Age ≥ 50: statin for all (KDIGO: statin or statin/ezetimibe if eGFR < 60). Age 18–49 (KDIGO criteria): coronary disease, diabetes, prior ischemic stroke or 10-year risk > 10%. CrCl < 30: rosuvastatin start 5 mg, max 10 mg; atorvastatin start at 10 mg. These recommendations exclude dialysis and kidney transplant.",
                 src: "BC CKD 2025; KDIGO 2024 Rec 3.15.1; Lipitor, Crestor and Ezetrol product monographs",
             },
@@ -1226,7 +1237,7 @@ const TOPICS = [
         beyondGuideline: "",
         points: [
             "Diagnosis | Compatible history **plus** documented reversible obstruction: ;; **Age ≥ 18**: FEV1/FVC < LLN (~0.75–0.8) **and** FEV1 rise ≥ **12% and ≥ 200 mL** ;; **Age 6–17**: ratio < LLN (~0.8–0.9), rise ≥ 12%, no volume floor ;; Normal spirometry does **not** exclude asthma",
-            "Under 6 | Clinical diagnosis — provider-documented wheeze or airflow obstruction improving with SABA ± oral steroid, across ≥ 2 episodes. Caregiver report alone is unreliable. Up to half outgrow it: after 3–6 months of good control, try a monitored trial off treatment",
+            "Preschool children | Under 6: clinical diagnosis — provider-documented wheeze or airflow obstruction improving with SABA ± oral steroid, across ≥ 2 episodes. Caregiver report alone is unreliable. Up to half outgrow it: after 3–6 months of good control, try a monitored trial off treatment",
             "Controlled | **All** of: daytime symptoms ≤ 2 days/wk, reliever ≤ 2 doses/wk, night < 1/wk and mild, normal activity, no work or school missed, FEV1 or PEF ≥ 90% personal best. Any single criterion missed = poorly controlled",
             "Higher risk | **Any one**: previous severe exacerbation (systemic steroids, ED, or admission), poorly controlled, > 2 SABA inhalers/year, current smoker. Higher-risk patients shouldn't stay on PRN SABA alone, even with minimal symptoms",
             "Start controller | Poorly controlled **or** higher risk → **daily ICS + PRN SABA**, all ages. PRN bud/form is the ≥ 12 y alternative, preferred over daily ICS only where adherence stays poor despite substantial education. Well controlled **and** lower risk → PRN SABA may continue",
@@ -1255,7 +1266,7 @@ const TOPICS = [
             {
                 name: "ICS / LABA fixed-dose combination",
                 dose: "Product-specific. Adult max daily LABA: salmeterol 100 mcg, formoterol 48 mcg, vilanterol 25 mcg",
-                adjustment: "First-line add-on ≥ 12 y once low-dose ICS isn't enough, with the LABA in the same inhaler as the ICS. The LABA black box warning has been removed, but LABA monotherapy is still not to be used.",
+                adjustment: "First-line add-on ≥ 12 y once low-dose ICS isn't enough, with the LABA in the same inhaler as the ICS. LABA monotherapy is still not to be used.",
                 src: "CTS 2021",
             },
             {
@@ -1299,13 +1310,21 @@ const TOPICS = [
         changed: "Earlier and more aggressive initial therapy at every severity; triple therapy now recommended to reduce mortality; single inhaler preferred over multiple; blood eosinophils dropped as an ICS biomarker.",
         beyondGuideline: "CTS sets no CAT or mMRC target to treat to; it advises monitoring symptom burden and tailoring treatment. The 2019 advice to refer all moderate–severe COPD to respirology was dropped in 2023.",
         points: [
-            "Diagnosis | Post-bronchodilator **FEV1/FVC < 0.70**. Never use ICS monotherapy. Test alpha-1 antitrypsin once in everyone diagnosed with COPD (CTS 2025)",
+            "Diagnosis | Post-bronchodilator **FEV1/FVC < 0.70**. Test alpha-1 antitrypsin once in everyone diagnosed with COPD (CTS 2025)",
             "Stratify | Treatment is chosen by symptom burden (mMRC or CAT) **plus** exacerbation risk — you need both. mMRC grade 2 (walking slower than peers on the flat) separates mild from moderate–severe",
             "Exacerbation risk | **Low** = ≤ 1 moderate in the past year and no ED visit or admission; **High** = ≥ 2 moderate **or** ≥ 1 severe. Moderate = treated with antibiotics and/or oral steroids; severe = ED or hospital",
-            "Initial therapy | Mild: LAMA **or** LABA; moderate–severe, low risk: **LAMA/LABA**; moderate–severe, high risk: **ICS/LAMA/LABA**. Each tier now starts one step higher than in 2019",
+            "Initial therapy | Mild: LAMA **or** LABA; moderate–severe, low risk: **LAMA/LABA**; moderate–severe, high risk: **ICS/LAMA/LABA**. Each tier now starts one step higher than in 2019. Never use ICS monotherapy",
             "Which dual | LAMA/LABA is preferred over ICS/LABA — better lung function, less pneumonia. Use ICS/LABA only where asthma coexists",
-            "Mortality | Triple therapy reduces all-cause mortality versus dual in moderate–severe high-risk COPD. Annualized NNT to prevent one death: **80** (ETHOS), **121** (IMPACT) (Kaplan 2024 review). NNT **4** for 1 year to prevent one moderate–severe exacerbation",
+            "Mortality | Triple therapy reduces all-cause mortality versus dual in moderate–severe high-risk COPD. Per the Kaplan 2024 review, not the CTS guideline: annualized NNT to prevent one death **80** (ETHOS), **121** (IMPACT); NNT **4** for 1 year to prevent one moderate–severe exacerbation",
             "One device | Single-inhaler triple therapy is preferred over multiple inhalers — better adherence and persistence, fewer critical technique errors. Recheck technique at follow-up visits",
+        ],
+        notes: [
+            {
+                title: "Eosinophil-guided ICS",
+                body: [
+                    "CTS doesn't use blood eosinophils to choose ICS — the evidence is observational and post hoc. It notes that patients at risk of exacerbations with eosinophils ≥ 300 cells/µL benefit more from ICS and may exacerbate if it's withdrawn.",
+                ],
+            },
         ],
         meds: [
             {
@@ -1336,12 +1355,7 @@ const TOPICS = [
         calculators: [],
         handout: { title: "CTS COPD action plan template", url: "https://cts-sct.ca/wp-content/uploads/2018/03/4915_THOR_COPDActionPlanUpdate_Editable_Eng_v006.pdf" },
         related: ["asthma", "smoking"],
-        conflicts: [
-            {
-                with: "Eosinophil-guided ICS",
-                note: "CTS doesn't use blood eosinophils to choose ICS — the evidence is observational and post hoc. It notes that patients at risk of exacerbations with eosinophils ≥ 300 cells/µL benefit more from ICS and may exacerbate if it's withdrawn.",
-            },
-        ],
+        conflicts: [],
         provincial: [
             {
                 scope: "ON", kind: "pathway", label: "Kingston (KHSC) COPD pathway (2026)",
@@ -1438,9 +1452,9 @@ const TOPICS = [
         points: [
             "Diagnose | **Acute dysuria**, or **two or more of**: new urgency or frequency, suprapubic pain, hematuria. **Don't treat asymptomatic bacteriuria**. **No urine culture needed** for uncomplicated cystitis",
             "Not uncomplicated | ;; **Fever, rigors, flank pain, nausea or vomiting** ;; Male ;; Pregnant ;; Under 12 ;; Immunocompromised ;; Catheter ;; Neurogenic bladder ;; Stones or kidney dysfunction ;; Gross hematuria or confusion also needs full assessment",
-            "First line | **Nitrofurantoin monohydrate/macrocrystals (BID formulation) 100 mg BID × 5 days**. Ontario *E. coli* resistance: about **3% to nitrofurantoin**, about **20% to TMP-SMX**",
+            "First line | **Nitrofurantoin monohydrate/macrocrystals (BID formulation) 100 mg BID × 5 days**. Ontario E. coli resistance: about **3% to nitrofurantoin**, about **20% to TMP-SMX**",
             "Alternatives | **TMP-SMX DS BID × 3 days**; trimethoprim 200 mg daily × 3 days; **fosfomycin 3 g once** (adults only; inferior to nitrofurantoin in one RCT)",
-            "Course length | **Short courses only** — longer ones work no better and add side effects, resistance and *C. difficile*",
+            "Course length | **Short courses only** — longer ones work no better and add side effects, resistance and C. difficile",
             "Follow up | Check at **72 hours**. No improvement, or upper-tract signs → reassess as a complicated infection (see Not uncomplicated)",
             "Relapse and recurrence | Symptoms back **within 4 weeks** of finishing = relapse. **≥ 2 in 6 months or ≥ 3 in 12 months** = recurrent — beyond empiric treatment, needs workup",
         ],
@@ -1513,16 +1527,19 @@ const TOPICS = [
                 name: "Ferrous fumarate",
                 dose: "300 mg tablet (100 mg elemental iron), 1 daily to BID",
                 adjustment: "Highest elemental iron per tablet. Alternate-day dosing if GI side effects limit use. No renal adjustment stated.",
+                src: "BC Guidelines, Iron Deficiency (2019)",
             },
             {
                 name: "Ferrous sulfate",
                 dose: "300 mg tablet (60 mg elemental iron), 1 BID to TID",
                 adjustment: "Same 100–200 mg/day elemental target. Alternate-day dosing if not tolerated. No renal adjustment stated.",
+                src: "BC Guidelines, Iron Deficiency (2019)",
             },
             {
                 name: "Ferrous gluconate",
                 dose: "300 mg tablet (35 mg elemental iron), 1–2 BID; never more than 5 tablets a day in total",
                 adjustment: "Lowest elemental iron per tablet — easy to underdose. No renal adjustment stated.",
+                src: "BC Guidelines, Iron Deficiency (2019)",
             },
             {
                 name: "IV iron",
@@ -1579,7 +1596,7 @@ const TOPICS = [
             "Where | **Outpatient** treatment preferred. Admit for: limb-threatening DVT; high bleeding risk; another reason for admission. IVC filter only if anticoagulation is contraindicated",
             "Which drug | ;; **Apixaban or rivaroxaban** (no lead-in), or LMWH followed by dabigatran or edoxaban, all preferred over warfarin ;; VKA instead for: antiphospholipid syndrome; interacting CYP3A4 or P-gp drugs; poor oral absorption; another VKA indication such as a mechanical valve ;; Start with an immediately acting drug, never warfarin alone",
             "Special groups | ;; **Pregnancy**: **LMWH alone**; no DOACs in pregnancy or breastfeeding ;; **Active cancer**: LMWH, or apixaban, rivaroxaban or edoxaban ;; **CrCl < 30**: avoid therapeutic LMWH and dabigatran; apixaban is the DOAC used in severe renal dysfunction ;; **Extremes of weight**: discuss with a thrombosis specialist",
-            "Calf (distal) DVT | Anticoagulate **3 months**, or withhold and **repeat ultrasound weekly × 2** (10 to 15% extend). Treat if: symptoms severe; follow-up imaging is not possible; it extends; or a risk factor is present: > 5 cm; several veins; near the popliteal; no reversible cause; prior VTE; inpatient; active cancer; positive D-dimer",
+            "Calf (distal) DVT | Anticoagulate **3 months**, or withhold and **repeat ultrasound weekly × 2** (10 to 15% extend). Treat if: ;; Symptoms severe ;; Follow-up imaging is not possible ;; It extends ;; Any risk factor: ;;; Thrombus > 5 cm ;;; Several veins involved ;;; Near the popliteal ;;; No reversible cause ;;; Prior VTE ;;; Inpatient ;;; Active cancer ;;; Positive D-dimer",
             "How long | **At least 3 months** for everyone; stopping at 4 to 6 weeks doubles recurrence. **Stop at 3 months** after: a major transient provoker such as surgery (< 3% recurrence the next year); distal DVT; subsegmental PE; a low HERDOO2 score in women; major bleeding risk **> 2 to 3% a year**",
             "HERDOO2 | Identifies women who can safely stop anticoagulation after a first unprovoked VTE, rather than continuing indefinitely; score it with the HERDOO2 calculator in this entry.",
             "Unprovoked or weakly provoked | Off treatment, recurrence after proximal DVT or PE is about **10% at 1 year, 25% at 5, 36% at 10**. Extended therapy lowers recurrence but not mortality or quality of life; decide together and **revisit every year**. Continue indefinitely, if bleeding risk allows, with: active cancer; antiphospholipid syndrome; high-risk thrombophilia",
@@ -1614,7 +1631,7 @@ const TOPICS = [
             {
                 name: "Warfarin",
                 dose: "Usually 5 mg daily to start, overlapped with LMWH or UFH for ≥ 5 days and until INR ≥ 2.0 on 2 consecutive days",
-                adjustment: "Dose varies widely: INR often until stable, then every 2–4 weeks. Many drug, alcohol and supplement interactions (e.g. St. John's wort) — recheck INR with any change. Keep vitamin K intake steady rather than restricting it. The choice for antiphospholipid syndrome.",
+                adjustment: "Dose varies widely: INR checked often until stable, then every 2–4 weeks. Many drug, alcohol and supplement interactions (e.g. St. John's wort) — recheck INR with any change. Keep vitamin K intake steady rather than restricting it. The choice for antiphospholipid syndrome.",
             },
         ],
         calculators: [],
@@ -1636,7 +1653,7 @@ const TOPICS = [
             year: 2026,
             edition: null,
             checked: "2026-10",
-            citation: "Canadian Immunization Guide, Part 1: Recommended immunization schedules (partial update June 2026)",
+            citation: "Canadian Immunization Guide, Part 1: Recommended immunization schedules (partial update June 2026); influenza and COVID-19 from the CIG Part 4 chapters and the NACI guidance on COVID-19 vaccines starting fall 2026",
             url: "https://www.canada.ca/en/public-health/services/publications/healthy-living/canadian-immunization-guide-part-1-key-immunization-information/page-13-recommended-immunization-schedules.html",
             tier: "national",
             state: "Living chapter, partly updated June 2026. PHAC flags several NACI statements as not yet folded in, including May 2026 meningococcal guidance under age 2. Provinces set what is publicly funded and when.",
@@ -1644,12 +1661,12 @@ const TOPICS = [
         changed: "Adult pneumococcal now one dose of Pneu-C-20 or Pneu-C-21 at ≥ 65 regardless of prior vaccines (Nov 2024); RSV vaccine for all adults ≥ 75 and maternal RSVpreF from 28 weeks; HPV is a single dose to age 20; Pneu-C-15 or Pneu-C-20 replaced Pneu-C-13 in infants; Men-C-ACYW replaces Men-C-C at 12–23 months (May 2026).",
         beyondGuideline: "",
         points: [
-            "Pregnancy | ;; **Tdap every pregnancy**, ideally **27–32 wk**, whatever the interval since the last dose ;; **RSVpreF may be considered at 28–36 wk**, in discussion with the care provider, before or during RSV season, **≥ 2 wk before birth**; not repeated in a later pregnancy: protect that baby with a monoclonal antibody instead",
-            "Infants | ;; **2, 4, 6 mo**: DTaP-IPV-Hib (or the hexavalent with hep B) at each visit; 4th dose at **18 mo** ;; Pneumococcal conjugate at 2 and 4 mo; booster at **12–15 mo** ;; Rotavirus: first dose **≥ 6 wk and before 15 wk**; series done **before 8 mo**; no catch-up past that ;; **RSV**: one dose of **nirsevimab or clesrovimab** for infants **< 8 mo** entering or in their first season, if the mother had no RSVpreF or delivered < 2 wk after it ;; High-risk infants get it **even if the mother was vaccinated** ;; **Influenza** yearly from **6 mo**; under 9 and first time: 2 doses 4 weeks apart",
-            "Toddlers | ;; **12 mo**: **MMR** ;; **12–23 mo**: **Men-C-ACYW** once (replaces Men-C-C; NACI May 2026) ;; **12–15 mo**: **varicella** ;; **From 18 mo**, no later than school entry: second MMR and varicella; MMRV at 4–6 y is an option",
-            "School age to 17 | ;; **4–6 y**: **Tdap-IPV** booster ;; **Around 12 y**: Men-C-ACYW; hep B if no infant series; **HPV: one dose of 9vHPV, ages 9–20** (2 doses if immunocompromised) ;; Tdap again 10 years after the preschool booster",
-            "Adults | ;; **Tdap once** in adulthood, then Td q10y ;; **Recombinant zoster**: 2 doses, 2–6 mo apart, at **≥ 50**; or ≥ 18 if immunocompromised, finished ≥ 14 d before immunosuppression ;; MMR: born **≥ 1970** gets 1 dose ;; Varicella: 2 doses if < 50 without immunity ;; HPV: 2 doses at 21–26",
-            "Older adults | ;; **One pneumococcal conjugate** dose (Pneu-C-20 or Pneu-C-21) at **≥ 65**, **regardless of past pneumococcal vaccines**, ≥ 1 y after the last one; same for < 65 at increased risk ;; **RSV**: single dose for **all ≥ 75**, and 65–74 at increased risk; no RSV booster",
+            "Pregnancy | ;; **Tdap every pregnancy**, ideally **27–32 wk**, whatever the interval since the last dose ;; **Influenza** every season, at any stage of pregnancy, with an inactivated vaccine (the live nasal vaccine is not for pregnancy) ;; **COVID-19**: pregnancy is an increased-risk group, so vaccination is **recommended**, one dose a year ;; **RSVpreF may be considered at 28–36 wk**, in discussion with the care provider, before or during RSV season, **≥ 2 wk before birth**; not repeated in a later pregnancy: protect that baby with a monoclonal antibody instead",
+            "Infants | ;; **2, 4, 6 mo**: DTaP-IPV-Hib (or the hexavalent with hep B) at each visit; 4th dose at **18 mo** ;; Pneumococcal conjugate at 2 and 4 mo; booster at **12–15 mo** ;; Rotavirus: first dose **≥ 6 wk and before 15 wk**; series done **before 8 mo**; no catch-up past that ;; **RSV**: one dose of **nirsevimab or clesrovimab** for infants **< 8 mo** entering or in their first season, if the mother had no RSVpreF or delivered < 2 wk after it ;; High-risk infants get it **even if the mother was vaccinated** ;; **Influenza** yearly from **6 mo**; under 9 and first time: 2 doses 4 weeks apart ;; **COVID-19** from **6 mo** is recommended for those at **increased risk** (underlying medical conditions, long-term care or congregate living, First Nations, Inuit or Métis communities); others may be offered it. First series under 5: 2 doses of Spikevax 8 wk apart (3 doses, 4–8 wk apart, if moderately to severely immunocompromised)",
+            "Toddlers | ;; **12 mo**: **MMR** ;; **12–23 mo**: **Men-C-ACYW** once (replaces Men-C-C; NACI May 2026) ;; **12–15 mo**: **varicella** ;; **From 18 mo**, no later than school entry: second MMR and varicella; MMRV at 4–6 y is an option ;; **Influenza** yearly (1 dose once vaccinated before); **COVID-19** as for infants: recommended at increased risk, optional for others",
+            "School age to 17 | ;; **4–6 y**: **Tdap-IPV** booster ;; **Around 12 y**: Men-C-ACYW; hep B if no infant series; **HPV: one dose of 9vHPV, ages 9–20** (2 doses if immunocompromised) ;; Tdap again 10 years after the preschool booster ;; **Influenza** yearly (the nasal live vaccine is an option from 2 y, with eligibility limits) ;; **COVID-19**: recommended at increased risk, optional for others; **1 dose** a year (2 doses for the first series if moderately to severely immunocompromised)",
+            "Adults | ;; **Tdap once** in adulthood, then Td q10y ;; **Recombinant zoster**: 2 doses, 2–6 mo apart, at **≥ 50**; or ≥ 18 if immunocompromised, finished ≥ 14 d before immunosuppression ;; MMR: born **≥ 1970** gets 1 dose ;; Varicella: 2 doses if < 50 without immunity ;; HPV: 2 doses at 21–26 ;; **Influenza** yearly, 1 dose ;; **COVID-19**: **1 dose a year** recommended at increased risk (underlying medical conditions, pregnancy, First Nations, Inuit or Métis communities, health care workers and other care providers, congregate living); others may be offered it. Moderately to severely immunocompromised: a **second yearly dose**, ≥ 3 mo after the first",
+            "Older adults | ;; **One pneumococcal conjugate** dose (Pneu-C-20 or Pneu-C-21) at **≥ 65**, **regardless of past pneumococcal vaccines**, ≥ 1 y after the last one; same for < 65 at increased risk ;; **RSV**: single dose for **all ≥ 75**, and 65–74 at increased risk; no RSV booster ;; **Influenza** yearly: **high-dose or adjuvanted** vaccine preferred at **≥ 65** (any age-appropriate vaccine if neither is available) ;; **COVID-19**: **all ≥ 65**, one dose a year; a **second dose ≥ 3 mo later** is strongly recommended at **≥ 80**, in long-term care or congregate living, and at 65–79 with underlying conditions; may be offered to other 65–79",
         ],
         meds: [],
         calculators: [],
@@ -1691,7 +1708,7 @@ const TOPICS = [
         journal: [
             { j: "CMAJ", year: 2026, title: "Reducing distress during vaccine injections: 2026 guideline update", note: "Use a **fast injection** at all ages; infants ≤ 12 months: **breastfeed**, bottle, a sweet liquid or a pacifier; offer **topical anesthetic** at the injection site at all ages; use distraction — toys and singing for infants, music, digital media or games for older children and adults", url: "https://doi.org/10.1503/cmaj.260123" },
         ],
-        editorial: "Schedule points come from the CIG schedule chapter; adult pneumococcal from the Nov 2024 NACI summary and RSV from the CIG RSV chapter (May 2026), because the schedule chapter has not absorbed either. Influenza in pregnancy and COVID-19 are deliberately absent — neither was in the fetched text. The Ontario childhood note is from the Spring 2025 publicly funded schedule as reposted by a health unit; check it against the current Ministry edition. Catch-up schedules would justify their own topic. Other provinces still needed — zoster and RSV funding differ most. Restructured Nov 3, 2026, with no clinical content changed: seven points became six on one axis, life stage in order (pregnancy, infants, toddlers, school age to 17, adults, older adults); ages moved from point titles into the points as leads, infant RSV folded into Infants, and influenza moved to Infants where it starts (6 mo). The six-point life-stage structure is a settled decision; future audits should not restore age-band titles or split infant RSV back into a product point.",
+        editorial: "Schedule points come from the CIG schedule chapter; adult pneumococcal from the Nov 2024 NACI summary and RSV from the CIG RSV chapter (May 2026), because the schedule chapter has not absorbed either. Influenza (CIG Part 4 influenza chapter, partial update Aug 2026; NACI 2025–2026 statement) and COVID-19 (CIG Part 4 COVID-19 chapter, Oct 2026; NACI summary of June 2026, guidance starting fall 2026) added in the V259 round, inside the existing life-stage points; COVID-19 is risk-based, not universal, and only the infant influenza line predates this. The Ontario childhood note is from the Spring 2025 publicly funded schedule as reposted by a health unit; check it against the current Ministry edition. Catch-up schedules would justify their own topic. Other provinces still needed — zoster and RSV funding differ most. Restructured Nov 3, 2026, with no clinical content changed: seven points became six on one axis, life stage in order (pregnancy, infants, toddlers, school age to 17, adults, older adults); ages moved from point titles into the points as leads, infant RSV folded into Infants, and influenza moved to Infants where it starts (6 mo). The six-point life-stage structure is a settled decision; future audits should not restore age-band titles or split infant RSV back into a product point.",
     },
     {
         id: "cervical-screen",
@@ -1885,7 +1902,7 @@ const TOPICS = [
         provincial: [
             {
                 scope: "BC", kind: "guideline", label: "BC Cancer Lung Screening (2022–)",
-                note: "55–74 with a significant smoking history; **patients self-refer by phone 1-877-717-5864** for a risk assessment; providers fax the eligibility form for those facing barriers; CT wait 1–6 months",
+                note: "55–74 with a significant smoking history; **patients self-refer** for a risk assessment; providers fax the eligibility form for those facing barriers; CT wait 1–6 months",
                 url: "https://www.bccancer.bc.ca/screening/health-professionals/lung",
             },
             {
@@ -1920,9 +1937,9 @@ const TOPICS = [
             "Start | **Age 50** for men who choose screening. **Age 45** if at increased risk (e.g. a first- or second-degree relative with prostate cancer)",
             "Interval | **PSA < 1 ng/mL: every 4 years**. **1–3: every 2 years**. **> 3**: optimal interval unknown — consider closer testing or further assessment",
             "Stop | At **60 if PSA < 1**. Most others at **70** — continue past 70 only in excellent health, by preference. Stop whenever life expectancy drops below 10 years",
-            "Elevated PSA | **Repeat and confirm before acting**; one value should not drive a biopsy. No single cut-off for all men. DRE at the same interval as PSA; a suspicious DRE alone may warrant biopsy. On finasteride or dutasteride, double the reported PSA (BC guideline; NCCN via the CUA supplementary table)",
+            "Elevated PSA | **Repeat and confirm before acting**; one value should not drive a biopsy. No single cut-off for all men. DRE at the same interval as PSA; a suspicious DRE alone may warrant biopsy. On finasteride or dutasteride, double the reported PSA (BC guideline; CUA supplementary table)",
             "Before biopsy | **Multiparametric MRI first** in biopsy-naive men at elevated risk who would be treated: ;; MRI positive → targeted plus systematic biopsy ;; MRI negative → biopsy may be skipped after discussion; it misses 8–24% of significant cancers",
-            "Add-on tests | Free PSA % can help but not alone. PSA velocity and density not alone. 4Kscore, PHI and PCA3 are not publicly funded — not for routine use",
+            "Add-on tests | Free PSA % can help, but not on its own. PSA velocity and density are not enough on their own. 4Kscore, PHI and PCA3 are not publicly funded and not for routine use",
         ],
         meds: [],
         calculators: [],
@@ -2113,18 +2130,18 @@ const TOPICS = [
                 name: "Aripiprazole (adjunct)",
                 dose: "Start 2–5 mg daily; increase by up to 5 mg at intervals of at least 1 week; effective range 2–15 mg, added to an antidepressant",
                 adjustment: "First-line adjunct for partial response to a tolerated antidepressant. Licensed in Canada as an adjunct to antidepressants for MDD in adults.",
+                src: "Abilify product monograph (Otsuka Canada, 2021)",
             },
             {
                 name: "Brexpiprazole (adjunct)",
                 dose: "0.5–2 mg daily, added to an antidepressant",
-                adjustment: "First-line adjunct, licensed in Canada for this use. Dose range from the product monograph. Max 1.25 mg with CrCl < 60 or moderate–severe hepatic impairment.",
+                adjustment: "First-line adjunct, licensed in Canada for this use. Max 1.25 mg with CrCl < 60 or moderate–severe hepatic impairment.",
+                src: "Rexulti product monograph (Otsuka Canada and Lundbeck Canada, 2024)",
             },
         ],
-        calculators: [
-            { title: "PHQ-9", url: "https://www.mdcalc.com/calc/1725/phq-9-patient-health-questionnaire-9" },
-        ],
+        calculators: [],
         handout: null,
-        related: ["smoking", "perinatal-mh"],
+        related: ["smoking"],
         conflicts: [
             {
                 with: "Task Force 2025",
@@ -2164,7 +2181,7 @@ const TOPICS = [
         changed: "",
         beyondGuideline: "",
         points: [
-            "Diagnose | DSM-5: ;; **6 of 9** inattentive and/or hyperactive-impulsive symptoms (**5 of 9** from age 17) ;; Present **by age 12** ;; Impairing in **≥ 2 roles** for **≥ 6 months** ;; No better explanation ;; Manageable in primary care. Rating scales screen and track change; they don't make the diagnosis",
+            "Diagnose | Manageable in primary care. Rating scales screen and track change; they don't make the diagnosis. DSM-5: ;; **6 of 9** inattentive and/or hyperactive-impulsive symptoms (**5 of 9** from age 17) ;; Present **by age 12** ;; Impairing in **≥ 2 roles** for **≥ 6 months** ;; No better explanation",
             "Assess | ;; Screen mood, anxiety, sleep and substance use (e.g. PHQ-9, GAD-7) ;; Treat the most impairing disorder first ;; **Psychosis, bipolar disorder, severe mood disorder**: treat before starting ADHD treatment ;; **Substance use disorder**: treat at the same time as the ADHD ;; Suicidal or violent thoughts take priority ;; Consult when comorbidity drives the picture, treatment fails, or the family won't accept the diagnosis",
             "Before starting | ;; **Work up first**: unexplained light-headedness, shortness of breath or other cardiac symptoms; a **family history of suspected sudden cardiac death** ;; BP and HR at baseline and follow-up ;; **No routine ECG** in young patients with no heart history and a normal exam ;; Cardiology if heart disease is known or suspected",
             "First line | **Long-acting stimulants**: ;; Methylphenidate (Biphentin, Concerta, Foquest) ;; Amphetamine (Adderall XR, Vyvanse) ;; Response to one class doesn't predict the other: **try both** before second line",
@@ -2254,7 +2271,7 @@ const TOPICS = [
             "Look further | Check **gait speed, parkinsonism, frailty, neuropsychiatric symptoms, sleep and hearing**. Correct vision. **Cut highly anticholinergic drugs**",
             "Reduce risk | **Mediterranean-style diet**, regular aerobic and/or resistance exercise, **treat hearing loss**, **CPAP for sleep apnea**, 7–8 h sleep, social and mental activity. **Treat high BP**; no aspirin for silent white-matter changes without stroke",
             "Non-drug care | **Exercise for people living with dementia**. **Group cognitive stimulation** for mild to moderate dementia. **Caregiver education and support**. Case management",
-            "Deprescribing | Consider stopping a cholinesterase inhibitor or memantine **after > 12 months** if: ;; Meaningful decline over 6 months; no benefit; **severe dementia**; intolerable side effects; poor adherence ;; **Stop in MCI and frontotemporal dementia**. Not during active psychosis, agitation or aggression. **Taper** (halve the dose every 4 weeks); restart if clearly worse",
+            "Deprescribing | **Stop in MCI and frontotemporal dementia**. Not during active psychosis, agitation or aggression. **Taper** (halve the dose every 4 weeks); restart if clearly worse. Consider stopping a cholinesterase inhibitor or memantine **after > 12 months** if: ;; Meaningful decline over 6 months ;; No benefit ;; **Severe dementia** ;; Intolerable side effects ;; Poor adherence",
         ],
         meds: [
             {
@@ -2304,8 +2321,8 @@ const TOPICS = [
         beyondGuideline: "",
         points: [
             "Screen | GAD: \"In the past 4 weeks, have you been bothered by feeling worried, tense or anxious most of the time?\" — plus tension, irritability, poor sleep. Panic: sudden unexpected attacks of intense fear, then **a month or more of worrying** about further attacks",
-            "Start | **CBT or medication** — similar efficacy; routine combination is not supported as a first step. CBT is first line for social anxiety, with efficacy comparable to drugs. Sessions: panic about **12–14 weekly**; GAD, fewer than 8 work as well as 8 or more for anxiety symptoms. In panic, begin drugs with a **first-line agent**",
-            "GAD first line | **Duloxetine, escitalopram, paroxetine, pregabalin, sertraline, venlafaxine XR**. Second line includes benzodiazepines, buspirone, hydroxyzine, quetiapine XR, vortioxetine (off-label in Canada — licensed for MDD only). **Not recommended: propranolol**",
+            "Start | **CBT or medication** — similar efficacy; routine combination is not supported as a first step. CBT is first line for social anxiety, with efficacy comparable to drugs. Sessions: panic about **12–14 weekly**; GAD: fewer than 8 sessions work as well as 8 or more for anxiety symptoms. In panic, begin drugs with a **first-line agent**",
+            "GAD first line | **Duloxetine, escitalopram, paroxetine, pregabalin, sertraline, venlafaxine XR**. Second line includes benzodiazepines, buspirone, hydroxyzine, quetiapine XR, vortioxetine. Pregabalin and vortioxetine are off-label in Canada for GAD. **Not recommended: propranolol**",
             "Panic first line | **Citalopram, escitalopram, fluoxetine, fluvoxamine, paroxetine, sertraline, venlafaxine XR**. **Start low** and titrate every 1–2 weeks over 4–6 weeks. Not recommended: buspirone, propranolol, trazodone",
             "Social anxiety first line | **Escitalopram, fluvoxamine, paroxetine, pregabalin, sertraline, venlafaxine XR**. Second line includes benzodiazepines, citalopram, gabapentin, phenelzine. Beta-blockers only for performance situations such as public speaking. Not recommended: buspirone, quetiapine",
             "Benzodiazepines | **Second line, short term**. May speed early response when started alongside an SSRI, or settle acute agitation. Not first-line on their own",
@@ -2334,11 +2351,10 @@ const TOPICS = [
                 name: "Benzodiazepines — alprazolam, clonazepam, lorazepam, diazepam",
                 dose: "Short-term only",
                 adjustment: "Second line. Useful to bridge the first weeks of an SSRI or for acute agitation. Avoid as long-term monotherapy.",
+                src: "Anxiety Disorders Association of Canada 2014 guideline",
             },
         ],
-        calculators: [
-            { title: "GAD-7", url: "https://www.mdcalc.com/calc/1727/gad-7-general-anxiety-disorder-7" },
-        ],
+        calculators: [],
         handout: null,
         related: ["mdd", "aud"],
         conflicts: [],
@@ -2403,6 +2419,7 @@ const TOPICS = [
                 name: "Naloxone (take-home kit)",
                 dose: "Per kit instructions",
                 adjustment: "Offer to every patient with OUD, and to family and friends, as part of harm reduction.",
+                src: "CRISM 2024 national OUD guideline",
             },
         ],
         calculators: [],
@@ -2435,7 +2452,7 @@ const TOPICS = [
         points: [
             "Screen everyone | **Adults and youth 12–25, routinely — yearly is practical**. Ask drinks in an average week and whether > 2 on one occasion, against Canada's Guidance (**≤ 2 a week low risk; 3–6 moderate; ≥ 7 high**); AUDIT-C is optional :: ;; **At or below the guidance**: brief education ;; Above it, ask about alcohol-related problems ;; **No problems**: personalized risk advice and cutting-down tips ;; **Problems**: **DSM-5-TR interview — mild 2–3, moderate 4–5, severe ≥ 6** criteria",
             "Brief intervention | **Offer to everyone who screens positive** — cuts about 20 g alcohol a week at a year. Discuss Canada's Guidance on Alcohol and Health. Goals are the patient's: **abstinence, less drinking, or harm reduction**",
-            "Withdrawal risk | **PAWSS for every patient with AUD**, plus past seizures or DTs. **Low risk (PAWSS < 4): gabapentin** first, or carbamazepine or clonidine, as outpatient. **High risk (PAWSS ≥ 4): short-course benzodiazepine**, ideally inpatient. **Thiamine 200 mg PO daily** before and during",
+            "Withdrawal risk | **PAWSS for every patient with AUD**, plus past seizures or DTs. **Low risk (PAWSS < 4): gabapentin** first, or carbamazepine or clonidine, as outpatient. **High risk (PAWSS ≥ 4): short-course benzodiazepine**, ideally inpatient. **Thiamine 200 mg PO daily** before and during withdrawal",
             "First-line drugs | **Moderate to severe AUD: naltrexone or acamprosate**. **Naltrexone** for abstinence or cutting down — not with opioids or acute hepatitis. **Acamprosate** for abstinence — not with severe kidney impairment. Continue **at least 6 months**, then reassess",
             "Second line | **Topiramate** — not in pregnancy, narrow-angle glaucoma or kidney stones. **Gabapentin** 100–300 mg TID, up to 1800 mg/day",
             "Don't use | **No SSRIs or antipsychotics to treat AUD** — including for co-existing anxiety or depression, unless already clearly benefiting. **No ongoing benzodiazepines** — withdrawal courses only",
@@ -2446,36 +2463,40 @@ const TOPICS = [
                 name: "Naltrexone",
                 dose: "25 mg daily × 3 days, then 50 mg daily",
                 adjustment: "Contraindicated with ongoing opioid therapy, acute hepatitis or liver failure; caution in severe hepatic impairment. The guideline sets no routine LFT monitoring. Works for abstinence or reduction goals.",
+                src: "Canadian AUD guideline (CMAJ 2023)",
             },
             {
                 name: "Acamprosate",
                 dose: "666 mg (2 × 333 mg) TID",
                 adjustment: "CrCl 30–50 mL/min: 333 mg TID (Campral monograph). Contraindicated in severe renal impairment. Safe in liver disease. For an abstinence goal.",
+                src: "Canadian AUD guideline (CMAJ 2023); Campral product monograph for the renal dose",
             },
             {
                 name: "Topiramate",
                 dose: "Titrate over several weeks to 100 mg BID as tolerated",
                 adjustment: "Second line. Contraindicated in pregnancy or planned pregnancy, narrow-angle glaucoma and kidney stones.",
+                src: "Canadian AUD guideline (CMAJ 2023)",
             },
             {
                 name: "Gabapentin",
                 dose: "100–300 mg TID, titrate to max 1800 mg/day",
-                adjustment: "Second line for AUD, and first choice for low-risk outpatient withdrawal. Reduce for kidney function per monograph — the guideline gives no renal cut-off.",
+                adjustment: "Second line for AUD, and first choice for low-risk outpatient withdrawal. Reduce for kidney function (see the Neurontin product monograph, section 4.2); the guideline gives no renal cut-off.",
+                src: "Canadian AUD guideline (CMAJ 2023); Neurontin product monograph (BGP Pharma, 2025), section 4.2",
             },
             {
                 name: "Diazepam (withdrawal only)",
                 dose: "Example, severe withdrawal: 10 mg BID–QID days 1–3, 5 mg BID–QID days 4–5, reassess days 6–7",
                 adjustment: "High-risk withdrawal only (PAWSS ≥ 4), short course, adjusted daily. Never as ongoing AUD treatment.",
+                src: "Canadian AUD guideline (CMAJ 2023), withdrawal figure",
             },
             {
                 name: "Thiamine",
                 dose: "200 mg PO daily before and during withdrawal",
                 adjustment: "Parenteral 200–300 mg daily for at least 5 days in hospital if Wernicke's is suspected, liver disease is decompensated or nutrition is poor, then oral.",
+                src: "Canadian AUD guideline (CMAJ 2023)",
             },
         ],
-        calculators: [
-            { title: "AUDIT-C", url: "https://www.mdcalc.com/calc/2021/audit-c-alcohol-use" },
-        ],
+        calculators: [],
         handout: { title: "Canada's Guidance on Alcohol and Health", url: "https://www.ccsa.ca/canadas-guidance-alcohol-and-health" },
         related: ["oud", "mdd", "anxiety", "smoking"],
         conflicts: [],
@@ -2512,7 +2533,7 @@ const TOPICS = [
             "Drugs | **Varenicline, bupropion, cytisine, NRT.** Combining pharmacotherapy with a behavioural intervention is also recommended",
             "Effect of each option | Extra quitters per 1000 for each option, from separate comparisons; the options have not been compared with each other: ;; varenicline +138 ;; bupropion +128 ;; group counselling +108 ;; combined drug + behavioural +71 ;; cytisine +64 ;; NRT +44 ;; individual counselling +40 ;; text messaging +37 ;; brief advice +36 ;; self-help +10 to +20",
             "E-cigarettes | Suggest **against** for most. Consider only where other interventions have failed, the person is unwilling to try them, or expresses strong preference. No approved product in Canada, no long-term safety data, and ~70% are still vaping at 6 months",
-            "Do not offer | St John's wort; S-adenosyl-L-methionine; hypnotherapy; acupuncture; laser therapy; electrostimulation; continuous auricular stimulation",
+            "Do not offer | ;; St John's wort ;; S-adenosyl-L-methionine ;; Hypnotherapy ;; Acupuncture ;; Laser therapy ;; Electrostimulation ;; Continuous auricular stimulation",
         ],
         meds: [
             {
@@ -2599,7 +2620,7 @@ const TOPICS = [
         ],
         calculators: [],
         handout: null,
-        related: ["immunization", "contraception", "perinatal-mh"],
+        related: ["immunization", "contraception"],
         conflicts: [],
         provincial: [
             {
@@ -2687,7 +2708,7 @@ const TOPICS = [
             "Clot, stroke, heart | VTE risk is higher with **oral and combined** therapy than **transdermal or estrogen alone** — use the lowest effective dose. Starting **10 or more years after menopause** raises cardiac risk. **Not for preventing heart disease**",
             "Breast | **Systemic MHT is contraindicated after any breast cancer**. Choose the lowest-risk regimen; **estrogen alone after hysterectomy**. **BRCA carriers after premenopausal risk-reducing oophorectomy**: MHT doesn't significantly raise breast cancer risk",
             "Early menopause | Ovarian function lost **before 45** → hormone therapy **until the average age of menopause**. May reduce the excess cardiovascular risk of early menopause",
-            "Non-hormonal | **When hormones are unwanted or contraindicated**: **certain antidepressants, gabapentinoids, clonidine, oxybutynin**, or **CBT**. **After breast cancer**: **venlafaxine first**; **paroxetine with caution on tamoxifen**. No natural product has good evidence",
+            "Non-hormonal | **When hormones are unwanted or contraindicated**: **antidepressants such as venlafaxine or paroxetine, gabapentinoids, clonidine, oxybutynin**, or **CBT**. **After breast cancer**: **venlafaxine first**; **paroxetine with caution on tamoxifen**. No natural product has good evidence",
             "Vaginal and urinary | Ask about it **at every stage**; symptoms build slowly. **First**: **lubricants and moisturizers**. **Second**: **low-dose vaginal estrogen** (no progestogen needed), ospemifene or prasterone. Vaginal estrogen can be considered after breast cancer. Laser only in trials",
         ],
         meds: [
@@ -2744,7 +2765,7 @@ const TOPICS = [
             state: "Still SOGC's current contraception guideline, published in four parts from 2015 to 2017. No newer SOGC contraception guideline found.",
         },
         changed: "",
-        beyondGuideline: "No. 329 predates the etonogestrel implant's Canadian approval (May 2020); implant content rests on SOGC's 2025 position statement on contraceptive implant removal.",
+        beyondGuideline: "",
         points: [
             "Most effective | **IUDs work as well as permanent contraception**. Offer IUDs **first-line** to nulliparous and multiparous women alike — nulliparity doesn't raise expulsion risk",
             "IUD insertion | Any day of the cycle if **reasonably certain she isn't pregnant**. Consider inserting **immediately after an abortion** rather than waiting. **Within 48 h postpartum**: better continuation but more expulsion. Higher perforation risk if breastfeeding",
@@ -2797,13 +2818,13 @@ const TOPICS = [
         beyondGuideline: "",
         points: [
             "Mostly viral | More than **70%** of children's and **80–90%** of adults' sore throats are viral, and most settle in **4–5 days** (up to 10). Cough and runny nose point to a virus — a positive swab then often means carriage",
-            ";; **Children (CPS)** ;;; **Score first***: For children 3–14, swab at a Centor score of 3 or more. Under 3, GAS pharyngitis and rheumatic fever are rare, so do not test unless a sibling has confirmed GAS and this child is symptomatic ;;; **Confirm before treating**: Treat only a positive test. Even at the highest scores, at most about half of presentations are GAS. A negative rapid antigen test in a child needs a backup throat culture ;;; **If positive**: Penicillin V or amoxicillin for 10 days (rows below). Children can return to school or daycare after 24 hours of treatment ;; **Adults (Ontario decision rule)** ;;; **Score first***: GAS accounts for only 5–15% of adult sore throats: ;;; **Score 1 or less**: no test, no antibiotic (risk under 10%) ;;; **Score 2–3**: rapid test or throat culture; treat only if positive ;;; **Score 4–5**: test, and consider starting antibiotics on clinical grounds if there is high fever, the patient is clinically unwell, or presentation is early in the course; stop if the test comes back negative ;;; **Confirm before treating**: A negative rapid test in an adult needs no backup culture, because the risk of rheumatic fever is low",
-            "Don't test | Under 3, unless there's an outbreak or scarlet fever is suspected — GAS is rare. No ASOT for diagnosis. No routine test of cure, and no swabs of well contacts",
-            "Testing | Culture of both tonsils and the posterior pharynx is the gold standard. Rapid antigen test: about 1 hour, specificity > 95%, sensitivity **86%** — confirm a negative with culture in high rheumatic fever–burden settings",
+            "Score and test | ;; **Children (CPS)** ;;; **Score first***: For children 3–14, swab at a McIsaac score of 3 or more. Under 3, GAS pharyngitis and rheumatic fever are rare, so do not test unless a sibling has confirmed GAS and this child is symptomatic ;;; **Confirm before treating**: Treat only a positive test. Even at the highest scores, at most about half of presentations are GAS. A negative rapid antigen test in a child needs a backup throat culture ;;; **If positive**: Penicillin V or amoxicillin for 10 days (rows below). Children can return to school or daycare after 24 hours of treatment ;; **Adults (Ontario decision rule)** ;;; **Score first***: GAS accounts for only 5–15% of adult sore throats. **Score 1 or less**: no test, no antibiotic (risk under 10%). **Score 2–3**: rapid test or throat culture; treat only if positive. **Score 4–5**: test, and consider starting antibiotics on clinical grounds if there is high fever, the patient is clinically unwell, or presentation is early in the course; stop if the test comes back negative ;;; **Confirm before treating**: A negative rapid test in an adult needs no backup culture, because the risk of rheumatic fever is low",
+            "Don't test | Under 3, unless a sibling has confirmed GAS and this child is symptomatic — GAS is rare. No ASOT for diagnosis. No routine test of cure, and no swabs of well contacts",
+            "Testing | Culture of both tonsils and the posterior pharynx is the gold standard. Rapid antigen test: about 1 hour, specificity > 95%, sensitivity **86%** — confirm a negative with culture in children and adolescents (CPS), and in high rheumatic fever–burden settings",
             "Treat confirmed GAS | **Penicillin V for 10 days** — no GAS resistance has been documented. Starting within **9 days** of onset still prevents rheumatic fever, so waiting for the culture is safe. Stop empiric antibiotics if the swab is negative",
             "Penicillin allergy | Not severe (e.g. a rash > 72 h after dosing): amoxicillin challenge or de-labelling, or cephalexin. **Anaphylaxis**: macrolide or clindamycin — up to **20%** of isolates resist them, so check local data",
             "Symptoms | Ibuprofen or acetaminophen; steroids not routinely",
-            "Safety-netting | Return if worse, still sore after 4–5 days, or with one-sided neck swelling, trouble breathing or severe trouble swallowing (abscess). Higher rheumatic fever risk (northern or Indigenous communities, crowded housing): test any child **≥ 3** with sore throat, and consider empiric treatment at Centor ≥ 3 in select settings if testing isn't available",
+            "Safety-netting | Return if worse, still sore after 4–5 days, or with one-sided neck swelling, trouble breathing or severe trouble swallowing (abscess). Higher rheumatic fever risk (northern or Indigenous communities, crowded housing): test any child **≥ 3** with sore throat, and consider empiric treatment at McIsaac ≥ 3 in select settings if testing isn't available",
         ],
         footnotes: [
             { mark: "*", text: "McIsaac (modified Centor) score. **+1 each**: temperature > 38 °C; absence of cough; swollen, tender anterior cervical nodes; tonsillar swelling or exudate. **Age**: 3–14 years **+1**; 15–44 years **0**; 45 years and over **−1**. **Risk of GAS by score**: −1 or 0: 1–2.5%; 1: 5–10%; 2: 11–17%; 3: 28–35%; 4 or 5: 51–53%" },
@@ -2884,7 +2905,7 @@ const TOPICS = [
             "FIB-4 | Age × AST ÷ (platelets × √ALT). Under 65: **< 1.3** low; 1.3–3.25 indeterminate → Fibroscan; **> 3.25** high. Over 65: low is **< 2.0**, indeterminate 2.0–3.25",
             "Fibroscan | **< 10 kPa** excludes advanced fibrosis → stay in primary care, FIB-4 every **3 years**",
             "Refer | To GI or hepatology if: **> 10 kPa**; FIB-4 > 3.25; ultrasound signs of cirrhosis or portal hypertension. While waiting: **ultrasound every 6 months** for HCC, and finish the full liver work-up even if enzymes are normal. On amiodarone, methotrexate or tamoxifen: refer for fibrosis assessment instead. ALT > 200, ascites or pregnancy: refer, and do not order Fibroscan",
-            "Manage | ;; **Lifestyle**: lose **5–10%** of weight over 6 months; moderate exercise 30 min, 4×/wk; less sugar, fructose and sweet drinks; 2–3 cups of coffee a day may help ;; **CV risk**: CV risk is **3–5× higher**; treat lipids, BP and diabetes, stop smoking ;; **Alcohol**: discourage alcohol; none with advanced fibrosis ;; **Vaccines**: hepatitis A and B vaccines ;; **Bariatric**: bariatric referral if lifestyle and medical weight loss fail",
+            "Manage | ;; **Lifestyle**: lose **5–10%** of weight over 6 months; moderate exercise 30 min, 4×/wk; less sugar, fructose and sweet drinks; 2–3 cups of coffee a day may help ;; **CV risk**: **3–5× higher**; treat lipids, BP and diabetes, stop smoking ;; **Alcohol**: discourage alcohol; none with advanced fibrosis ;; **Vaccines**: hepatitis A and B vaccines ;; **Bariatric**: bariatric referral if lifestyle and medical weight loss fail",
         ],
         meds: [
             {
@@ -2894,18 +2915,18 @@ const TOPICS = [
             },
             {
                 name: "Statins",
-                dose: "As for the lipid indication",
+                dose: "Per the lipid indication — see Dyslipidemia",
                 adjustment: "Safe in MASLD and indicated for raised LDL. Check ALT 3 months after starting; if ALT doubles, consider stopping and trying another lipid-lowering agent.",
+                src: "Kingston MASLD pathway (2026)",
             },
             {
                 name: "Pioglitazone",
-                dose: "45 mg daily in the trial Diabetes Canada cites",
-                adjustment: "Type 2 diabetes with MASH and F2–F3 fibrosis only: Diabetes Canada suggests preferential consideration of pioglitazone or subcutaneous semaglutide. Not part of the Kingston pathway.",
+                dose: "45 mg daily",
+                adjustment: "Type 2 diabetes with MASH and F2–F3 fibrosis only: Diabetes Canada suggests preferential consideration of pioglitazone or subcutaneous semaglutide. Not part of the Kingston pathway. The 45 mg dose is from the trial Diabetes Canada cites.",
+                src: "Diabetes Canada MASLD chapter (Kim et al., Can J Diabetes 2025)",
             },
         ],
-        calculators: [
-            { title: "FIB-4 index", url: "https://www.mdcalc.com/calc/2200/fib-4-index-liver-fibrosis" },
-        ],
+        calculators: [],
         handout: null,
         related: ["t2dm", "obesity", "lipids", "aud"],
         conflicts: [
@@ -2937,7 +2958,7 @@ const TOPICS = [
                     tier: "provincial",
                     level: "provincial",
                     province: "AB",
-                    state: "Province-wide Alberta pathway, last updated October 2021 — still uses NAFLD wording and has no elastography step. The Kingston pathway (2026) is newer. Its scheduled June 2023 review has not been published.",
+                    state: "Province-wide Alberta pathway, last updated October 2021 — still uses NAFLD wording and has no elastography step. The Kingston pathway (2026) is newer. Alberta's scheduled June 2023 review has not been published.",
                 },
                 verified: true,
                 points: [
@@ -2947,7 +2968,7 @@ const TOPICS = [
                     "Baseline | ALT, AST, ALP, GGT (AMA if cholestatic); CBC with platelets; A1C, lipids; INR, bilirubin, albumin if cirrhosis is suspected",
                     "FIB-4 | **< 1.30**: manage in primary care, **repeat every 2–3 years**; **≥ 1.30 → refer** to a liver specialist",
                     "Manage | ;; **Lifestyle**: 150 min/week of activity; **~10% weight loss over 6 months** ;; **Treat**: treat diabetes, BP and lipids; **statins are safe**; ALT 3 months after starting, stop if it doubles; quit smoking ;; **Alcohol**: low risk: ≤ 4–5 drinks/week (men), 3–4 (women); none with cirrhosis ;; **Vaccines**: **hepatitis A and B vaccines**",
-                    "Not routine | **Vitamin E**: **Vitamin E 800 IU/day** only for non-diabetic adults with biopsy-proven NASH (PIVENS); not for diabetes, cirrhosis (including NASH or cryptogenic cirrhosis) or NAFLD without a biopsy; long-term cardiovascular and prostate cancer concerns rest on weak evidence. **Omega-3**: insufficient evidence for NAFLD, so not to treat the liver itself; consider for high triglycerides or other comorbidities; possible anticoagulant effect above 3 g/day. **Coffee**: Coffee 2–3 cups may help (inconclusive)",
+                    "Not routine | **Vitamin E**: **800 IU/day** only for non-diabetic adults with biopsy-proven NASH (PIVENS); not for diabetes, cirrhosis (including NASH or cryptogenic cirrhosis) or NAFLD without a biopsy; long-term cardiovascular and prostate cancer concerns rest on weak evidence. **Omega-3**: insufficient evidence for NAFLD, so not to treat the liver itself; consider for high triglycerides or other comorbidities; possible anticoagulant effect above 3 g/day. **Coffee**: 2–3 cups may help (inconclusive)",
                 ],
                 meds: [],
                 editorial: "Read from the Pathway Hub page (Details tab) through the browser. Same content as the 2021 PDF summarized in the old provincial note. Kept as a 2021 pathway with its review overdue (Ron's decision). The vitamin E and omega-3 wording was verified by browser against the Pathway Hub copy (pathways/148; AHS NAFLD Primary Care Pathway, last updated Oct 2021) on Nov 3, 2026; the pathway attaches no bleeding or mortality caution to vitamin E.",
@@ -2977,9 +2998,9 @@ const TOPICS = [
         beyondGuideline: "",
         points: [
             "Diagnose | Rome IV: abdominal pain **≥ 1 day a week for ≥ 3 months**, linked to defecation or a change in bowel habit. Subtype by stool form (IBS-C, IBS-D, mixed or unclassified), because treatment follows the subtype",
-            "Alarm features | First-degree relative with IBD or colorectal cancer; onset **after 50**; unintended weight loss > 5% over 6–12 months; visible blood; nocturnal symptoms; iron deficiency anemia. Any one → investigate or refer",
+            "Alarm features | Any one of these → investigate or refer: ;; First-degree relative with IBD or colorectal cancer ;; Onset **after 50** ;; Unintended weight loss > 5% over 6–12 months ;; Visible blood ;; Nocturnal symptoms ;; Iron deficiency anemia",
             "Test | **Celiac serology**. CBC and ferritin. **Not** CRP, routine fecal calprotectin, food allergy testing, or lactose or glucose breath tests. Calprotectin only if IBD is suspected: ;; **< 50**: normal ;; **50–120**: indeterminate, repeat in 4–6 weeks if symptoms persist ;; **> 120**: refer",
-            "Colonoscopy | New symptoms at **≥ 50** → colonoscopy. Under 50 without alarm features → no. Under 50 with alarm features, CAG suggests against *routine* colonoscopy; the Alberta pathway still refers them",
+            "Colonoscopy | New symptoms at **≥ 50** → colonoscopy. Under 50 without alarm features → no. Under 50 with alarm features, CAG suggests against routine colonoscopy; the Alberta pathway still refers them",
             "First steps | **Psyllium**, build slowly to 5–10 g/day of soluble fibre; not wheat bran. **Low FODMAP** for as short a time as possible (about 4 weeks), under a dietitian's guidance. **Not** a gluten-free diet, herbal remedies or acupuncture",
             "Symptom relief | Peppermint oil, antispasmodics (dicyclomine, hyoscine, pinaverium) and probiotics may help. CBT or hypnotherapy if available",
             "Drugs by subtype | ;; **Any subtype**: **low-dose TCA**; SSRI ;; **IBS-D**: eluxadoline; **not** continuous loperamide or cholestyramine ;; **IBS-C**: **linaclotide**; osmotic laxatives and prucalopride don't improve overall symptoms",
@@ -3081,8 +3102,8 @@ const TOPICS = [
             },
             {
                 name: "Cyclobenzaprine",
-                dose: "10 mg TID (range 20–40 mg/day; max 60 mg/day) — guideline: lowest dose, under 2 weeks",
-                adjustment: "Severe pain only. Sedating and anticholinergic — caution in older adults.",
+                dose: "10 mg TID (range 20–40 mg/day; max 60 mg/day)",
+                adjustment: "Guideline: lowest dose, under 2 weeks. Severe pain only. Sedating and anticholinergic — caution in older adults.",
                 src: "Cyclobenzaprine product monograph (Apo-Cyclobenzaprine, Apotex, 2021)",
             },
         ],
@@ -3116,11 +3137,11 @@ const TOPICS = [
         beyondGuideline: "",
         points: [
             "Diagnose | Acute symptoms **plus a bulging eardrum**, usually red or yellow and cloudy, or a perforation draining pus :: ;; **Not AOM**: an air-fluid level without bulging ;; Tympanometry unreliable under 7 months",
-            "Treat now | Bulging eardrum plus any of: ;; Temperature **≥ 39 °C** with moderate–severe illness ;; Severe ear pain ;; Significantly ill for **48 h** ;; A perforation with pus also gets antibiotics promptly",
-            "Watchful waiting | Mild illness, 6 months or older, follow-up assured: analgesic advice, then **reassess in 24–48 h**, or a prescription to fill if not better in 48 h :: ;; Unsure of the diagnosis, < 39 °C for < 24 h: next-day review",
+            "Treat now | A perforation with pus gets antibiotics promptly. Bulging eardrum plus any of: ;; Temperature **≥ 39 °C** with moderate–severe illness ;; Severe ear pain ;; Significantly ill for **48 h**",
+            "Watchful waiting | Mild illness, 6 months or older, follow-up assured: analgesic advice, then **reassess in 24–48 h**, or a prescription to fill if not better in 48 h. If unsure of the diagnosis and temperature < 39 °C for < 24 h: next-day review",
             "First line | **Amoxicillin 75–90 mg/kg/day divided BID** (or 45–60 mg/kg/day TID)",
             "How long | **5 days**: most children age 2 and over, uncomplicated. **10 days**: under 2, recurrent AOM, perforated eardrum, failed first course",
-            "Not better at 2–3 days | ;; Switch to **amoxicillin-clavulanate** for 10 days ;; Ceftriaxone for 3 days only if oral drugs are not tolerated, or amoxicillin-clavulanate has failed ;; Start with amoxicillin-clavulanate instead: amoxicillin in the past 30 days, otitis-conjunctivitis, or a suspected relapse ;; Effusion alone is not failure: expect improvement in 24 h, resolution in 2–3 days",
+            "If not better | At 2–3 days: ;; Switch to **amoxicillin-clavulanate** for 10 days ;; Ceftriaxone for 3 days only if oral drugs are not tolerated, or amoxicillin-clavulanate has failed ;; Start with amoxicillin-clavulanate instead: amoxicillin in the past 30 days, otitis-conjunctivitis, or a suspected relapse ;; Effusion alone is not failure: expect improvement in 24 h, resolution in 2–3 days",
             "Penicillin allergy | **Not life-threatening**: cefuroxime or ceftriaxone :: ;; **Life-threatening** (angioedema, bronchospasm, hypotension): a macrolide or clindamycin, which kill bacteria less well",
         ],
         meds: [
@@ -3147,7 +3168,7 @@ const TOPICS = [
         ],
         calculators: [],
         handout: null,
-        related: ["pharyngitis", "croup", "bronchiolitis"],
+        related: ["pharyngitis"],
         conflicts: [],
         provincial: [],
         editorial: "Written from the CPS statement page (posted 5 Feb 2016, reaffirmed 21 Nov 2024). Macrolide and clindamycin doses for AOM are not given; tube referral is outside its scope. Recurrent AOM appears both in the excludes and in the 10-day duration list, as CPS states both; the tension is CPS's own, and Ron chose to keep both.",
@@ -3252,17 +3273,19 @@ const TOPICS = [
             {
                 name: "Cephalexin",
                 dose: "500–1000 mg PO q6h; 5 days",
-                adjustment: "First line for non-purulent cellulitis and purulent cellulitis without MRSA risk factors. Renal dose adjustment needed.",
+                adjustment: "First line for non-purulent cellulitis and purulent cellulitis without MRSA risk factors.",
             },
             {
                 name: "Cefadroxil",
                 dose: "500–1000 mg PO q12h; 5 days",
-                adjustment: "Twice-daily alternative to cephalexin. Renal dose adjustment needed.",
+                adjustment: "Twice-daily alternative to cephalexin. Renal (500 mg maintenance dose): CrCl 25–50 mL/min q12h; 10–25 q24h; < 10 q36h. Above 50: usual dosing.",
+                src: "Cefadroxil product monograph (Apotex, 2019), dosage in impaired renal function",
             },
             {
                 name: "Cefuroxime",
                 dose: "500 mg PO q12h",
-                adjustment: "Immediate beta-lactam allergy. Renal dose adjustment needed.",
+                adjustment: "Immediate beta-lactam allergy. Renal: CrCl ≥ 30 mL/min no change; 10–29: usual dose q24h; < 10: usual dose q48h; hemodialysis: one extra dose after each session.",
+                src: "Apo-Cefuroxime product monograph (Apotex, 2023), section 4.2",
             },
             {
                 name: "Clindamycin",
@@ -3277,12 +3300,14 @@ const TOPICS = [
             {
                 name: "Trimethoprim-sulfamethoxazole",
                 dose: "1–2 DS tablets (800/160 mg each) PO q12h",
-                adjustment: "Purulent cellulitis with MRSA risk factors. Renal dose adjustment needed. Poor strep coverage — consider adding a beta-lactam.",
+                adjustment: "Purulent cellulitis with MRSA risk factors. Renal: CrCl > 30 mL/min usual dose; 15–30: half the usual dose; < 15: not recommended. Poor strep coverage — consider adding a beta-lactam.",
+                src: "Sulfatrim product monograph (AA Pharma, 2023)",
             },
             {
                 name: "Cefazolin IV",
                 dose: "2 g IV q8h; outpatient: probenecid 1 g PO, then cefazolin 2 g IV, q24h",
-                adjustment: "Moderate infection — systemic toxicity without sepsis, or failed oral therapy. 5 days if improving within 72 h, otherwise 7–10. Renal dose adjustment needed.",
+                adjustment: "Moderate infection — systemic toxicity without sepsis, or failed oral therapy. 5 days if improving within 72 h, otherwise 7–10. Renal (monograph schedule after a full first dose): CrCl 35–54 mL/min 250 mg–1 g q8–12h; 11–34: 125–500 mg q12h; ≤ 10: 125–500 mg q18h. The monograph gives no renal dose for 2 g or for the probenecid regimen.",
+                src: "Cefazolin for Injection product monograph (Teva Canada, 2024), section 4.2",
             },
         ],
         calculators: [],
@@ -3324,8 +3349,8 @@ const TOPICS = [
         meds: [
             {
                 name: "Sumatriptan",
-                dose: "PO 50 mg, up to 100 mg; SC 6 mg (4 mg a sensible start where available); nasal 10 mg, up to 20 mg",
-                adjustment: "Contraindicated with coronary or cerebrovascular disease. Counts toward the ≤ 9 days/month overuse limit.",
+                dose: "PO 50 mg, up to 100 mg; SC 6 mg; nasal 10 mg, up to 20 mg",
+                adjustment: "SC: 4 mg is a sensible start where available. Contraindicated with coronary or cerebrovascular disease. Counts toward the ≤ 9 days/month overuse limit.",
             },
             {
                 name: "Metoclopramide",
@@ -3382,7 +3407,7 @@ const TOPICS = [
         beyondGuideline: "",
         points: [
             "Red flags | No routine CT or other imaging without red flags. Emergency care for: ;; Loss of consciousness ;; Seizure ;; **Worsening headache** ;; **Repeated vomiting** ;; Neck pain ;; GCS < 15 ;; Focal deficits ;; Ataxia ;; Slurred speech ;; **Anticoagulant or antiplatelet use**",
-            "First 24–48 h | See the patient early, ideally within **72 h**. Relative rest, limit screens, **no driving**. Acetaminophen rather than NSAIDs for the first 24–48 h. Gentle walking is fine if it only briefly worsens symptoms",
+            "Early care | See the patient early, ideally within **72 h**. Relative rest, limit screens, **no driving**. Acetaminophen rather than NSAIDs for the first 24–48 h. Gentle walking is fine if it only briefly worsens symptoms",
             "Then build up | Step up activity **once a day**. A small, brief rise in symptoms (< 2 points for < 1 h) is expected; if worse than that, drop back to the last comfortable level",
             "Exercise helps | Start light aerobic activity early — about **55%** of maximum heart rate (220 − age), then 70% — even with mild symptoms. It lowers the risk of persisting symptoms",
             "School, work, sport | Back to school or work as soon as tolerated, with accommodations — **more than 1 week off is not recommended**. Sport: 6 steps, **≥ 24 h each**; finish return to school and get a **medical clearance letter** before step 4 (non-contact drills)",
@@ -3392,7 +3417,7 @@ const TOPICS = [
         meds: [],
         calculators: [],
         handout: null,
-        related: ["migraine", "driving"],
+        related: ["migraine"],
         conflicts: [],
         provincial: [],
         editorial: "National content from the Parachute 2nd edition PDF (2024); primary-care content from the full BC guideline PDF (effective Sep 2024, revised May 2025), both read in full (Nov 2026); the Parachute pathway figure and the BC appendices were not read. Parachute requires the medical clearance letter before step 4. BC's fuller red-flag list and its early-analgesia advice are added (Ron's decision).",
@@ -3450,7 +3475,7 @@ const TOPICS = [
         ],
         calculators: [],
         handout: null,
-        related: ["dyspepsia", "gerd", "ibs"],
+        related: ["gerd", "ibs"],
         conflicts: [],
         provincial: [
             {
@@ -3564,6 +3589,7 @@ const TOPICS = [
                 name: "PPIs (once daily)",
                 dose: "Pantoprazole 40 mg; rabeprazole 20 mg; omeprazole 20 mg; esomeprazole 40 mg; lansoprazole 30 mg; dexlansoprazole 30 mg",
                 adjustment: "30 min before breakfast; second dose, if needed, 30 min before supper. Taper to the lowest effective dose and attempt to stop yearly, except with Barrett's.",
+                src: "Kingston GERD pathway (2024)",
             },
             {
                 name: "H2 blockers (famotidine)",
@@ -3575,11 +3601,12 @@ const TOPICS = [
                 name: "Antacids",
                 dose: "On demand; effect lasts about 1.5 h",
                 adjustment: "Calcium (Rolaids, Tums) most potent, then sodium bicarbonate, then magnesium, then aluminum (Gaviscon) least potent. Magnesium can cause diarrhea, calcium constipation; caution in renal disease.",
+                src: "Kingston GERD pathway (2024)",
             },
         ],
         calculators: [],
         handout: null,
-        related: ["dyspepsia", "hpylori"],
+        related: ["hpylori"],
         conflicts: [],
         provincial: [],
         journal: [
@@ -3605,7 +3632,7 @@ const TOPICS = [
                     "Diagnose | Predominant **heartburn ± regurgitation**, no alarm features → GERD. **No tests needed** at first. Risk factors: higher BMI, hiatus hernia, pregnancy, smoking, sleeve gastrectomy. Chest pain: exclude cardiac causes first; GERD treatment can start meanwhile",
                     "H. pylori | **Don't screen for H. pylori** in GERD — most patients don't have it",
                     "Alarm features → endoscopy | ;; Weight loss **> 5% over 6–12 months** ;; Progressive **dysphagia** ;; Odynophagia ;; Persistent vomiting (not cannabis) ;; Black stool or blood in vomit (send **CBC, INR, BUN**) ;; Iron deficiency anemia ;; Abdominal mass ;; List every feature on the referral",
-                    "Barrett's screening | **Males** with GERD **> 10 years or weekly or more**, only with **≥ 2 of**: age > 50, Caucasian, central obesity (waist ≥ 102 cm or waist-hip > 0.9), smoking, first-degree family history of Barrett's or esophageal cancer. **Females** only with multiple (waist ≥ 88 cm or > 0.8). Discuss life expectancy and surveillance first",
+                    "Barrett's screening | **Males** with GERD **> 10 years or weekly or more**, only with **≥ 2 of**: age > 50, Caucasian, central obesity (waist ≥ 102 cm or waist-hip > 0.9), smoking, first-degree family history of Barrett's or esophageal cancer. **Females** only with multiple of the same risk factors (central obesity: waist ≥ 88 cm or waist-hip > 0.8). Discuss life expectancy and surveillance first",
                     "Lifestyle | ;; **Stop smoking** (essential) ;; Lose weight if overweight or recently gained ;; Smaller meals ;; Nothing **3 h before bed** if nocturnal ;; Loose waistbands ;; Head of bed up **4–6 inches** (blocks or wedge, not a pillow) ;; Cutting trigger foods is reasonable but unproven",
                     "Drugs | **< 2×/week**: H2 blocker or antacid on demand. **≥ 2×/week: PPI** once daily 30 min before breakfast; poor response at **8 weeks** → twice daily or switch. Once controlled, lowest dose and **try to stop yearly**. Barrett's: daily PPI for life",
                     "Refer | Alarm features; Barrett's screen positive; **poor response despite confirmed adherence** (about 1 in 3 don't respond to PPI) — lower threshold with a first-degree family history of esophageal or gastric cancer. Consider specialist advice before referring",
@@ -3615,16 +3642,19 @@ const TOPICS = [
                         name: "PPIs (once daily)",
                         dose: "Rabeprazole 20 mg, pantoprazole 40 mg, omeprazole 20 mg, lansoprazole 30 mg — **covered** by Blue Cross/NIHB; esomeprazole 40 mg, dexlansoprazole 30 mg — **not covered**",
                         adjustment: "No major efficacy differences at standard doses. Estimated 90-day cost (2023): $25–65 covered agents vs $210–265 esomeprazole or dexlansoprazole. Confirm daily use 30 min before breakfast before calling it a failure.",
+                        src: "Alberta GERD pathway (2025)",
                     },
                     {
                         name: "H2 blockers (famotidine)",
-                        dose: "On demand for symptoms < 2×/week — the pathway gives no dose",
+                        dose: "Famotidine 20 mg BID (40 mg BID for erosive esophagitis); on demand for symptoms < 2×/week",
+                        src: "Teva-Famotidine product monograph",
                         adjustment: "Less effective than PPIs; tachyphylaxis after several weeks. Can add at night to a daytime PPI when there is objective nocturnal reflux.",
                     },
                     {
                         name: "Antacids",
                         dose: "On demand; relief in about 20%, protection for about 1.5 h",
                         adjustment: "Calcium most potent (constipates) > sodium bicarbonate > magnesium (diarrhea) > aluminum (Gaviscon, least). Caution in kidney disease.",
+                        src: "Alberta GERD pathway (2025)",
                     },
                 ],
                 editorial: "Read from the Pathway Hub page (Details tab, all panels) through the browser. Advice line numbers carried from the 2025 PDF version, which redirected to this page.",
@@ -3656,7 +3686,7 @@ const TOPICS = [
         beyondGuideline: "",
         points: [
             "Sort it out | ;; 'Dizzy' may mean light-headed, presyncope, imbalance, brain fog or true vertigo ;; Most common: **orthostatic**, imbalance and **migraine-related** dizziness",
-            "Send to ED | New one-sided face or limb weakness; trouble speaking; limb or gait ataxia; other stroke signs (FAST); systolic BP **> 180**",
+            "Send to ED | Any of: ;; New one-sided face or limb weakness ;; Trouble speaking ;; Limb or gait ataxia ;; Other stroke signs (FAST) ;; Systolic BP **> 180**",
             "BPPV | Brief positional vertigo; **Dix-Hallpike** shows torsional geotropic nystagmus → **Epley maneuver**, or refer to physiotherapy for it",
             "Vestibular neuritis | ;; Typically **5 or more days of essentially constant vertigo**; with hearing loss it is labyrinthitis ;; Supportive care and **early vestibular physiotherapy** ;; **Avoid vestibular suppressants** such as benzodiazepines: they slow recovery",
             "Sudden hearing loss | New one-sided sensorineural loss → **urgent ENT** and consider a high-dose oral steroid (e.g. prednisone) 1 mg/kg (max 60) for 7 days, then taper over 7",
@@ -3720,7 +3750,7 @@ const TOPICS = [
         changed: "",
         beyondGuideline: "",
         points: [
-            "Define | **≥ 3 RBC/hpf on microscopy**. 0–2 is insignificant. A positive dipstick **must be confirmed by microscopy** — most aren't. Sample read within 2–3 h, so give it at the lab",
+            "Define | **≥ 3 RBC/hpf on microscopy**. 0–2 is insignificant. A positive dipstick **must be confirmed by microscopy** — most positives aren't confirmed. Sample read within 2–3 h, so give it at the lab",
             "First exclude | Fix these, then repeat: ;; Infection ;; Menstruation ;; Vigorous exercise ;; Sex ;; Trauma ;; Instrumentation ;; Recent prostate exam ;; Viral illness",
             "Anticoagulants | Including ASA, they unmask disease rather than cause hematuria — **still investigate**",
             "Image | **Kidney and bladder ultrasound** first in most; CT urogram (CTIVP) is the alternative — non-contrast or single-phase CT isn't adequate. No imaging test completely assesses the lower urinary tract; cystoscopy is required",
@@ -3751,10 +3781,10 @@ const TOPICS = [
         reviewedBy: "2026-11-06",
         source: {
             org: "BC Guidelines (GPAC)",
-            year: 2023,
-            edition: 2023,
+            year: 2021,
+            edition: 2021,
             checked: "2026-11",
-            citation: "Obstructive Sleep Apnea: Assessment and Management in Adults, BC Guidelines, effective 19 September 2023",
+            citation: "Obstructive Sleep Apnea: Assessment and Management in Adults, BC Guidelines, 2021 edition",
             url: "https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/bc-guidelines/sleep-apnea",
             doi: null,
             province: "BC",
@@ -3775,7 +3805,7 @@ const TOPICS = [
         meds: [],
         calculators: [],
         handout: null,
-        related: ["obesity", "htn", "driving"],
+        related: ["obesity", "htn"],
         conflicts: [],
         provincial: [
             {
@@ -3876,7 +3906,7 @@ const TOPICS = [
             "Laxatives | ;; **PEG** first, after fibre ;; Alternatives: magnesium oxide or lactulose ;; Stimulants (bisacodyl, senna): short-term, or for opioid constipation",
             "Next steps | ;; PEG and bisacodyl failed: **linaclotide or plecanatide** ;; ≥ 2 laxative classes failed: **prucalopride** (not studied in men; Canadian indication is adult women; experienced-clinician initiation); stop if no benefit at 4 weeks ;; Give 3–6 months before calling it a failure",
             "Dyssynergia | ;; Straining, prolonged sitting, digital assistance: fibre works poorly ;; Trauma-informed exam ;; Refer for anorectal manometry and pelvic floor therapy",
-            "Alarm features → refer | ;; First-degree relative with colorectal cancer ;; Weight loss > 5% in 6–12 months ;; Sudden or progressive change ;; Visible blood ;; Anal mass ;; Iron deficiency anemia ;; Rectal pain ;; Tenesmus ;; **No colonoscopy under 50 without alarm features**",
+            "Alarm features → refer | **No colonoscopy under 50 without alarm features**. Any of these → refer: ;; First-degree relative with colorectal cancer ;; Weight loss > 5% in 6–12 months ;; Sudden or progressive change ;; Visible blood ;; Anal mass ;; Iron deficiency anemia ;; Rectal pain ;; Tenesmus",
         ],
         meds: [
             {
@@ -3907,7 +3937,7 @@ const TOPICS = [
         ],
         calculators: [],
         handout: null,
-        related: ["ibs", "abdo-pain", "rectal-bleeding"],
+        related: ["ibs", "rectal-bleeding"],
         conflicts: [],
         provincial: [],
         editorial: "From the Alberta Adult Chronic Constipation Primary Care Pathway (updated Feb 2026). Psyllium and other bulk-agent doses follow product labels.",
@@ -3968,6 +3998,7 @@ const TOPICS = [
                 name: "Tamsulosin (alpha-blocker)",
                 dose: "0.4 mg daily",
                 adjustment: "Dizziness; ejaculatory change with tamsulosin and silodosin. Doxazosin and terazosin need titration and BP checks.",
+                src: "Flomax CR product monograph (Boehringer Ingelheim, 2023)",
             },
             {
                 name: "Finasteride · dutasteride",
@@ -3979,6 +4010,7 @@ const TOPICS = [
                 name: "Tadalafil",
                 dose: "5 mg daily",
                 adjustment: "Especially with coexisting erectile dysfunction. Combined with an alpha-blocker it beat an alpha-blocker alone.",
+                src: "Cialis product monograph (Eli Lilly Canada, 2020)",
             },
             {
                 name: "Desmopressin",
@@ -3989,7 +4021,7 @@ const TOPICS = [
         ],
         calculators: [],
         handout: null,
-        related: ["prostate-screen", "hematuria", "female-luts"],
+        related: ["prostate-screen", "hematuria"],
         conflicts: [],
         provincial: [],
         pathways: [
@@ -4032,6 +4064,7 @@ const TOPICS = [
                         name: "Tamsulosin (alpha-blocker)",
                         dose: "0.4 mg daily",
                         adjustment: "Dizziness; ejaculatory change. Doxazosin and terazosin need titration and BP checks.",
+                        src: "Flomax CR product monograph (Boehringer Ingelheim, 2023)",
                     },
                     {
                         name: "Finasteride · dutasteride",
@@ -4043,6 +4076,7 @@ const TOPICS = [
                         name: "Tadalafil",
                         dose: "5 mg daily",
                         adjustment: "Voiding symptoms; also helps erectile dysfunction.",
+                        src: "Cialis product monograph (Eli Lilly Canada, 2020)",
                     },
                     {
                         name: "Mirabegron (beta-3 agonist)",
@@ -4374,8 +4408,8 @@ const TOPICS = [
             "First line | **Amoxicillin 500 mg–1 g TID**",
             "Allergy | IgE-mediated penicillin allergy → **cefuroxime**. No β-lactam possible → levofloxacin or doxycycline (pneumococcal resistance to doxycycline rising)",
             "Duration | **5 days** usually — longer with instability or bacteremia",
-            "Recovery | Fever settles in about 3 days; cough and breathlessness can take 4 weeks, fatigue months — no more antibiotics for a lingering cough",
-            "Follow-up x-ray | Not routine; at about 8 weeks for smokers or others at risk of lung cancer",
+            "Recovery | Fever settles in about 3 days; cough and breathlessness can take 4 weeks, fatigue months — no more antibiotics for a lingering cough (INESSS 2017)",
+            "Follow-up x-ray | Not routine; at about 8 weeks for smokers or others at risk of lung cancer (INESSS 2017)",
         ],
         notes: [
             {
@@ -4460,6 +4494,7 @@ const TOPICS = [
                 name: "Amoxicillin",
                 dose: "40–90 mg/kg/day divided TID (max 4000 mg/day)",
                 adjustment: "First line for outpatients.",
+                src: "CPS practice point (updated 2024), Table 2",
             },
             {
                 name: "Azithromycin / clarithromycin",
@@ -4470,7 +4505,7 @@ const TOPICS = [
         ],
         calculators: [],
         handout: null,
-        related: ["cap-adult", "bronchiolitis", "aom"],
+        related: ["cap-adult", "aom"],
         conflicts: [],
         provincial: [],
         editorial: "From the CPS practice point web page (updated March 2024). TREKK (March 2024, ED-focused) also uses amoxicillin × 5 days.",
@@ -5123,6 +5158,10 @@ const CALCULATORS_META = {
     fib4: { title: "FIB-4", short: "FIB-4", blurb: "Liver fibrosis risk in MASLD" },
     mcisaac: { title: "McIsaac (modified Centor) score", short: "McIsaac", blurb: "Who to test for strep throat" },
     ipss: { title: "IPSS (International Prostate Symptom Score)", short: "IPSS", blurb: "Lower urinary tract symptom severity in BPH" },
+    phq9: { title: "PHQ-9 (Patient Health Questionnaire-9)", short: "PHQ-9", blurb: "Depression symptom severity" },
+    gad7: { title: "GAD-7 (Generalized Anxiety Disorder-7)", short: "GAD-7", blurb: "Anxiety symptom severity" },
+    auditc: { title: "AUDIT-C", short: "AUDIT-C", blurb: "Screen for high-risk alcohol use" },
+    amoxkg: { title: "Amoxicillin (child, by weight)", short: "Amoxicillin dose", blurb: "Dose and suspension volume from weight, using each entry's printed regimen" },
 };
 const TOPIC_CALCS = {
     afib: ["chads65", "crcl"],
@@ -5130,8 +5169,14 @@ const TOPIC_CALCS = {
     ckd: ["crcl"],
     "periop-anticoag": ["crcl"],
     masld: ["fib4"],
-    pharyngitis: ["mcisaac"],
+    pharyngitis: ["mcisaac", "amoxkg"],
+    aom: ["amoxkg"],
+    "cap-child": ["amoxkg"],
+    lyme: ["amoxkg"],
     bph: ["ipss"],
+    mdd: ["phq9"],
+    anxiety: ["gad7"],
+    aud: ["auditc"],
 };
 Object.keys(TOPIC_CALCS).forEach((id) => { if (!TOPIC_BY_ID[id]) delete TOPIC_CALCS[id]; });
 /* Routes */
@@ -6275,7 +6320,7 @@ function TopicPage({ topic: t, province, setProvince, open, go }) {
                             React.createElement("a", { href: f.url, target: "_blank", rel: "noopener noreferrer" }, f.label || "Source"))))))))),
                 calcs.length > 0 && (React.createElement("div", { id: "s-calc", className: "sec" }, calcs.map((k, i) => (React.createElement("section", { key: k, style: i ? { marginTop: 22 } : undefined },
                     React.createElement("h2", { className: "sec-title" }, CALCULATORS_META[k].title),
-                    React.createElement(CALC_COMPONENTS[k])))))),),
+                    React.createElement(CALC_COMPONENTS[k], { topicId: t.id })))))),),
             React.createElement("aside", { className: "d-side d-right", "aria-label": "Dosing, tools and source" },
                 React.createElement("div", { className: "d-stick d-scroll" },
                     meds.length > 0 && (React.createElement("section", { className: "sec", id: "s-dosing" },
@@ -6545,6 +6590,87 @@ function Ipss() {
             React.createElement("p", { className: "calc-act ipss-bother-out", "aria-live": "polite" }, bother == null ? "0 delighted … 6 terrible" : `Bother score: ${bother} (${IPSS_BOTHER[bother]})`)),
         (done > 0 || bother != null) && (React.createElement("button", { className: "calc-clear", onClick: () => { setAns({}); setBother(null); } }, "Clear"))));
 }
+/* PHQ-9, GAD-7 and AUDIT-C: published items and scoring, shown for the reader
+   to tick and total. Nothing is stored. Free to use. */
+const PHQ_OPTS = ["Not at all", "Several days", "More than half the days", "Nearly every day"];
+const QUESTIONNAIRES = {
+    phq9: {
+        intro: "Over the last 2 weeks, how often have you been bothered by any of the following problems? Each item 0 (not at all) to 3 (nearly every day).",
+        opts: PHQ_OPTS,
+        items: [
+            "Little interest or pleasure in doing things",
+            "Feeling down, depressed, or hopeless",
+            "Trouble falling or staying asleep, or sleeping too much",
+            "Feeling tired or having little energy",
+            "Poor appetite or overeating",
+            "Feeling bad about yourself — or that you are a failure or have let yourself or your family down",
+            "Trouble concentrating on things, such as reading the newspaper or watching television",
+            "Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual",
+            "Thoughts that you would be better off dead, or of hurting yourself in some way",
+        ],
+        result: (t) => (t <= 4 ? ["low", "Minimal (0 to 4)"] : t <= 9 ? ["low", "Mild (5 to 9)"] : t <= 14 ? ["mid", "Moderate (10 to 14)"] : t <= 19 ? ["high", "Moderately severe (15 to 19)"] : ["high", "Severe (20 to 27)"]),
+        src: "PHQ-9 total 0 to 27. A severity measure, not a diagnosis.",
+        notes: (ans) => (ans[8] > 0 ? ["Item 9 (thoughts of death or self-harm) is above 0: it needs clinical attention whatever the total."] : []),
+    },
+    gad7: {
+        intro: "Over the last 2 weeks, how often have you been bothered by the following problems? Each item 0 (not at all) to 3 (nearly every day).",
+        opts: PHQ_OPTS,
+        items: [
+            "Feeling nervous, anxious, or on edge",
+            "Not being able to stop or control worrying",
+            "Worrying too much about different things",
+            "Trouble relaxing",
+            "Being so restless that it is hard to sit still",
+            "Becoming easily annoyed or irritable",
+            "Feeling afraid, as if something awful might happen",
+        ],
+        result: (t) => (t <= 4 ? ["low", "Minimal (0 to 4)"] : t <= 9 ? ["low", "Mild (5 to 9)"] : t <= 14 ? ["mid", "Moderate (10 to 14)"] : ["high", "Severe (15 to 21)"]),
+        src: "GAD-7 total 0 to 21. A severity measure, not a diagnosis.",
+        notes: () => [],
+    },
+    auditc: {
+        intro: "Each item is scored 0 to 4, in the order the answers are listed.",
+        sex: true,
+        items: [
+            ["How often do you have a drink containing alcohol?", ["Never", "Monthly or less", "2 to 4 times a month", "2 to 3 times a week", "4 or more times a week"]],
+            ["How many standard drinks containing alcohol do you have on a typical day?", ["1 or 2", "3 or 4", "5 or 6", "7 to 9", "10 or more"]],
+            ["How often do you have six or more drinks on one occasion?", ["Never", "Less than monthly", "Monthly", "Weekly", "Daily or almost daily"]],
+        ],
+        result: (t, sex) => (sex == null ? ["none", "Total " + t + " of 12. Positive screen: 4 or more in men, 3 or more in women (choose sex)"] : t >= (sex === "m" ? 4 : 3) ? ["mid", "Positive screen (" + (sex === "m" ? "4 or more in men" : "3 or more in women") + ")"] : ["low", "Negative screen (" + (sex === "m" ? "under 4 in men" : "under 3 in women") + ")"]),
+        src: "AUDIT-C total 0 to 12. Positive screen: 4 or more in men, 3 or more in women.",
+        notes: () => [],
+    },
+};
+function Questionnaire({ qk }) {
+    const cfg = QUESTIONNAIRES[qk];
+    const [ans, setAns] = useState({});
+    const [sex, setSex] = useState(null);
+    const n = cfg.items.length;
+    const done = cfg.items.filter((_, i) => ans[i] != null).length;
+    const total = done === n ? cfg.items.reduce((sum, _, i) => sum + ans[i], 0) : null;
+    const res = total == null ? null : cfg.result(total, sex);
+    const max = cfg.sex ? 12 : n * 3;
+    return (React.createElement("div", { className: "calc" },
+        React.createElement("p", { className: "calc-hint", style: { margin: "0 0 12px" } }, cfg.intro),
+        cfg.items.map((it, i) => {
+            const text = cfg.sex ? it[0] : it;
+            const opts = cfg.sex ? it[1] : cfg.opts;
+            return (React.createElement("div", { key: i, style: { marginBottom: 12 } },
+                React.createElement("div", { className: "calc-label", style: { marginBottom: 6 } }, (i + 1) + ". " + text),
+                React.createElement("div", { className: "seg", role: "group", "aria-label": text, style: { gridTemplateColumns: opts.length === 4 ? "repeat(2, minmax(0, 1fr))" : "minmax(0, 1fr)" } }, opts.map((o, v) => (React.createElement("button", { key: v, "aria-pressed": ans[i] === v ? "true" : "false", onClick: () => setAns({ ...ans, [i]: v }) }, o + " (" + v + ")"))))));
+        }),
+        cfg.sex && React.createElement(Seg, { label: "Sex", value: sex, options: [["f", "Female"], ["m", "Male"]], onChange: setSex }),
+        React.createElement("div", { className: "calc-out", "data-band": res ? res[0] : "none", "aria-live": "polite" }, res == null ? (React.createElement("span", { className: "calc-wait" }, `Answer all ${n} questions (${done} of ${n})`)) : (React.createElement(React.Fragment, null,
+            React.createElement("div", { className: "calc-score" },
+                React.createElement("span", { className: "calc-num" }, total),
+                React.createElement("span", { className: "calc-band" }, res[1])),
+            React.createElement("p", { className: "calc-src" }, cfg.src)))),
+        cfg.notes(ans).map((x, i) => React.createElement("p", { className: "calc-note", key: i }, x)),
+        done > 0 && (React.createElement("button", { className: "calc-clear", onClick: () => { setAns({}); setSex(null); } }, "Clear"))));
+}
+const Phq9 = () => React.createElement(Questionnaire, { qk: "phq9" });
+const Gad7 = () => React.createElement(Questionnaire, { qk: "gad7" });
+const AuditC = () => React.createElement(Questionnaire, { qk: "auditc" });
 /* Cockcroft–Gault: CrCl (mL/min) = (140 − age) × weight (kg) ÷ (72 × SCr in mg/dL),
    × 0.85 if female (Cockcroft & Gault, Nephron 1976). SCr in µmol/L ÷ 88.4 = mg/dL.
    Actual body weight, as Canadian DOAC monographs specify (CJHP 2016). VTE
@@ -6662,7 +6788,69 @@ function Herdoo2() {
             React.createElement("p", { className: "calc-src" }, "Rodger et al., BMJ 2017 \u00B7 Thrombosis Canada duration guide, 2026"))),
         (fits || Object.values(on).some(Boolean)) && React.createElement("button", { className: "calc-clear", onClick: () => { setFits(null); setOn({}); } }, "Clear")));
 }
-const CALC_COMPONENTS = { crcl: Crcl, chads65: Chads65, herdoo2: Herdoo2, fib4: Fib4, mcisaac: McIsaac, ipss: Ipss };
+/* Amoxicillin, child, by weight. Each regimen is the one printed in the topic's
+   own entry; nothing here adds dosing content. day = mg/kg/day x weight; the
+   printed cap is then applied (daily cap, or per-dose cap). */
+const AMOX_IND = {
+    strep: { name: "Sore throat", topic: "pharyngitis", regs: [
+        { label: "50 mg/kg once daily", rate: [50, 50], n: 1 },
+        { label: "25 mg/kg BID", rate: [50, 50], n: 2 },
+    ], capDay: 1000, capText: "max 1 g/day" },
+    aom: { name: "Ear (AOM)", topic: "aom", regs: [
+        { label: "75–90 mg/kg/day, BID", rate: [75, 90], n: 2 },
+        { label: "45–60 mg/kg/day, TID", rate: [45, 60], n: 3 },
+    ], capText: "no maximum is printed" },
+    cap: { name: "Pneumonia", topic: "cap-child", regs: [
+        { label: "40–90 mg/kg/day, TID", rate: [40, 90], n: 3 },
+    ], capDay: 4000, capText: "max 4000 mg/day" },
+    lyme: { name: "Lyme", topic: "lyme", regs: [
+        { label: "50 mg/kg/day, TID", rate: [50, 50], n: 3 },
+    ], capDose: 500, capText: "max 500 mg per dose" },
+};
+function amoxCalc(ind, regIdx, rate, w) {
+    const I = AMOX_IND[ind], R = I.regs[regIdx];
+    let day = rate * w, dose = day / R.n, capped = null;
+    if (I.capDay && day > I.capDay) { day = I.capDay; dose = day / R.n; capped = "day"; }
+    if (I.capDose && dose > I.capDose) { dose = I.capDose; day = dose * R.n; capped = "dose"; }
+    return { day, dose, n: R.n, capped };
+}
+function AmoxKg({ topicId }) {
+    const start = Object.keys(AMOX_IND).find((k) => AMOX_IND[k].topic === topicId) || null;
+    const [ind, setInd] = useState(start);
+    const [reg, setReg] = useState(0);
+    const [rate, setRate] = useState(start ? AMOX_IND[start].regs[0].rate[0] : null);
+    const [wt, setWt] = useState("");
+    const w = wt === "" || isNaN(+wt) ? null : +wt;
+    const I = ind ? AMOX_IND[ind] : null, R = I ? I.regs[reg] : null;
+    const pick = (k) => { setInd(k); setReg(0); setRate(AMOX_IND[k].regs[0].rate[0]); };
+    const pickReg = (i) => { setReg(+i); setRate(I.regs[+i].rate[0]); };
+    const ranged = R && R.rate[0] !== R.rate[1];
+    const res = I && w > 0 ? amoxCalc(ind, reg, rate, w) : null;
+    const mg = (x) => Math.round(x);
+    const ml = (x, c) => (Math.round((mg(x) / c) * 5 * 10) / 10).toFixed(1);
+    return (React.createElement("div", { className: "calc" },
+        React.createElement("div", { className: "calc-grid" },
+            React.createElement(NumberField, { label: "Weight", unit: "kg", value: wt, onChange: setWt }),
+            React.createElement(Seg, { label: "Indication", value: ind, options: Object.entries(AMOX_IND).map(([k, v]) => [k, v.name]), onChange: pick }),
+            I && I.regs.length > 1 && React.createElement(Seg, { label: "Printed regimen", value: String(reg), options: I.regs.map((r, i) => [String(i), r.label]), onChange: pickReg }),
+            ranged && (React.createElement("label", { className: "calc-field" },
+                React.createElement("span", { className: "calc-label" }, "Dose within the printed range"),
+                React.createElement("input", { type: "range", min: R.rate[0], max: R.rate[1], step: 1, value: rate, onChange: (e) => setRate(+e.target.value), "aria-label": "mg/kg/day", style: { width: "100%" } }),
+                React.createElement("span", { className: "calc-hint" }, rate + " mg/kg/day (range " + R.rate[0] + "–" + R.rate[1] + ")")))),
+        React.createElement("div", { className: "calc-out", "data-band": res && res.capped ? "mid" : "none", "aria-live": "polite" }, !res ? React.createElement("span", { className: "calc-wait" }, I ? "Enter the child's weight" : "Choose an indication and enter the weight") : (React.createElement(React.Fragment, null,
+            React.createElement("div", { className: "calc-score" },
+                React.createElement("span", { className: "calc-num" }, mg(res.dose)),
+                React.createElement("span", { className: "calc-band" }, "mg per dose, " + res.n + (res.n === 1 ? " dose" : " doses") + " a day")),
+            React.createElement("p", { className: "calc-note" }, mg(res.day) + " mg per day (" + (R.rate[0] === R.rate[1] ? R.label : rate + " mg/kg/day, " + (res.n === 2 ? "divided BID" : "divided TID")) + ")"),
+            res.capped && React.createElement("p", { className: "calc-note" }, React.createElement("b", null, "Capped: "), "the printed maximum (" + I.capText + ") is limiting the dose. Uncapped it would be " + mg(rate * w / R.n) + " mg per dose, " + mg(rate * w) + " mg per day."),
+            !res.capped && I.capText && React.createElement("p", { className: "calc-hint" }, "Printed cap: " + I.capText + " — not reached."),
+            React.createElement("ul", { className: "rules" },
+                React.createElement("li", null, React.createElement("b", null, "200 mg/5 mL"), React.createElement("span", null, ml(res.dose, 200) + " mL per dose")),
+                React.createElement("li", null, React.createElement("b", null, "400 mg/5 mL"), React.createElement("span", null, ml(res.dose, 400) + " mL per dose"))),
+            React.createElement("p", { className: "calc-src" }, "Regimens as printed in the Sore throat, Acute otitis media, Pneumonia in children and Lyme disease entries. Volumes are rounded to 0.1 mL from the dose in whole mg.")))),
+        (wt || ind !== start) && React.createElement("button", { className: "calc-clear", onClick: () => { setWt(""); if (start) pick(start); else { setInd(null); setReg(0); } } }, "Clear")));
+}
+const CALC_COMPONENTS = { amoxkg: AmoxKg, crcl: Crcl, chads65: Chads65, herdoo2: Herdoo2, fib4: Fib4, mcisaac: McIsaac, ipss: Ipss, phq9: Phq9, gad7: Gad7, auditc: AuditC };
 /* ---------------------------------------------------------------- PAGES */
 const formatMonth = (ym) => {
     const m = /^(\d{4})-(\d{2})$/.exec(ym || "");
