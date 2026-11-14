@@ -843,9 +843,7 @@ const TOPICS = [
                 src: "AHS Calgary Zone AF primary care pathway (2025), Table 5A, from CCS 2020",
             },
         ],
-        calculators: [
-            { title: "CHADS-65 (CCS algorithm)", url: "https://www.mdcalc.com/calc/10398/ccs-algorithm-for-oac-in-af-chads-65" },
-        ],
+        calculators: [],
         handout: null,
         related: ["hf", "htn", "ckd"],
         conflicts: [],
@@ -1695,7 +1693,7 @@ const TOPICS = [
             {
                 scope: "ON", kind: "pathway", label: "Childhood schedule",
                 note: "Men-C-ACYW replaces Men-C-C at 12 mo as Men-C-C supply runs out (Aug 2026); varicella at 15 mo; MMRV at 4–6 y for second doses; Grade 7 school program: Men-C-ACYW, hep B (2 doses, ages 11–15), HPV; Tdap at 14–16 y",
-                url: "https://www.myhealthunit.ca/en/health-professionals-and-partners/resources/Health-Care-Professionals/Publicly-Funded-Immunization-Schedule-for-Ontario---Spring-2025.pdf",
+                url: "https://www.ontario.ca/page/ontarios-routine-immunization-schedule",
             },
             {
                 scope: "ON", kind: "coverage", label: "Influenza 2026–27",
@@ -2480,7 +2478,7 @@ const TOPICS = [
                 name: "Varenicline",
                 dose: "0.5 mg daily × 3 days → 0.5 mg BID days 4–7 → 1 mg BID from day 8 (0.5 mg BID if not tolerated); 12 weeks",
                 adjustment: "Start 1–2 weeks before the quit date, or quit on days 8–35, or cut down gradually over 12 weeks (then treat 24 weeks). A second 12-week course if quit. CrCl < 30: max 0.5 mg BID; not in end-stage kidney disease.",
-                src: "Champix product monograph",
+                src: "Varenicline product monograph",
             },
             {
                 name: "Bupropion SR",
@@ -3360,8 +3358,8 @@ const TOPICS = [
             edition: 2016,
             checked: "2026-11",
             citation: "Fallone CA, Chiba N, van Zanten SV, et al. The Toronto Consensus for the Treatment of Helicobacter pylori Infection in Adults. Gastroenterology 2016;151(1):51–69",
-            url: "https://www.cag-acg.org/images/publications/Hp_Toronto_Consensus_2016.pdf",
-            doi: null,
+            url: "https://doi.org/10.1053/j.gastro.2016.04.006",
+            doi: "https://doi.org/10.1053/j.gastro.2016.04.006",
             tier: "national",
             state: "Still the Canadian H. pylori treatment consensus (2016). It covers treatment only; testing and test of cure come from provincial pathways.",
         },
@@ -3758,13 +3756,13 @@ const TOPICS = [
         changed: "",
         beyondGuideline: "",
         points: [
-            "Suspect | Nasal obstruction or purulent discharge, plus facial pain or pressure, discoloured post-nasal drip or loss of smell. **About 90% are viral**",
-            "First 7 days | **No antibiotics**. NSAID, saline rinses, consider an intranasal steroid. Topical decongestant **≤ 3 days**. No cultures or imaging",
-            "Antibiotics | Symptoms **> 7 days** with no response to 72 h of conservative care, or severe symptoms (hard to tolerate, disturbing sleep). **Mild–moderate**: intranasal steroid alone",
-            "Which antibiotic | **Amoxicillin** first. **Severe or first-line failure**: amoxicillin-clavulanate. **Penicillin allergy**: doxycycline. **β-lactam allergy**: cefixime; severe → levofloxacin",
-            "Chronic | Symptoms **6–12+ weeks** (the pathway's referral window; chronic by definition is ≥ 12 weeks); needs **CT** to confirm. Consider CT and referral at about 6 weeks if moderate–severe despite care. Check smoking, allergies, autoimmune disease, immunoglobulins (IgA, IgG, IgM)",
-            "Refer to ENT | Chronic symptoms despite care, with CT; **≥ 4 acute episodes a year** needing treatment (CT first; think immunodeficiency); suspected surgical need",
-            "Red flags → ED or urgent specialist | Altered mental status; **orbital swelling, redness or vision change**; cranial nerve palsy or meningeal signs",
+            "Suspect | **About 90% are viral.** **PODS**: ;; **P**ain or facial pressure ;; **O**bstruction (nasal) ;; **D**ischarge (purulent, or discoloured post-nasal drip) ;; **S**mell loss ;; One of obstruction or discharge, plus at least one other.",
+            "First 7 days | ;; **No antibiotics** ;; NSAID, saline rinses ;; Consider an intranasal steroid ;; Topical decongestant **≤ 3 days** ;; No cultures or imaging",
+            "Antibiotics | Symptoms **> 7 days** with no response to 72 h of conservative care, or severe symptoms (hard to tolerate, disturbing sleep) ;; **Mild–moderate**: intranasal steroid alone",
+            "Which antibiotic | ;; **Amoxicillin** first ;; **Severe or first-line failure**: amoxicillin-clavulanate ;; **Penicillin allergy**: doxycycline ;; **β-lactam allergy**: cefixime; severe → levofloxacin",
+            "Chronic | Symptoms **6–12+ weeks** (the pathway's referral window; chronic by definition is ≥ 12 weeks). Needs **CT** to confirm ;; Consider CT and referral at about 6 weeks if moderate–severe despite care ;; Check smoking, allergies, autoimmune disease, immunoglobulins (IgA, IgG, IgM)",
+            "Refer to ENT | ;; Chronic symptoms despite care, with CT ;; **≥ 4 acute episodes a year** needing treatment (CT first; think immunodeficiency) ;; Suspected surgical need",
+            "Red flags → ED or urgent specialist | ;; Altered mental status ;; **Orbital swelling, redness or vision change** ;; Cranial nerve palsy or meningeal signs",
         ],
         meds: [
             {
@@ -3794,7 +3792,7 @@ const TOPICS = [
         conflicts: [],
         provincial: [],
         journal: [
-            { j: "CMAJ", year: 2025, title: "Diagnosis and management of chronic rhinosinusitis", note: "**≥ 3 months** of congestion, rhinorrhea, facial pressure, altered smell. Confirming it needs **endoscopy or CT** — sinus x-rays add little. First line: **long-term saline irrigation and intranasal steroid**. Acute flares: amoxicillin-clavulanate 875 mg BID × 10 days. Refractory → ENT for endoscopic surgery; biologics for severe disease with nasal polyps", url: "https://doi.org/10.1503/cmaj.241101" },
+            { j: "CMAJ", year: 2025, title: "Diagnosis and management of chronic rhinosinusitis", note: "**≥ 3 months** of congestion, rhinorrhea, facial pressure, altered smell. Confirming it needs **endoscopy or CT**, sinus x-rays add little. First line: **long-term saline irrigation and intranasal steroid**. Acute flares: amoxicillin-clavulanate 875 mg BID × 10 days. Refractory → ENT for endoscopic surgery; biologics for severe disease with nasal polyps", url: "https://doi.org/10.1503/cmaj.241101" },
         ],
         editorial: "From the Alberta Rhinosinusitis Clinical Pathway (January 2025), reached at albertahealthservices.ca without 'www' — the www address redirects to the Pathway Hub. The pathway gives no NSAID, saline or INCS doses. The 2011 Canadian guideline (Desrosiers et al.) was not read. The CMAJ biologics mention is kept as awareness only (specialist-started).",
     },
@@ -3837,7 +3835,7 @@ const TOPICS = [
             {
                 name: "Magnesium oxide / lactulose",
                 dose: "MgO 400–500 mg/day in 1–3 doses, max 1.5 g; lactulose 15–60 mL/day",
-                adjustment: "Avoid magnesium if CrCl ≤ 20 mL/min. Lactulose causes bloating and gas.",
+                adjustment: "Magnesium oxide is an OTC supplement in Canada. Avoid magnesium if CrCl ≤ 20 mL/min. Lactulose causes bloating and gas.",
             },
             {
                 name: "Bisacodyl / senna",
@@ -3878,6 +3876,7 @@ const TOPICS = [
             url: "https://cuaj.ca/index.php/journal/article/view/7906",
             doi: "https://doi.org/10.5489/cuaj.7906",
             tier: "national",
+            short: "CUA · urology",
             state: "Current CUA guideline (2022 update).",
         },
         topNote: "Newer international updates exist (AUA 2026; EAU 2026). Their core medical management matches the CUA 2022 guideline this entry follows; the main changes are expanded surgical options and, in the EAU, a new section on voiding dysfunction in young men.",
@@ -3903,6 +3902,10 @@ const TOPICS = [
                 title: "Caveat",
                 body: ["PVR here is a bladder scanner measurement in clinic, not a booked ultrasound."],
             },
+            {
+                title: "Alberta pathway",
+                body: ["The second pathway in this topic is Alberta's Provincial Male LUTS Primary Care Clinical Pathway (updated November 2025). Alberta publishes it as a pathway for male lower urinary tract symptoms, not as a BPH guideline: the pathway itself says it does not address benign prostatic hyperplasia or complex conditions such as bladder cancer or neurogenic bladder, which need specialized evaluation. What it covers is the primary care management of the symptoms, including voiding symptoms from benign prostatic enlargement."],
+            },
         ],
         footnotes: [
             { mark: "†", text: "IPSS (International Prostate Symptom Score): 7 questions about the past month, each scored 0 (not at all) to 5 (almost always); nocturia is scored by number of times up at night, 0 to 5: ;; Incomplete emptying: sensation of not emptying the bladder ;; Frequency: urinating again less than 2 hours after finishing ;; Intermittency: stopping and starting several times while urinating ;; Urgency: difficulty postponing urination ;; Weak stream ;; Straining to urinate ;; Nocturia: times up at night to urinate", tail: "Total 0 to 35: 0 to 7 mild, 8 to 19 moderate, 20 to 35 severe. The bother score is the separate quality-of-life question, how the patient would feel living with the symptoms as they are: 0 delighted, 1 pleased, 2 mostly satisfied, 3 mixed, 4 mostly dissatisfied, 5 unhappy, 6 terrible." },
@@ -3927,9 +3930,9 @@ const TOPICS = [
             },
             {
                 name: "Desmopressin",
-                dose: "Nocdurna SL 1 h before bed: 50 mcg",
+                dose: "ODT 50 mcg sublingual 1 h before bed",
                 adjustment: "Nocturnal polyuria confirmed on a frequency-volume chart. No fluids from 1 h before to 8 h after. Baseline sodium; men ≥ 65 recheck at 4–8 days and 1 month; stop if sodium falls below normal. Not with CrCl < 50, heart failure, diuretics or past hyponatremia.",
-                src: "Nocdurna product monograph",
+                src: "CUA guideline",
             },
         ],
         calculators: [],
@@ -3937,6 +3940,73 @@ const TOPICS = [
         related: ["prostate-screen", "hematuria", "female-luts"],
         conflicts: [],
         provincial: [],
+        pathways: [
+            {
+                source: {
+                    org: "Alberta Health Services (Primary Care Alberta)",
+                    year: 2025,
+                    edition: 2025,
+                    checked: "2026-11",
+                    citation: "Provincial Male LUTS Primary Care Clinical Pathway. Alberta Health Services, updated November 2025",
+                    url: "https://albertahealthservices.ca/assets/info/aph/if-aph-prov-male-luts-primary-care-clinical-pathway.pdf",
+                    doi: null,
+                    tier: "provincial",
+                    level: "provincial",
+                    short: "Male LUTS · Alberta",
+                    state: "Current Alberta pathway, updated November 2025, co-designed by primary care providers, urologists, geriatricians and patient advisors. Framed as male LUTS; the pathway states it does not address BPH itself. See the Alberta pathway note in this topic.",
+                },
+                verified: true,
+                reviewedBy: "2026-11-13",
+                points: [
+                    "Sort the symptoms | ;; **Voiding:** hesitancy, weak stream, intermittency ;; **Storage:** frequency, nocturia, urgency, incontinence ;; **Post-micturition:** incomplete emptying, dribbling ;; History: diabetes, OSA, neurologic disease, CHF, smoking; family history of bladder or prostate cancer; earlier urologic or pelvic surgery ;; Drugs that worsen LUTS: anticholinergics, antihistamines, diuretics, bronchodilators, antidepressants",
+                    "Assess | Score severity with the **IPSS†**: mild **≤ 7**, moderate **8–19**, severe **≥ 20** ;; Examine the external genitalia; DRE if indicated ;; Urinalysis; creatinine and GFR; PSA if indicated ;; Voiding diary; renal and bladder ultrasound if appropriate",
+                    "Everyone | Lifestyle and behavioural measures for all: ;; Limit caffeine, alcohol and carbonated drinks; stop smoking ;; Timed voiding and bladder training ;; Post-micturition dribbling: urethral milking; consider pelvic floor physiotherapy",
+                    "Voiding symptoms | **Alpha-blocker** first line; trial **4–8 weeks** ;; Prostate enlarged: add a **5-alpha reductase inhibitor**; allow **6 months** to see the effect ;; **Tadalafil** is an option ;; Mixed symptoms: combine with the storage drugs below",
+                    "Storage symptoms | **Antimuscarinic** or **beta-3 agonist**, alone or added to the alpha-blocker ;; **Nocturia:** consider **desmopressin**; review diuretic timing and evening fluids",
+                    "Refer to urology | ;; No improvement after the 4–8 week trials, or symptoms worsen ;; DRE suspicious for cancer ;; Elevated PSA ;; **Send to ER:** acute retention with obstructive renal failure (acute kidney injury, bilateral hydronephrosis); catheterize first",
+                ],
+                footnotes: [
+                    { mark: "†", text: "IPSS (International Prostate Symptom Score): 7 questions about the past month, each scored 0 (not at all) to 5 (almost always); nocturia is scored by number of times up at night, 0 to 5: ;; Incomplete emptying: sensation of not emptying the bladder ;; Frequency: urinating again less than 2 hours after finishing ;; Intermittency: stopping and starting several times while urinating ;; Urgency: difficulty postponing urination ;; Weak stream ;; Straining to urinate ;; Nocturia: times up at night to urinate", tail: "Total 0 to 35: 0 to 7 mild, 8 to 19 moderate, 20 to 35 severe. The bother score is the separate quality-of-life question, how the patient would feel living with the symptoms as they are: 0 delighted, 1 pleased, 2 mostly satisfied, 3 mixed, 4 mostly dissatisfied, 5 unhappy, 6 terrible." },
+                ],
+                meds: [
+                    {
+                        name: "Tamsulosin (alpha-blocker)",
+                        dose: "0.4 mg daily",
+                        adjustment: "Dizziness; ejaculatory change. Doxazosin and terazosin need titration and BP checks.",
+                    },
+                    {
+                        name: "Finasteride · dutasteride",
+                        dose: "Finasteride 5 mg daily · dutasteride 0.5 mg daily",
+                        adjustment: "Enlarged prostate. Double the PSA for interpretation. Sexual side effects. Allow 6 months for effect.",
+                        src: "Proscar and Avodart product monographs",
+                    },
+                    {
+                        name: "Tadalafil",
+                        dose: "5 mg daily",
+                        adjustment: "Voiding symptoms; also helps erectile dysfunction.",
+                    },
+                    {
+                        name: "Mirabegron (beta-3 agonist)",
+                        dose: "25 mg daily; may increase to 50 mg",
+                        adjustment: "Storage symptoms. Check blood pressure; avoid in severe uncontrolled hypertension.",
+                        src: "Myrbetriq product monograph",
+                    },
+                    {
+                        name: "Solifenacin (antimuscarinic)",
+                        dose: "5 mg daily; may increase to 10 mg",
+                        adjustment: "Storage symptoms. Dry mouth and constipation; caution with retention risk and in older adults.",
+                        src: "Vesicare product monograph",
+                    },
+                    {
+                        name: "Desmopressin",
+                        dose: "ODT 50 mcg sublingual 1 h before bed",
+                        adjustment: "Nocturnal polyuria. No fluids from 1 h before to 8 h after. Baseline sodium; men ≥ 65 recheck at 4–8 days and 1 month; stop if sodium falls below normal. Not with CrCl < 50, heart failure, diuretics or past hyponatremia.",
+                        src: "CUA guideline",
+                    },
+                ],
+                editorial: "Drafted 2026-11-13 from the algorithm page of the Alberta pathway only. Mirabegron and solifenacin doses from their Canadian product monographs; both currently marketed in Canada. The pathway names desmopressin for nocturia without a dose; the dose shown is the CUA guideline's.",
+            },
+        ],
         editorial: "From the CUAJ full text (2022 update). The guideline gives doses only for tamsulosin 0.4 mg (used in trials), tadalafil 5 mg and desmopressin 50 µg ODT (sodium checks); 5-ARI doses are left to product labels. Floppy iris material deliberately removed; it is covered by ophthalmology's pre-operative review. The 300 mL PVR figure is from the AUA and EAU, not the CUA. 5-ARI carried as monotherapy-capable per CUA §2.3.2.",
     },
     {
