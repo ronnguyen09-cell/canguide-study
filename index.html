@@ -4875,7 +4875,7 @@ const PROVINCE_CODES = PROVINCES.map((p) => p[0]);
    topic keeps the full ranked list in `paths` for the picker.
 ================================================================== */
 const LEVEL_RANK = { national: 0, provincial: 1, regional: 2, international: 3, none: 4 };
-const LEVEL_LABEL = { national: "National", provincial: "Provincial", regional: "Regional", international: "Not Canadian", none: "No guideline" };
+const LEVEL_LABEL = { national: "National", provincial: "Provincial", regional: "Regional", international: "International", none: "No guideline" };
 /* A source marked `preferred` is ranked ahead of every level, so it becomes the default view. */
 const pathRank = (p) => (p.source.preferred ? -1 : LEVEL_RANK[p.level]);
 const levelOf = (src) => src.level || (src.tier === "national" ? "national" : src.tier === "provincial" ? "provincial" : src.tier || "none");
@@ -5061,7 +5061,7 @@ const firstSentence = (t) => {
     const m = String(t).match(/^(.+?[.!?])\s+(.+)$/s);
     return m ? [m[1], m[2]] : [t, ""];
 };
-const tierLabel = (tier) => ({ national: "National", provincial: "Provincial only", international: "Not Canadian", none: "No guideline" })[tier] || "";
+const tierLabel = (tier) => ({ national: "National", provincial: "Provincial only", international: "International", none: "No guideline" })[tier] || "";
 const levelLabel = (level) => LEVEL_LABEL[level] || "";
 /* ==================================================================
    SEARCH
@@ -6924,7 +6924,7 @@ function AboutPage({ go }) {
                 " Only a regional or centre pathway (for example Kingston or Calgary) \u00B7 ",
                 tiers.regional || 0),
             React.createElement("li", null,
-                React.createElement("span", { className: "tier", "data-tier": "international" }, "Not Canadian"),
+                React.createElement("span", { className: "tier", "data-tier": "international" }, "International"),
                 " No Canadian source; the foreign body is named \u00B7 ",
                 tiers.international || 0),
             React.createElement("li", null,
