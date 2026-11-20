@@ -957,7 +957,7 @@ const TOPICS = [
             "Subclinical | High TSH, normal free T4. **Treat if TSH > 10**. Between the upper limit and 10, consider treating if: symptomatic; TPO-positive; ASCVD or heart failure (or their risk factors); pregnant. Untreated: **TSH every 6–12 months**",
             "Anti-TPO | **Not routine**. Useful with a goitre or a mildly raised TSH — positivity raises the risk of progression. Once positive, don't repeat",
             "Monitor treatment | TSH **at least 6 weeks** after any dose change, then **yearly** once normal — every 6 months on lithium or amiodarone. TSH varies **up to 50%** through the day; changes inside the reference range don't matter",
-            "Pregnancy | Test if a risk factor‡ (e.g. **over 30**, morbid obesity, type 1 diabetes, already on levothyroxine). Not universal. On treatment: preconception TSH **lower limit to 2.5**; expect a **25–50% dose increase**; TSH **every 4–6 weeks to mid-pregnancy** and once near 30 weeks. Drop the dose postpartum, TSH at 6 weeks",
+            "Pregnancy | Test if a risk factor‡ (e.g. **over 30**, morbid obesity, type 1 diabetes, already on levothyroxine). Not universal ;; On treatment: preconception TSH **lower limit to 2.5**; expect a **25–50% dose increase**; TSH **every 4–6 weeks to mid-pregnancy** and once near 30 weeks ;; Drop the dose postpartum, TSH at 6 weeks",
             "Central hypothyroidism | TSH is unreliable if the pituitary or hypothalamus is affected — **free T4 is needed**. Write \"suspicion of pituitary insufficiency\" on the requisition",
         ],
         footnotes: [
@@ -1599,8 +1599,8 @@ const TOPICS = [
             "Calf (distal) DVT | Anticoagulate **3 months**, or withhold and **repeat ultrasound weekly × 2** (10 to 15% extend). Treat if: ;; Symptoms severe ;; Follow-up imaging is not possible ;; It extends ;; Any risk factor: ;;; Thrombus > 5 cm ;;; Several veins involved ;;; Near the popliteal ;;; No reversible cause ;;; Prior VTE ;;; Inpatient ;;; Active cancer ;;; Positive D-dimer",
             "How long | **At least 3 months** for everyone; stopping at 4 to 6 weeks doubles recurrence. **Stop at 3 months** after: a major transient provoker such as surgery (< 3% recurrence the next year); distal DVT; subsegmental PE; a low HERDOO2 score in women; major bleeding risk **> 2 to 3% a year**",
             "HERDOO2 | Identifies women who can safely stop anticoagulation after a first unprovoked VTE, rather than continuing indefinitely; score it with the HERDOO2 calculator in this entry.",
-            "Unprovoked or weakly provoked | Off treatment, recurrence after proximal DVT or PE is about **10% at 1 year, 25% at 5, 36% at 10**. Extended therapy lowers recurrence but not mortality or quality of life; decide together and **revisit every year**. Continue indefinitely, if bleeding risk allows, with: active cancer; antiphospholipid syndrome; high-risk thrombophilia",
-            "Extended phase | After 6 months, drop to **apixaban 2.5 mg BID or rivaroxaban 10 mg daily**; similar recurrence, less bleeding. Do not change duration for: heterozygous factor V Leiden or prothrombin mutation; family history; an IVC filter; residual clot. With atherosclerotic disease, continue ASA when anticoagulation stops",
+            "Unprovoked or weakly provoked | Off treatment, recurrence after proximal DVT or PE is about **10% at 1 year, 25% at 5, 36% at 10** ;; Extended therapy lowers recurrence but not mortality or quality of life; decide together and **revisit every year** ;; Continue indefinitely, if bleeding risk allows, with: active cancer; antiphospholipid syndrome; high-risk thrombophilia",
+            "Extended phase | After 6 months, drop to **apixaban 2.5 mg BID or rivaroxaban 10 mg daily**; similar recurrence, less bleeding ;; Do not change duration for: heterozygous factor V Leiden or prothrombin mutation; family history; an IVC filter; residual clot ;; With atherosclerotic disease, continue ASA when anticoagulation stops",
         ],
         meds: [
             {
@@ -1642,9 +1642,9 @@ const TOPICS = [
         editorial: "Written from two Thrombosis Canada PDFs: DVT Treatment (02 Nov 2025) and VTE Duration of Treatment (09 Apr 2026). The duration guide's Table 4 (sex-specific recurrence) and full HERDOO2 criteria were not in the extracted text — HERDOO2 is a candidate for a built-in calculator once its criteria are sourced. Compression stockings are not addressed by the DVT guide. PE treatment is a separate guide (thrombosiscanada.ca/clinical_guides/pdfs/44_52.pdf) not yet read. Duration guide: thrombosiscanada.ca/clinical_guides/pdfs/DURATIONOFANTICOAGULANTTHERAPY_101.pdf.",
     },
     {
-        id: "immunization",
-        title: "Immunization schedule",
-        aliases: ["vaccines", "vaccination", "immunization", "NACI", "schedule", "Tdap", "Shingrix", "zoster", "pneumococcal", "Prevnar", "Capvaxive", "RSV", "Abrysvo", "Arexvy", "nirsevimab", "Beyfortus", "HPV", "Gardasil", "MMR", "MMRV", "rotavirus", "Pediacel", "Pentacel"],
+        id: "immunization-childhood",
+        title: "Childhood immunization schedule",
+        aliases: ["vaccines", "vaccination", "immunization", "NACI", "schedule", "RSV", "nirsevimab", "Beyfortus", "HPV", "Gardasil", "MMR", "MMRV", "rotavirus", "Pediacel", "Pentacel"],
         category: "Prevention & screening",
         verified: true,
         reviewedBy: "2026-11-02",
@@ -1658,20 +1658,68 @@ const TOPICS = [
             tier: "national",
             state: "Living chapter, partly updated June 2026. PHAC flags several NACI statements as not yet folded in, including May 2026 meningococcal guidance under age 2. Provinces set what is publicly funded and when.",
         },
-        changed: "Adult pneumococcal now one dose of Pneu-C-20 or Pneu-C-21 at ≥ 65 regardless of prior vaccines (Nov 2024); RSV vaccine for all adults ≥ 75 and maternal RSVpreF from 28 weeks; HPV is a single dose to age 20; Pneu-C-15 or Pneu-C-20 replaced Pneu-C-13 in infants; Men-C-ACYW replaces Men-C-C at 12–23 months (May 2026).",
+        changed: "HPV is a single dose to age 20; Pneu-C-15 or Pneu-C-20 replaced Pneu-C-13 in infants; Men-C-ACYW replaces Men-C-C at 12–23 months (May 2026).",
         beyondGuideline: "",
         points: [
-            "Pregnancy | ;; **Tdap every pregnancy**, ideally **27–32 wk**, whatever the interval since the last dose ;; **Influenza** every season, at any stage of pregnancy, with an inactivated vaccine (the live nasal vaccine is not for pregnancy) ;; **COVID-19**: pregnancy is an increased-risk group, so vaccination is **recommended**, one dose a year ;; **RSVpreF may be considered at 28–36 wk**, in discussion with the care provider, before or during RSV season, **≥ 2 wk before birth**; not repeated in a later pregnancy: protect that baby with a monoclonal antibody instead",
             "Infants | ;; **2, 4, 6 mo**: DTaP-IPV-Hib (or the hexavalent with hep B) at each visit; 4th dose at **18 mo** ;; Pneumococcal conjugate at 2 and 4 mo; booster at **12–15 mo** ;; Rotavirus: first dose **≥ 6 wk and before 15 wk**; series done **before 8 mo**; no catch-up past that ;; **RSV**: one dose of **nirsevimab or clesrovimab** for infants **< 8 mo** entering or in their first season, if the mother had no RSVpreF or delivered < 2 wk after it ;; High-risk infants get it **even if the mother was vaccinated** ;; **Influenza** yearly from **6 mo**; under 9 and first time: 2 doses 4 weeks apart ;; **COVID-19** from **6 mo** is recommended for those at **increased risk** (underlying medical conditions, long-term care or congregate living, First Nations, Inuit or Métis communities); others may be offered it. First series under 5: 2 doses of Spikevax 8 wk apart (3 doses, 4–8 wk apart, if moderately to severely immunocompromised)",
-            "Toddlers | ;; **12 mo**: **MMR** ;; **12–23 mo**: **Men-C-ACYW** once (replaces Men-C-C; NACI May 2026) ;; **12–15 mo**: **varicella** ;; **From 18 mo**, no later than school entry: second MMR and varicella; MMRV at 4–6 y is an option ;; **Influenza** yearly (1 dose once vaccinated before); **COVID-19** as for infants: recommended at increased risk, optional for others",
-            "School age to 17 | ;; **4–6 y**: **Tdap-IPV** booster ;; **Around 12 y**: Men-C-ACYW; hep B if no infant series; **HPV: one dose of 9vHPV, ages 9–20** (2 doses if immunocompromised) ;; Tdap again 10 years after the preschool booster ;; **Influenza** yearly (the nasal live vaccine is an option from 2 y, with eligibility limits) ;; **COVID-19**: recommended at increased risk, optional for others; **1 dose** a year (2 doses for the first series if moderately to severely immunocompromised)",
-            "Adults | ;; **Tdap once** in adulthood, then Td q10y ;; **Recombinant zoster**: 2 doses, 2–6 mo apart, at **≥ 50**; or ≥ 18 if immunocompromised, finished ≥ 14 d before immunosuppression ;; MMR: born **≥ 1970** gets 1 dose ;; Varicella: 2 doses if < 50 without immunity ;; HPV: 2 doses at 21–26 ;; **Influenza** yearly, 1 dose ;; **COVID-19**: **1 dose a year** recommended at increased risk (underlying medical conditions, pregnancy, First Nations, Inuit or Métis communities, health care workers and other care providers, congregate living); others may be offered it. Moderately to severely immunocompromised: a **second yearly dose**, ≥ 3 mo after the first",
-            "Older adults | ;; **One pneumococcal conjugate** dose (Pneu-C-20 or Pneu-C-21) at **≥ 65**, **regardless of past pneumococcal vaccines**, ≥ 1 y after the last one; same for < 65 at increased risk ;; **RSV**: single dose for **all ≥ 75**, and 65–74 at increased risk; no RSV booster ;; **Influenza** yearly: **high-dose or adjuvanted** vaccine preferred at **≥ 65** (any age-appropriate vaccine if neither is available) ;; **COVID-19**: **all ≥ 65**, one dose a year; a **second dose ≥ 3 mo later** is strongly recommended at **≥ 80**, in long-term care or congregate living, and at 65–79 with underlying conditions; may be offered to other 65–79",
+            "Toddlers | ;; **12 mo**: **MMR** ;; **12–23 mo**: **Men-C-ACYW** once (replaces Men-C-C; NACI May 2026) ;; **12–15 mo**: **varicella** ;; **From 18 mo**, no later than school entry: second MMR and varicella ;; **Influenza** yearly (1 dose once vaccinated before); **COVID-19** as for infants: recommended at increased risk, optional for others",
+            "School age to 17 | ;; **4–6 y**: **Tdap-IPV** booster ;; **MMRV**: second MMR and varicella dose, generally at **4–6 y** if not given at 18 mo ;; **Around 12 y**: Men-C-ACYW; hep B if no infant series; **HPV: one dose of 9vHPV, ages 9–20** (2 doses if immunocompromised) ;; Tdap again 10 years after the preschool booster ;; **Influenza** yearly (the nasal live vaccine is an option from 2 y, with eligibility limits) ;; **COVID-19**: recommended at increased risk, optional for others; **1 dose** a year (2 doses for the first series if moderately to severely immunocompromised)",
         ],
         meds: [],
         calculators: [],
         handout: { title: "Ontario — RSV prevention for infants and high-risk children (fact sheet, Sept 2026)", url: "https://www.ontario.ca/files/2026-09/moh-infant-high-risk-children-rsv-factsheet-hcp-en-2026-09-25.pdf" },
-        related: ["breast-screen", "copd", "ckd"],
+        related: ["wellbaby", "immunization-adult"],
+        conflicts: [],
+        provincial: [
+            {
+                scope: "ON", kind: "coverage", label: "RSV, pregnancy and infants",
+                note: "Abrysvo funded at 28–36 wk if delivery expected in season; use before 32 wk is off-label; nirsevimab for infants < 8 mo and high-risk children to 24 mo; give Oct 1 to Mar 31; not both maternal and infant except born < 14 d after vaccine or high-risk (including all premature infants < 37 wk)",
+                url: "https://oma.org/practice-professional-support/running-your-practice/patient-care/vaccines-physicians-rights-and-responsibilities/rsv-immunization-program",
+            },
+            {
+                scope: "ON", kind: "pathway", label: "Childhood schedule",
+                note: "Men-C-ACYW replaces Men-C-C at 12 mo as Men-C-C supply runs out (Aug 2026); varicella at 15 mo; MMRV at 4–6 y for second doses; Grade 7 school program: Men-C-ACYW, hep B (2 doses, ages 11–15), HPV; Tdap at 14–16 y",
+                url: "https://www.ontario.ca/page/ontarios-routine-immunization-schedule",
+            },
+            {
+                scope: "ON", kind: "coverage", label: "Influenza 2026–27",
+                note: "General population from Oct 26, 2026; high-risk and priority groups first; high-dose or adjuvanted for ≥ 65; pharmacies vaccinate from age 2",
+                url: "https://www.ontario.ca/files/2026-09/moh-executive-officer-notice-en-2026-09-25.pdf",
+            },
+        ],
+        journal: [
+            { j: "CMAJ", year: 2026, title: "Reducing distress during vaccine injections: 2026 guideline update", note: "Use a **fast injection** at all ages; infants ≤ 12 months: **breastfeed**, bottle, a sweet liquid or a pacifier; offer **topical anesthetic** at the injection site at all ages; use distraction — toys and singing for infants, music, digital media or games for older children and adults", url: "https://doi.org/10.1503/cmaj.260123" },
+        ],
+        editorial: "Schedule points come from the CIG schedule chapter; adult pneumococcal from the Nov 2024 NACI summary and RSV from the CIG RSV chapter (May 2026), because the schedule chapter has not absorbed either. Influenza (CIG Part 4 influenza chapter, partial update Aug 2026; NACI 2025–2026 statement) and COVID-19 (CIG Part 4 COVID-19 chapter, Oct 2026; NACI summary of June 2026, guidance starting fall 2026) added in the V259 round, inside the existing life-stage points; COVID-19 is risk-based, not universal, and only the infant influenza line predates this. The Ontario childhood note is from the Spring 2025 publicly funded schedule as reposted by a health unit; check it against the current Ministry edition. Catch-up schedules would justify their own topic. Other provinces still needed — zoster and RSV funding differ most. Restructured Nov 3, 2026, with no clinical content changed: seven points became six on one axis, life stage in order (pregnancy, infants, toddlers, school age to 17, adults, older adults); ages moved from point titles into the points as leads, infant RSV folded into Infants, and influenza moved to Infants where it starts (6 mo). The six-point life-stage structure is a settled decision; future audits should not restore age-band titles or split infant RSV back into a product point. Split on Nov 20, 2026 (V268) into a childhood and an adult schedule topic on the owner's direction, superseding the single-topic structure described above; the MMRV bullet moved to the 4–6 y line of school age, with the toddler MMRV tail removed. Provincial notes and the CMAJ journal item that apply to both are shown on both.",
+    },
+    {
+        id: "immunization-adult",
+        title: "Adult immunization schedule",
+        aliases: ["vaccines", "vaccination", "immunization", "NACI", "schedule", "Tdap", "Shingrix", "zoster", "pneumococcal", "Prevnar", "Capvaxive", "RSV", "Abrysvo", "Arexvy", "HPV", "Gardasil", "MMR"],
+        category: "Prevention & screening",
+        verified: true,
+        reviewedBy: "2026-11-02",
+        source: {
+            org: "Public Health Agency of Canada — NACI",
+            year: 2026,
+            edition: null,
+            checked: "2026-10",
+            citation: "Canadian Immunization Guide, Part 1: Recommended immunization schedules (partial update June 2026); influenza and COVID-19 from the CIG Part 4 chapters and the NACI guidance on COVID-19 vaccines starting fall 2026",
+            url: "https://www.canada.ca/en/public-health/services/publications/healthy-living/canadian-immunization-guide-part-1-key-immunization-information/page-13-recommended-immunization-schedules.html",
+            tier: "national",
+            state: "Living chapter, partly updated June 2026. PHAC flags several NACI statements as not yet folded in, including May 2026 meningococcal guidance under age 2. Provinces set what is publicly funded and when.",
+        },
+        changed: "Adult pneumococcal now one dose of Pneu-C-20 or Pneu-C-21 at ≥ 65 regardless of prior vaccines (Nov 2024); RSV vaccine for all adults ≥ 75 and maternal RSVpreF from 28 weeks; HPV is a single dose to age 20.",
+        beyondGuideline: "",
+        points: [
+            "Pregnancy | ;; **Tdap every pregnancy**, ideally **27–32 wk**, whatever the interval since the last dose ;; **Influenza** every season, at any stage of pregnancy, with an inactivated vaccine (the live nasal vaccine is not for pregnancy) ;; **COVID-19**: pregnancy is an increased-risk group, so vaccination is **recommended**, one dose a year ;; **RSVpreF may be considered at 28–36 wk**, in discussion with the care provider, before or during RSV season, **≥ 2 wk before birth**; not repeated in a later pregnancy: protect that baby with a monoclonal antibody instead",
+            "Adults | ;; **Tdap once** in adulthood, then Td q10y ;; **Recombinant zoster**: 2 doses, 2–6 mo apart, at **≥ 50**; or ≥ 18 if immunocompromised, finished ≥ 14 d before immunosuppression ;; After a shingles episode or the old live vaccine (Zostavax), wait **at least 1 year** before Shingrix; never during an active episode ;; MMR: born **≥ 1970** gets 1 dose ;; Varicella: 2 doses if < 50 without immunity ;; HPV: 2 doses at 21–26 ;; **Influenza** yearly, 1 dose ;; **COVID-19**: **1 dose a year** recommended at increased risk (underlying medical conditions, pregnancy, First Nations, Inuit or Métis communities, health care workers and other care providers, congregate living); others may be offered it. Moderately to severely immunocompromised: a **second yearly dose**, ≥ 3 mo after the first",
+            "Older adults | ;; **One pneumococcal conjugate** dose (Pneu-C-20 or Pneu-C-21) at **≥ 65**, **regardless of past pneumococcal vaccines**, ≥ 1 y after the last one; same for < 65 at increased risk ;; **RSV**: single dose for **all ≥ 75**, and 65–74 at increased risk; no RSV booster ;; **Influenza** yearly: **high-dose or adjuvanted** vaccine preferred at **≥ 65** (any age-appropriate vaccine if neither is available) ;; **COVID-19**: **all ≥ 65**, one dose a year; a **second dose ≥ 3 mo later** is strongly recommended at **≥ 80**, in long-term care or congregate living, and at 65–79 with underlying conditions; may be offered to other 65–79",
+        ],
+        meds: [],
+        calculators: [],
+        handout: null,
+        related: ["breast-screen", "copd", "ckd", "immunization-childhood"],
         conflicts: [],
         provincial: [
             {
@@ -1695,11 +1743,6 @@ const TOPICS = [
                 url: "https://oma.org/practice-professional-support/running-your-practice/patient-care/vaccines-physicians-rights-and-responsibilities/rsv-immunization-program",
             },
             {
-                scope: "ON", kind: "pathway", label: "Childhood schedule",
-                note: "Men-C-ACYW replaces Men-C-C at 12 mo as Men-C-C supply runs out (Aug 2026); varicella at 15 mo; MMRV at 4–6 y for second doses; Grade 7 school program: Men-C-ACYW, hep B (2 doses, ages 11–15), HPV; Tdap at 14–16 y",
-                url: "https://www.ontario.ca/page/ontarios-routine-immunization-schedule",
-            },
-            {
                 scope: "ON", kind: "coverage", label: "Influenza 2026–27",
                 note: "General population from Oct 26, 2026; high-risk and priority groups first; high-dose or adjuvanted for ≥ 65; pharmacies vaccinate from age 2",
                 url: "https://www.ontario.ca/files/2026-09/moh-executive-officer-notice-en-2026-09-25.pdf",
@@ -1708,7 +1751,7 @@ const TOPICS = [
         journal: [
             { j: "CMAJ", year: 2026, title: "Reducing distress during vaccine injections: 2026 guideline update", note: "Use a **fast injection** at all ages; infants ≤ 12 months: **breastfeed**, bottle, a sweet liquid or a pacifier; offer **topical anesthetic** at the injection site at all ages; use distraction — toys and singing for infants, music, digital media or games for older children and adults", url: "https://doi.org/10.1503/cmaj.260123" },
         ],
-        editorial: "Schedule points come from the CIG schedule chapter; adult pneumococcal from the Nov 2024 NACI summary and RSV from the CIG RSV chapter (May 2026), because the schedule chapter has not absorbed either. Influenza (CIG Part 4 influenza chapter, partial update Aug 2026; NACI 2025–2026 statement) and COVID-19 (CIG Part 4 COVID-19 chapter, Oct 2026; NACI summary of June 2026, guidance starting fall 2026) added in the V259 round, inside the existing life-stage points; COVID-19 is risk-based, not universal, and only the infant influenza line predates this. The Ontario childhood note is from the Spring 2025 publicly funded schedule as reposted by a health unit; check it against the current Ministry edition. Catch-up schedules would justify their own topic. Other provinces still needed — zoster and RSV funding differ most. Restructured Nov 3, 2026, with no clinical content changed: seven points became six on one axis, life stage in order (pregnancy, infants, toddlers, school age to 17, adults, older adults); ages moved from point titles into the points as leads, infant RSV folded into Infants, and influenza moved to Infants where it starts (6 mo). The six-point life-stage structure is a settled decision; future audits should not restore age-band titles or split infant RSV back into a product point.",
+        editorial: "Schedule points come from the CIG schedule chapter; adult pneumococcal from the Nov 2024 NACI summary and RSV from the CIG RSV chapter (May 2026), because the schedule chapter has not absorbed either. Influenza (CIG Part 4 influenza chapter, partial update Aug 2026; NACI 2025–2026 statement) and COVID-19 (CIG Part 4 COVID-19 chapter, Oct 2026; NACI summary of June 2026, guidance starting fall 2026) added in the V259 round, inside the existing life-stage points; COVID-19 is risk-based, not universal, and only the infant influenza line predates this. The Ontario childhood note is from the Spring 2025 publicly funded schedule as reposted by a health unit; check it against the current Ministry edition. Catch-up schedules would justify their own topic. Other provinces still needed — zoster and RSV funding differ most. Restructured Nov 3, 2026, with no clinical content changed: seven points became six on one axis, life stage in order (pregnancy, infants, toddlers, school age to 17, adults, older adults); ages moved from point titles into the points as leads, infant RSV folded into Infants, and influenza moved to Infants where it starts (6 mo). The six-point life-stage structure is a settled decision; future audits should not restore age-band titles or split infant RSV back into a product point. Split on Nov 20, 2026 (V268) into a childhood and an adult schedule topic on the owner's direction, superseding the single-topic structure described above; the MMRV bullet moved to the 4–6 y line of school age, with the toddler MMRV tail removed. Provincial notes and the CMAJ journal item that apply to both are shown on both.",
     },
     {
         id: "cervical-screen",
@@ -1752,7 +1795,7 @@ const TOPICS = [
         meds: [],
         calculators: [],
         handout: null,
-        related: ["immunization", "breast-screen", "crc-screen"],
+        related: ["immunization-adult", "breast-screen", "crc-screen"],
         conflicts: [
             {
                 with: "Task Force 2013",
@@ -1822,10 +1865,10 @@ const TOPICS = [
         changed: "Average-risk start lowered from 50 to 45; increased-risk start lowered to 40; a single first-degree relative diagnosed at 60 or older no longer counts as increased risk; colonoscopy every 5 years when the last one was normal; FIT lab moved from LifeLabs to ICL.",
         beyondGuideline: "",
         points: [
-            "Average risk | No personal history of colorectal cancer, surveillance polyps or IBD; no qualifying family history (**one relative diagnosed at 60 or older still counts as average**). **45–74: FIT every 2 years**. **75–85**: optional, if benefit outweighs risk given health, life expectancy and past screening. **86 and over: strongly recommend against**",
+            "Average risk | No personal history of colorectal cancer, surveillance polyps or IBD; no qualifying family history (**one relative diagnosed at 60 or older still counts as average**) ;; **45–74: FIT every 2 years** ;; **75–85**: optional, if benefit outweighs risk given health, life expectancy and past screening ;; **86 and over: strongly recommend against**",
             "Ordering FIT | Fax the new requisition to **ICL (1-833-520-1544)**; the kit is mailed to the patient. No family doctor or NP: patient calls **811**. Unreturned kits get a reminder letter at 2 months. Ontario mails invitation letters to 45–49-year-olds over two years from July 2026",
             "Abnormal FIT | Refer for **colonoscopy as soon as possible** (OCFP summary); ColonCancerCheck's target is **within 8 weeks** (ColonCancerCheck, ontario.ca)",
-            "Increased risk | **One first-degree relative diagnosed before 60**; **two or more at any age**; first-degree = parent, sibling, child. **Colonoscopy from 40, or 10 years before the youngest relative's diagnosis**, whichever is earlier; repeat every **5 years** if no polyps. Ontario Health doesn't track family history, so there's **no letter specific to increased risk** — identify and refer them",
+            "Increased risk | **One first-degree relative diagnosed before 60**; **two or more at any age**; first-degree = parent, sibling, child ;; **Colonoscopy from 40, or 10 years before the youngest relative's diagnosis**, whichever is earlier; repeat every **5 years** if no polyps ;; Ontario Health doesn't track family history, so there's **no letter specific to increased risk** — identify and refer them",
             "Not screening | Colonoscopy as a first-line screen in average risk is not recommended nationally",
         ],
         meds: [],
@@ -2321,7 +2364,7 @@ const TOPICS = [
         beyondGuideline: "",
         points: [
             "Screen | GAD: \"In the past 4 weeks, have you been bothered by feeling worried, tense or anxious most of the time?\" — plus tension, irritability, poor sleep. Panic: sudden unexpected attacks of intense fear, then **a month or more of worrying** about further attacks",
-            "Start | **CBT or medication** — similar efficacy; routine combination is not supported as a first step. CBT is first line for social anxiety, with efficacy comparable to drugs. Sessions: panic about **12–14 weekly**; GAD: fewer than 8 sessions work as well as 8 or more for anxiety symptoms. In panic, begin drugs with a **first-line agent**",
+            "Start | **CBT or medication** — similar efficacy; routine combination is not supported as a first step ;; CBT is first line for social anxiety, with efficacy comparable to drugs ;; Sessions: panic about **12–14 weekly**; GAD: fewer than 8 sessions work as well as 8 or more for anxiety symptoms ;; In panic, begin drugs with a **first-line agent**",
             "GAD first line | **Duloxetine, escitalopram, paroxetine, pregabalin, sertraline, venlafaxine XR**. Second line includes benzodiazepines, buspirone, hydroxyzine, quetiapine XR, vortioxetine. Pregabalin and vortioxetine are off-label in Canada for GAD. **Not recommended: propranolol**",
             "Panic first line | **Citalopram, escitalopram, fluoxetine, fluvoxamine, paroxetine, sertraline, venlafaxine XR**. **Start low** and titrate every 1–2 weeks over 4–6 weeks. Not recommended: buspirone, propranolol, trazodone",
             "Social anxiety first line | **Escitalopram, fluvoxamine, paroxetine, pregabalin, sertraline, venlafaxine XR**. Second line includes benzodiazepines, citalopram, gabapentin, phenelzine. Beta-blockers only for performance situations such as public speaking. Not recommended: buspirone, quetiapine",
@@ -2452,7 +2495,7 @@ const TOPICS = [
         points: [
             "Screen everyone | **Adults and youth 12–25, routinely — yearly is practical**. Ask drinks in an average week and whether > 2 on one occasion, against Canada's Guidance (**≤ 2 a week low risk; 3–6 moderate; ≥ 7 high**); AUDIT-C is optional :: ;; **At or below the guidance**: brief education ;; Above it, ask about alcohol-related problems ;; **No problems**: personalized risk advice and cutting-down tips ;; **Problems**: **DSM-5-TR interview — mild 2–3, moderate 4–5, severe ≥ 6** criteria",
             "Brief intervention | **Offer to everyone who screens positive** — cuts about 20 g alcohol a week at a year. Discuss Canada's Guidance on Alcohol and Health. Goals are the patient's: **abstinence, less drinking, or harm reduction**",
-            "Withdrawal risk | **PAWSS for every patient with AUD**, plus past seizures or DTs. **Low risk (PAWSS < 4): gabapentin** first, or carbamazepine or clonidine, as outpatient. **High risk (PAWSS ≥ 4): short-course benzodiazepine**, ideally inpatient. **Thiamine 200 mg PO daily** before and during withdrawal",
+            "Withdrawal risk | **PAWSS for every patient with AUD**, plus past seizures or DTs ;; **Low risk (PAWSS < 4): gabapentin** first, or carbamazepine or clonidine, as outpatient ;; **High risk (PAWSS ≥ 4): short-course benzodiazepine**, ideally inpatient ;; **Thiamine 200 mg PO daily** before and during withdrawal",
             "First-line drugs | **Moderate to severe AUD: naltrexone or acamprosate**. **Naltrexone** for abstinence or cutting down — not with opioids or acute hepatitis. **Acamprosate** for abstinence — not with severe kidney impairment. Continue **at least 6 months**, then reassess",
             "Second line | **Topiramate** — not in pregnancy, narrow-angle glaucoma or kidney stones. **Gabapentin** 100–300 mg TID, up to 1800 mg/day",
             "Don't use | **No SSRIs or antipsychotics to treat AUD** — including for co-existing anxiety or depression, unless already clearly benefiting. **No ongoing benzodiazepines** — withdrawal courses only",
@@ -2620,7 +2663,7 @@ const TOPICS = [
         ],
         calculators: [],
         handout: null,
-        related: ["immunization", "contraception"],
+        related: ["immunization-adult", "contraception"],
         conflicts: [],
         provincial: [
             {
@@ -2650,7 +2693,7 @@ const TOPICS = [
             citation: "Rourke Baby Record 2024: Evidence-Based Infant/Child Health Maintenance, Ontario edition (Guides I–IV)",
             url: "https://www.rourkebabyrecord.ca/pdf/2024/RBR%202024%20ON-EN-3vpp-May%2018-BLACK-Feb%209.pdf",
             tier: "national",
-            state: "Current 2024 edition. National content with provincial editions; this is the Ontario version. Immunization chart removed in 2024 — see Immunization schedule.",
+            state: "Current 2024 edition. National content with provincial editions; this is the Ontario version. Immunization chart removed in 2024 — see Childhood immunization schedule.",
         },
         changed: "Anti-racist and culturally safe care section added; milestones regrouped by domain; cow's milk maximums clarified to cut iron deficiency; acholic stools added to 2 months; sentinel injuries defined; reading aloud now good evidence at every visit; immunization chart removed.",
         beyondGuideline: "",
@@ -2660,7 +2703,7 @@ const TOPICS = [
             "Exam and screening | ;; **Newborn**: Ortolani, red reflex, femoral pulses, **universal hearing and newborn screen** ;; **Red flags**: **acholic stools to 2 mo** (biliary atresia); fever **≥ 38 °C under 3 mo** needs urgent assessment ;; **Cover-uncover and corneal light reflex from 6 mo**; visual acuity at 3–5 y ;; BP from 3 y if at risk ;; **If at risk**: **iron deficiency or anemia 6–18 mo**; **blood lead** by the record's risk criteria; HBV serology at 9–12 mo if mother HBsAg-positive",
             "Development | **18-month visit**: parent completes a **standardized developmental screen**. Absence of any milestone, loss of milestones or parental concern merits further assessment: ;; Walks alone; **≥ 10 words**; points to body parts; points to what they want; tries to show you something; follows 1-step directions ;; **M-CHAT at 18–24 mo** for failed social, emotional or communication items, a sibling with autism, or a developmental concern from a parent, caregiver or physician",
             "Safety | ;; **Sleep**: **back to sleep**, firm flat surface, own crib in the parents' room for **6 mo**; avoid bed sharing ;; **Car**: **rear-facing as long as possible**; harness ≥ 10 kg; booster ≥ 18 kg; back seat under 13 ;; **Home**: hot water **< 49 °C**; no baby walkers; no hard, small, smooth or gummy foods under 4",
-            "Screens and teeth | **Screens**: **no screens under 2** except video chat; **< 1 h/day at 2–4 y**. Read, speak and sing daily. **Teeth**: brush twice daily, **rice-grain smear** of fluoride toothpaste under 3 (by caries risk), **pea-sized at 3–6**. **First dental visit by 1 y**, or within 6 mo of the first tooth",
+            "Screens and teeth | **Screens**: **no screens under 2** except video chat; **< 1 h/day at 2–4 y** ;; Read, speak and sing daily ;; **Teeth**: brush twice daily, **rice-grain smear** of fluoride toothpaste under 3 (by caries risk), **pea-sized at 3–6** ;; **First dental visit by 1 y**, or within 6 mo of the first tooth",
         ],
         meds: [
             {
@@ -2672,7 +2715,7 @@ const TOPICS = [
         ],
         calculators: [],
         handout: { title: "Rourke Baby Record — parent resources", url: "https://www.rourkebabyrecord.ca/" },
-        related: ["immunization", "prenatal", "ida"],
+        related: ["immunization-childhood", "prenatal", "ida"],
         conflicts: [],
         provincial: [
             {
@@ -2772,7 +2815,7 @@ const TOPICS = [
             "IUD and infection | No routine antibiotics. **Test for STIs at insertion if high risk**; if positive, **treat and leave the IUD in**. PID: keep the IUD unless no improvement after **48–72 h** of antibiotics. Pregnancy with an IUD in place is **ectopic in 15–50%**",
             "Starting the pill, patch or ring | **Blood pressure is the only test needed**. No pelvic exam, Pap, STI screen or thrombophilia testing. **Quick start** any day if pregnancy is reasonably excluded — **backup for 7 days** unless started on day 1 of the period",
             "Missed pills | Risk is in a hormone-free gap **> 7 days**: ;; One missed in **week 1**: backup until 7 days in a row ;; Missed in **week 2 or 3**: skip the hormone-free week ;; **≥ 3 in a row** in weeks 2–3: skip it **and** use backup for 7 days ;; Consider emergency contraception if the gap ran over 7 days",
-            "Combined hormonal cautions | Raises **VTE risk** — progestin type doesn't justify choosing one pill over another. Effectiveness drops with **some anticonvulsants, some antiretrovirals, rifampicin, griseofulvin**. Patch may fail at **≥ 90 kg**. Extended or continuous use works as well, with fewer period symptoms",
+            "Combined hormonal cautions | Raises **VTE risk** — progestin type doesn't justify choosing one pill over another ;; Effectiveness drops with **some anticonvulsants, some antiretrovirals, rifampicin, griseofulvin** ;; Patch may fail at **≥ 90 kg** ;; Extended or continuous use works as well, with fewer period symptoms",
             "Progestin-only | Use when estrogen is a problem: **postpartum, breastfeeding, smokers over 35**. No rise in VTE, MI or stroke: ;; **DMPA**: **no limit on duration**; bone density loss is reversible; counsel on calcium, vitamin D, exercise. Delays return of ovulation. Doesn't reduce breast milk ;; **Progestin-only pill > 3 h late**: take a pill as soon as possible, continue daily, backup contraception for **48 h**, emergency contraception if unprotected sex in the past 5 days*",
         ],
         footnotes: [
@@ -2824,7 +2867,7 @@ const TOPICS = [
             "Treat confirmed GAS | **Penicillin V for 10 days** — no GAS resistance has been documented. Starting within **9 days** of onset still prevents rheumatic fever, so waiting for the culture is safe. Stop empiric antibiotics if the swab is negative",
             "Penicillin allergy | Not severe (e.g. a rash > 72 h after dosing): amoxicillin challenge or de-labelling, or cephalexin. **Anaphylaxis**: macrolide or clindamycin — up to **20%** of isolates resist them, so check local data",
             "Symptoms | Ibuprofen or acetaminophen; steroids not routinely",
-            "Safety-netting | Return if worse, still sore after 4–5 days, or with one-sided neck swelling, trouble breathing or severe trouble swallowing (abscess). Higher rheumatic fever risk (northern or Indigenous communities, crowded housing): test any child **≥ 3** with sore throat, and consider empiric treatment at McIsaac ≥ 3 in select settings if testing isn't available",
+            "Safety-netting | Return if worse, still sore after 4–5 days, or with one-sided neck swelling, trouble breathing or severe trouble swallowing (abscess) ;; Higher rheumatic fever risk (northern or Indigenous communities, crowded housing): test any child **≥ 3** with sore throat, and consider empiric treatment at McIsaac ≥ 3 in select settings if testing isn't available",
         ],
         footnotes: [
             { mark: "*", text: "McIsaac (modified Centor) score. **+1 each**: temperature > 38 °C; absence of cough; swollen, tender anterior cervical nodes; tonsillar swelling or exudate. **Age**: 3–14 years **+1**; 15–44 years **0**; 45 years and over **−1**. **Risk of GAS by score**: −1 or 0: 1–2.5%; 1: 5–10%; 2: 11–17%; 3: 28–35%; 4 or 5: 51–53%" },
@@ -2904,7 +2947,7 @@ const TOPICS = [
             "Baseline | ALT, AST, ALP, bilirubin, INR, albumin, CBC with platelets, lipids, A1C, and ultrasound if none in the past year. MASLD can be assumed once other causes are excluded, even with a normal ultrasound",
             "FIB-4 | Age × AST ÷ (platelets × √ALT). Under 65: **< 1.3** low; 1.3–3.25 indeterminate → Fibroscan; **> 3.25** high. Over 65: low is **< 2.0**, indeterminate 2.0–3.25",
             "Fibroscan | **< 10 kPa** excludes advanced fibrosis → stay in primary care, FIB-4 every **3 years**",
-            "Refer | To GI or hepatology if: **> 10 kPa**; FIB-4 > 3.25; ultrasound signs of cirrhosis or portal hypertension. While waiting: **ultrasound every 6 months** for HCC, and finish the full liver work-up even if enzymes are normal. On amiodarone, methotrexate or tamoxifen: refer for fibrosis assessment instead. ALT > 200, ascites or pregnancy: refer, and do not order Fibroscan",
+            "Refer | To GI or hepatology if: **> 10 kPa**; FIB-4 > 3.25; ultrasound signs of cirrhosis or portal hypertension ;; While waiting: **ultrasound every 6 months** for HCC, and finish the full liver work-up even if enzymes are normal ;; On amiodarone, methotrexate or tamoxifen: refer for fibrosis assessment instead ;; ALT > 200, ascites or pregnancy: refer, and do not order Fibroscan",
             "Manage | ;; **Lifestyle**: lose **5–10%** of weight over 6 months; moderate exercise 30 min, 4×/wk; less sugar, fructose and sweet drinks; 2–3 cups of coffee a day may help ;; **CV risk**: **3–5× higher**; treat lipids, BP and diabetes, stop smoking ;; **Alcohol**: discourage alcohol; none with advanced fibrosis ;; **Vaccines**: hepatitis A and B vaccines ;; **Bariatric**: bariatric referral if lifestyle and medical weight loss fail",
         ],
         meds: [
@@ -2968,7 +3011,7 @@ const TOPICS = [
                     "Baseline | ALT, AST, ALP, GGT (AMA if cholestatic); CBC with platelets; A1C, lipids; INR, bilirubin, albumin if cirrhosis is suspected",
                     "FIB-4 | **< 1.30**: manage in primary care, **repeat every 2–3 years**; **≥ 1.30 → refer** to a liver specialist",
                     "Manage | ;; **Lifestyle**: 150 min/week of activity; **~10% weight loss over 6 months** ;; **Treat**: treat diabetes, BP and lipids; **statins are safe**; ALT 3 months after starting, stop if it doubles; quit smoking ;; **Alcohol**: low risk: ≤ 4–5 drinks/week (men), 3–4 (women); none with cirrhosis ;; **Vaccines**: **hepatitis A and B vaccines**",
-                    "Not routine | **Vitamin E**: **800 IU/day** only for non-diabetic adults with biopsy-proven NASH (PIVENS); not for diabetes, cirrhosis (including NASH or cryptogenic cirrhosis) or NAFLD without a biopsy; long-term cardiovascular and prostate cancer concerns rest on weak evidence. **Omega-3**: insufficient evidence for NAFLD, so not to treat the liver itself; consider for high triglycerides or other comorbidities; possible anticoagulant effect above 3 g/day. **Coffee**: 2–3 cups may help (inconclusive)",
+                    "Not routine | **Vitamin E**: **800 IU/day** only for non-diabetic adults with biopsy-proven NASH (PIVENS); not for diabetes, cirrhosis (including NASH or cryptogenic cirrhosis) or NAFLD without a biopsy; long-term cardiovascular and prostate cancer concerns rest on weak evidence ;; **Omega-3**: insufficient evidence for NAFLD, so not to treat the liver itself; consider for high triglycerides or other comorbidities; possible anticoagulant effect above 3 g/day ;; **Coffee**: 2–3 cups may help (inconclusive)",
                 ],
                 meds: [],
                 editorial: "Read from the Pathway Hub page (Details tab) through the browser. Same content as the 2021 PDF summarized in the old provincial note. Kept as a 2021 pathway with its review overdue (Ron's decision). The vitamin E and omega-3 wording was verified by browser against the Pathway Hub copy (pathways/148; AHS NAFLD Primary Care Pathway, last updated Oct 2021) on Nov 3, 2026; the pathway attaches no bleeding or mortality caution to vitamin E.",
@@ -3264,7 +3307,7 @@ const TOPICS = [
             "Non-purulent | Strep or S. aureus: **cephalexin or cefadroxil**. **No MRSA coverage** for mild–moderate non-purulent cellulitis, even with MRSA risk factors",
             "Purulent or abscess | **Incision and drainage is essential**; culture the pus. Add MRSA cover only with risk factors: ;; Prior MRSA ;; Household contact with a carrier ;; IV drug use ;; Homelessness ;; Incarceration ;; Travel to or living in an endemic area",
             "How long | **5 days** if improving within 72 h; 7–10 days if response is slow. Some spread of redness in the first 48 h is expected — judge by pain, fever and how the patient looks",
-            "Oral vs IV | IV is no better for uncomplicated cellulitis. One sign of systemic toxicity can still be treated orally. IV cefazolin for systemic toxicity or oral failure; outpatient option: probenecid then cefazolin once daily. In obesity, consider adjusting antibiotic doses to ensure adequate tissue concentrations",
+            "Oral vs IV | IV is no better for uncomplicated cellulitis ;; One sign of systemic toxicity can still be treated orally ;; IV cefazolin for systemic toxicity or oral failure; outpatient option: probenecid then cefazolin once daily ;; In obesity, consider adjusting antibiotic doses to ensure adequate tissue concentrations",
             "Help it heal | Mark the border or photograph daily. **Elevate** the leg above the hip, the arm above the shoulder; compression if appropriate. Treat predisposing problems such as tinea pedis, especially with recurrence",
             "Beta-lactam allergy | **Immediate reaction**: cefuroxime. **Severe delayed reaction**: clindamycin",
             "Necrotizing infection | **Urgent surgical assessment** for biopsy and/or debridement with any of: ;; Pain out of proportion ;; Rapid spread ;; Gas ;; Numb skin ;; Hemodynamic instability ;; Multi-organ failure ;; Woody induration ;; Violaceous bullae",
@@ -3340,7 +3383,7 @@ const TOPICS = [
         beyondGuideline: "",
         points: [
             "Treat attacks early | Take acute medication while pain is still mild; take a triptan at the start of head pain rather than during aura. Match the drug to attack severity",
-            "Acute options | **Any triptan**, ASA, ibuprofen, naproxen sodium, diclofenac potassium; acetaminophen for mild–moderate attacks. **Metoclopramide or domperidone** for nausea. Avoid butalbital and butorphanol; codeine or tramadol combinations and ergotamine are not for routine use. Triptans: not with coronary or cerebrovascular disease",
+            "Acute options | **Any triptan**, ASA, ibuprofen, naproxen sodium, diclofenac potassium; acetaminophen for mild–moderate attacks ;; **Metoclopramide or domperidone** for nausea ;; Avoid butalbital and butorphanol; codeine or tramadol combinations and ergotamine are not for routine use ;; Triptans: not with coronary or cerebrovascular disease",
             "Overuse limits | Acetaminophen, ASA, NSAIDs: **≤ 14 days a month**. Triptans, combination analgesics, opioids, ergots: **≤ 9 days a month**",
             "Who needs prevention | **≥ 4** moderate–severe headache days a month not helped by acute treatment; **≥ 8** headache days a month even if acute treatment works; or attacks with major impact despite acute care",
             "Prevention choices | Beta-blocker (propranolol, nadolol, metoprolol); **amitriptyline**; **candesartan** (caution if pregnancy possible). **Chronic** migraine: propranolol or topiramate",
@@ -3412,7 +3455,7 @@ const TOPICS = [
             "Exercise helps | Start light aerobic activity early — about **55%** of maximum heart rate (220 − age), then 70% — even with mild symptoms. It lowers the risk of persisting symptoms",
             "School, work, sport | Back to school or work as soon as tolerated, with accommodations — **more than 1 week off is not recommended**. Sport: 6 steps, **≥ 24 h each**; finish return to school and get a **medical clearance letter** before step 4 (non-contact drills)",
             "Follow-up | Review **within 2 weeks**, more often if slow. Avoid opioids, alcohol, cannabis and sedatives. Decide on driving, and document it",
-            "Persisting symptoms | Beyond **4 weeks** (about 1 in 4 youth, at least 1 in 6 adults): refer for interdisciplinary care. Screen for vestibular and neck problems, mood (PHQ-9, GAD-7), PTSD, substance use and orthostatic intolerance. Highest risk: severe early symptoms, prior migraine or mental illness",
+            "Persisting symptoms | Beyond **4 weeks** (about 1 in 4 youth, at least 1 in 6 adults): refer for interdisciplinary care ;; Screen for vestibular and neck problems, mood (PHQ-9, GAD-7), PTSD, substance use and orthostatic intolerance ;; Highest risk: severe early symptoms, prior migraine or mental illness",
         ],
         meds: [],
         calculators: [],
@@ -3632,7 +3675,7 @@ const TOPICS = [
                     "Diagnose | Predominant **heartburn ± regurgitation**, no alarm features → GERD. **No tests needed** at first. Risk factors: higher BMI, hiatus hernia, pregnancy, smoking, sleeve gastrectomy. Chest pain: exclude cardiac causes first; GERD treatment can start meanwhile",
                     "H. pylori | **Don't screen for H. pylori** in GERD — most patients don't have it",
                     "Alarm features → endoscopy | ;; Weight loss **> 5% over 6–12 months** ;; Progressive **dysphagia** ;; Odynophagia ;; Persistent vomiting (not cannabis) ;; Black stool or blood in vomit (send **CBC, INR, BUN**) ;; Iron deficiency anemia ;; Abdominal mass ;; List every feature on the referral",
-                    "Barrett's screening | **Males** with GERD **> 10 years or weekly or more**, only with **≥ 2 of**: age > 50, Caucasian, central obesity (waist ≥ 102 cm or waist-hip > 0.9), smoking, first-degree family history of Barrett's or esophageal cancer. **Females** only with multiple of the same risk factors (central obesity: waist ≥ 88 cm or waist-hip > 0.8). Discuss life expectancy and surveillance first",
+                    "Barrett's screening | **Males** with GERD **> 10 years or weekly or more**, only with **≥ 2 of**: age > 50, Caucasian, central obesity (waist ≥ 102 cm or waist-hip > 0.9), smoking, first-degree family history of Barrett's or esophageal cancer ;; **Females** only with multiple of the same risk factors (central obesity: waist ≥ 88 cm or waist-hip > 0.8) ;; Discuss life expectancy and surveillance first",
                     "Lifestyle | ;; **Stop smoking** (essential) ;; Lose weight if overweight or recently gained ;; Smaller meals ;; Nothing **3 h before bed** if nocturnal ;; Loose waistbands ;; Head of bed up **4–6 inches** (blocks or wedge, not a pillow) ;; Cutting trigger foods is reasonable but unproven",
                     "Drugs | **< 2×/week**: H2 blocker or antacid on demand. **≥ 2×/week: PPI** once daily 30 min before breakfast; poor response at **8 weeks** → twice daily or switch. Once controlled, lowest dose and **try to stop yearly**. Barrett's: daily PPI for life",
                     "Refer | Alarm features; Barrett's screen positive; **poor response despite confirmed adherence** (about 1 in 3 don't respond to PPI) — lower threshold with a first-degree family history of esophageal or gastric cancer. Consider specialist advice before referring",
@@ -4442,7 +4485,7 @@ const TOPICS = [
         ],
         calculators: [],
         handout: null,
-        related: ["cap-child", "copd", "immunization"],
+        related: ["cap-child", "copd", "immunization-adult"],
         conflicts: [],
         provincial: [
             {
@@ -4926,7 +4969,7 @@ const SHORT_NAME = {
     htn: "Hypertension", lipids: "Lipids", hf: "Heart failure", afib: "Atrial fibrillation",
     t2dm: "Diabetes", hypothyroid: "Hypothyroidism", obesity: "Obesity", osteoporosis: "Osteoporosis",
     ckd: "Kidney disease", asthma: "Asthma", copd: "COPD", sti: "STIs", uti: "UTI",
-    ida: "Iron deficiency", immunization: "Immunization",
+    ida: "Iron deficiency", "immunization-childhood": "Childhood immunization", "immunization-adult": "Adult immunization",
     "cervical-screen": "Cervical screening", "breast-screen": "Breast screening",
     "crc-screen": "Colorectal screening", "lung-screen": "Lung screening",
     "prostate-screen": "Prostate screening",
@@ -4944,7 +4987,7 @@ const shortName = (id) => SHORT_NAME[id] || (TOPIC_BY_ID[id] || {}).title || id;
 /* The wheel. A key is a topic id, or "g:" + a group name. */
 const GROUPS = {
     "Women's health": { category: "Women's health", ids: ["prenatal", "perinatal-mh", "contraception", "menopause", "hmb", "pcos", "female-luts", "ipv"] },
-    "Infections": { category: "Infectious disease", ids: ["uti", "sti", "pharyngitis", "sinusitis", "cap-adult", "lyme", "prep", "hepc", "hepb", "hiv", "ltbi", "measles", "immunization"] },
+    "Infections": { category: "Infectious disease", ids: ["uti", "sti", "pharyngitis", "sinusitis", "cap-adult", "lyme", "prep", "hepc", "hepb", "hiv", "ltbi", "measles", "immunization-childhood", "immunization-adult"] },
     "MH / Addictions": { category: "Mental health", ids: ["mdd", "anxiety", "perinatal-mh", "adhd", "oud", "aud", "smoking"] },
     "Cancer screening": { category: "Prevention & screening", ids: ["cervical-screen", "breast-screen", "crc-screen", "lung-screen", "prostate-screen"], trim: / screening$/ },
     "Respiratory": { category: "Respiratory", ids: ["asthma", "copd", "allergic-rhinitis", "osa"] },
@@ -5507,6 +5550,7 @@ const STYLES = `
 .drug-dose{font-family:var(--mono);font-size:14px;line-height:1.5;margin-top:4px;color:var(--ink);}
 .drug-src{padding:0 14px 8px;margin-top:-4px;font-size:11.5px;color:var(--faint);}
 .drug-adj{padding:10px 14px 12px;background:var(--sunk);font-size:14.5px;line-height:1.5;border-top:1px solid var(--line);}
+
 .drug-adj-label{display:block;font-size:11px;font-weight:750;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
 
 .prov-pick{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:14px;color:var(--muted);}
@@ -6850,7 +6894,6 @@ function AmoxKg({ topicId }) {
             React.createElement("p", { className: "calc-src" }, "Regimens as printed in the Sore throat, Acute otitis media, Pneumonia in children and Lyme disease entries. Volumes are rounded to 0.1 mL from the dose in whole mg.")))),
         (wt || ind !== start) && React.createElement("button", { className: "calc-clear", onClick: () => { setWt(""); if (start) pick(start); else { setInd(null); setReg(0); } } }, "Clear")));
 }
-const CALC_COMPONENTS = { amoxkg: AmoxKg, crcl: Crcl, chads65: Chads65, herdoo2: Herdoo2, fib4: Fib4, mcisaac: McIsaac, ipss: Ipss, phq9: Phq9, gad7: Gad7, auditc: AuditC };
 /* ---------------------------------------------------------------- PAGES */
 const formatMonth = (ym) => {
     const m = /^(\d{4})-(\d{2})$/.exec(ym || "");
